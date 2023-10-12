@@ -7,7 +7,13 @@ resourceTypes = {
     "FlexContainer" : "ty=28"
 }
 
-def Create(url:str, originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str, primitiveContent):
+def CreateResource(url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
+    print(url)
+    print(headers)
+    print(primitiveContent)
+    return requests.post(url, headers=headers, json=primitiveContent)
+
+def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str) -> dict:
     headers = {
         'X-M2M-Origin': originator,
         'X-M2M-RI': requestIdentifier,
@@ -15,12 +21,9 @@ def Create(url:str, originator:str, requestIdentifier:str, releaseVersionIndicat
         'Content-Type': 'application/json;' + resourceType,
         'Accept': 'application/json'
     }
-    print(url)
-    print(headers)
-    print(primitiveContent)
-    return requests.post(url, headers=headers, json=primitiveContent)
+    return headers
 
-def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict):
+def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict) -> dict:
     data = {
         "m2m:ae": {
             "rn": resourceName,
@@ -31,7 +34,7 @@ def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReach
     }
     return data
 
-def ContainerPrimitiveContent(resourceName:str):
+def ContainerPrimitiveContent(resourceName:str) -> dict:
     data = {
         "m2m:cnt": {
             "rn": resourceName
@@ -39,7 +42,7 @@ def ContainerPrimitiveContent(resourceName:str):
     }
     return data
 
-def ContentInstancePrimitiveContent(content:str):
+def ContentInstancePrimitiveContent(content:str) -> dict:
     data = {
         "m2m:cin": {
             "cnf": "text/plain:0",
@@ -48,7 +51,7 @@ def ContentInstancePrimitiveContent(content:str):
     }
     return data
 
-def FlexContainerWeightPrimitiveContent(resourceName:str):
+def FlexContainerWeightPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:weigt": {
             "rn": resourceName,
@@ -58,7 +61,7 @@ def FlexContainerWeightPrimitiveContent(resourceName:str):
     }
     return data
 
-def FlexContainerColorPrimitiveContent(resourceName:str):
+def FlexContainerColorPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:color": {
             "rn": resourceName,
@@ -70,7 +73,7 @@ def FlexContainerColorPrimitiveContent(resourceName:str):
     }
     return data
 
-def FlexContainerBinarySwitchPrimitiveContent(resourceName:str):
+def FlexContainerBinarySwitchPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:binSh": {
             "rn": resourceName,
@@ -80,7 +83,7 @@ def FlexContainerBinarySwitchPrimitiveContent(resourceName:str):
     }
     return data
 
-def DeviceModelDeviceLightPrimitiveContent(resourceName:str):
+def DeviceModelDeviceLightPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:devLt": {
             "rn": resourceName,
@@ -89,7 +92,7 @@ def DeviceModelDeviceLightPrimitiveContent(resourceName:str):
     }
     return data
 
-def DeviceModelDeviceScalePrimitiveContent(resourceName:str):
+def DeviceModelDeviceScalePrimitiveContent(resourceName:str) -> dict:
     data = {
         "mio:devSca": {
             "rn": resourceName,
@@ -99,7 +102,6 @@ def DeviceModelDeviceScalePrimitiveContent(resourceName:str):
     return data
 
 def CheckResponse(response:requests.models.Response):
-
     if response.status_code == 201:
         print("POST request successful")
         print(response.text)
@@ -116,18 +118,19 @@ def CheckResponse(response:requests.models.Response):
 #ContentInstance
 #CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", "Cmyself", "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
-#Application Entity
-CheckResponse(Create("http://192.168.1.108:8080/cse-in", "Cmyself", "0001", "4", resourceTypes["ApplicationEntity"], ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
-#Container
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE", "Cmyself", "0002", "4", resourceTypes["Container"], ContainerPrimitiveContent("Box-1")))
-#Device Model DeviceScale
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE/Box-1", "Cmyself", "0004", "4", resourceTypes["FlexContainer"], DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
-#FlexContainer Weight
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE/Box-1/DeviceScale", "Cmyself", "0003", "4", resourceTypes["FlexContainer"], FlexContainerWeightPrimitiveContent("weight")))
-#Device Model DeviceLight
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE/Box-1", "Cmyself", "0004", "4", resourceTypes["FlexContainer"], DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
-#FlexContainer binarySwitch
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE/Box-1/DeviceLight", "Cmyself", "0005", "4", resourceTypes["FlexContainer"], FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
-#FlexContainer colour
-CheckResponse(Create("http://192.168.1.108:8080/cse-in/Regal-AE/Box-1/DeviceLight", "Cmyself", "0006", "4", resourceTypes["FlexContainer"], FlexContainerColorPrimitiveContent("colour")))
+url = "http://192.168.1.108:8080/cse-in"
 
+#Application Entity
+CheckResponse(CreateResource(url, HeaderFields("Cmyself", "0001", "4", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
+#Container
+CheckResponse(CreateResource(url + "/Regal-AE", HeaderFields("Cmyself", "0002", "4", resourceTypes["Container"]), ContainerPrimitiveContent("Box-1")))
+#Device Model DeviceScale
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("Cmyself", "0004", "4", resourceTypes["FlexContainer"]), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
+#FlexContainer Weight
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceScale", HeaderFields("Cmyself", "0003", "4", resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
+#Device Model DeviceLight
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("Cmyself", "0004", "4", resourceTypes["FlexContainer"]), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
+#FlexContainer binarySwitch
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("Cmyself", "0005", "4", resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+#FlexContainer colour
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("Cmyself", "0006", "4", resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))

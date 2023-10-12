@@ -1,0 +1,11 @@
+[
+    // DeviceClass: deviceScale
+    {
+        "type"      : "mio:devSca",
+        "lname"     : "mioDeviceScale",
+        "cnd"       : "org.fhtwmio.common.device.mioDeviceScale",
+        "children"  : [
+            "cod:weigt"
+        ]
+    }
+]
