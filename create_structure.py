@@ -118,7 +118,7 @@ def CheckResponse(response:requests.models.Response):
 #ContentInstance
 #CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", "Cmyself", "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
-url = "http://192.168.1.108:8080/cse-in"
+url = "http://192.168.1.106:8080/cse-asn"
 
 #Application Entity
 CheckResponse(CreateResource(url, HeaderFields("Cmyself", "0001", "4", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
