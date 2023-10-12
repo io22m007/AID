@@ -156,25 +156,28 @@ def CheckResponse(response:requests.models.Response):
         print()
 
 #Application Entity
-#CheckResponse(Create("http://localhost:8080/cse-in", "CAIDAdmin", "0001", "3", resourceTypes["ApplicationEntity"], ApplicationEntityPrimitiveContent("Notebook-AE", "NnotebookAE", True, ["3"])))
+#CheckResponse(Create("http://localhost:8080/cse-in", CMyself, "0001", "3", resourceTypes["ApplicationEntity"], ApplicationEntityPrimitiveContent("Notebook-AE", "NnotebookAE", True, ["3"])))
 #Container
-#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE", "CAIDAdmin", "0002", "3", resourceTypes["Container"], ContainerPrimitiveContent("Container")))
+#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE", CMyself, "0002", "3", resourceTypes["Container"], ContainerPrimitiveContent("Container")))
 #ContentInstance
-#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", "CAIDAdmin", "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
+#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", CMyself, "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
-url = "http://192.168.1.106:8080/cse-asn"
+cse = "http://192.168.32.189:8080/cse-asn" # URL includes AE and resource names
+ae =  "/Regal-AE"
+box = "/Box-1"
+user = "CAdmin"
 
 #Application Entity
-CheckResponse(CreateResource(url, HeaderFields("CAIDAdmin", "0001", "4", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
+CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "4", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
 #Container
-CheckResponse(CreateResource(url + "/Regal-AE", HeaderFields("CAIDAdmin", "0002", "4", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
+CheckResponse(CreateResource(cse + ae, HeaderFields(user, "0002", "4", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
 #Device Model DeviceScale
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("CAIDAdmin", "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
 #FlexContainer Weight
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceScale", HeaderFields("CAIDAdmin", "0003", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceScale", HeaderFields(user, "0003", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
 #Device Model DeviceLight
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("CAIDAdmin", "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
 #FlexContainer binarySwitch
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("CAIDAdmin", "0005", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0005", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
 #FlexContainer colour
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("CAIDAdmin", "0006", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0006", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))

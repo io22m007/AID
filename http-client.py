@@ -1,14 +1,14 @@
 import http.client
 import json
 
-connection = http.client.HTTPConnection('localhost','8080',timeout=10)
+connection = http.client.HTTPConnection("192.168.32.113",'8080',timeout=10)
 
 def create(connection) : 
 
     header = { 
     'Content-Type': 'application/json;ty=1',
     'Accept': 'application/json',
-    'X-M2M-Origin': 'CAdmin',
+    'X-M2M-Origin': 'CAIDAdmin',
     'X-M2M-RI': 'lus89mknqcd',
     'X-M2M-RVI': '3'
     }
@@ -43,8 +43,8 @@ def put(connection):
     header = { 
     'Content-Type': 'application/json;ty=1',
     'Accept': 'application/json',
-    'X-M2M-Origin': 'CAdmin',
-    'X-M2M-RI': 'pfgk5cslxc',
+    'X-M2M-Origin': 'CAIDAdmin',
+    'X-M2M-RI': 'acpCreateACPs',
     'X-M2M-RVI': '3'
     }
     payload = {
@@ -52,16 +52,16 @@ def put(connection):
             "pv": {
                 "acr": [ 
                 {
-                    "acop": 1,
-                    "acor": ["CSensor*"]
+                    "acop": 63,
+                    "acor": ["all"]
                 }
                 ]
             }
         }
     }
     json_data = json.dumps(payload)
-    connection.request('PUT', 'acp8798785459841813212', json_data, header)
+    connection.request('PUT', 'acpCreateACPs', json_data, header)
 
-create(connection)
+put(connection)
 response = connection.getresponse()
 print(response.read().decode())
