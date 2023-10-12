@@ -1,10 +1,15 @@
 import requests
 
-resourceTypes = {
+resourceTypes = { # TS0004 6.3.4.2.1
     "ApplicationEntity" : "ty=2",
     "Container" : "ty=3",
     "ContentInstance" : "ty=4",
-    "FlexContainer" : "ty=28"
+    "FlexContainer" : "ty=28",
+    "ApplicationEntityAnnouced" : "ty=10002",
+    "ContainerAnnouced" : "ty=10003",
+    "ContentInstanceAnnouced" : "ty=10004",
+    "FlexContainerAnnouced" : "ty=10028"
+
 }
 
 def CreateResource(url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
@@ -13,16 +18,19 @@ def CreateResource(url:str, headers:dict, primitiveContent:dict) -> requests.mod
     print(primitiveContent)
     return requests.post(url, headers=headers, json=primitiveContent)
 
-def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str) -> dict:
+def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str, announceTo:str, announceSyncType:str) -> dict:
     headers = {
         'X-M2M-Origin': originator,
         'X-M2M-RI': requestIdentifier,
         'X-M2M-RVI': releaseVersionIndicator,
         'Content-Type': 'application/json;' + resourceType,
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        "at": announceTo,
+        "ast": announceSyncType
     }
     return headers
 
+#ApplicationEntity
 def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict) -> dict:
     data = {
         "m2m:ae": {
@@ -34,6 +42,19 @@ def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReach
     }
     return data
 
+#ApplicationEntityAnnouced
+def ApplicationEntityAnnoucedPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict) -> dict:
+    data = {
+        "m2m:aeA": {
+            "rn": resourceName,
+            "api": App_ID,
+            "rr": requestReachability,
+            "srv": supportedReleaseVersions
+        }
+    }
+    return data
+
+#Container
 def ContainerPrimitiveContent(resourceName:str) -> dict:
     data = {
         "m2m:cnt": {
@@ -42,6 +63,16 @@ def ContainerPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
+#ContainerAnnouced
+def ContainerAnnoucedPrimitiveContent(resourceName:str) -> dict:
+    data = {
+        "m2m:cntA": {
+            "rn": resourceName
+        }
+    }
+    return data
+
+#ContentInstance
 def ContentInstancePrimitiveContent(content:str) -> dict:
     data = {
         "m2m:cin": {
@@ -51,6 +82,17 @@ def ContentInstancePrimitiveContent(content:str) -> dict:
     }
     return data
 
+#ContentInstanceAnnouced
+def ContentInstanceAnnoucedPrimitiveContent(content:str) -> dict:
+    data = {
+        "m2m:cinA": {
+            "cnf": "text/plain:0",
+            "con": content
+        }
+    }
+    return data
+
+#FlexContainerWeight
 def FlexContainerWeightPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:weigt": {
@@ -61,6 +103,7 @@ def FlexContainerWeightPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
+#FlexContainerColor
 def FlexContainerColorPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:color": {
@@ -73,6 +116,7 @@ def FlexContainerColorPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
+#FlexContainerBinarySwitch
 def FlexContainerBinarySwitchPrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:binSh": {
@@ -112,25 +156,25 @@ def CheckResponse(response:requests.models.Response):
         print()
 
 #Application Entity
-#CheckResponse(Create("http://localhost:8080/cse-in", "Cmyself", "0001", "3", resourceTypes["ApplicationEntity"], ApplicationEntityPrimitiveContent("Notebook-AE", "NnotebookAE", True, ["3"])))
+#CheckResponse(Create("http://localhost:8080/cse-in", "CAIDAdmin", "0001", "3", resourceTypes["ApplicationEntity"], ApplicationEntityPrimitiveContent("Notebook-AE", "NnotebookAE", True, ["3"])))
 #Container
-#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE", "Cmyself", "0002", "3", resourceTypes["Container"], ContainerPrimitiveContent("Container")))
+#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE", "CAIDAdmin", "0002", "3", resourceTypes["Container"], ContainerPrimitiveContent("Container")))
 #ContentInstance
-#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", "Cmyself", "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
+#CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", "CAIDAdmin", "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
 url = "http://192.168.1.106:8080/cse-asn"
 
 #Application Entity
-CheckResponse(CreateResource(url, HeaderFields("Cmyself", "0001", "4", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
+CheckResponse(CreateResource(url, HeaderFields("CAIDAdmin", "0001", "4", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
 #Container
-CheckResponse(CreateResource(url + "/Regal-AE", HeaderFields("Cmyself", "0002", "4", resourceTypes["Container"]), ContainerPrimitiveContent("Box-1")))
+CheckResponse(CreateResource(url + "/Regal-AE", HeaderFields("CAIDAdmin", "0002", "4", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
 #Device Model DeviceScale
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("Cmyself", "0004", "4", resourceTypes["FlexContainer"]), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("CAIDAdmin", "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
 #FlexContainer Weight
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceScale", HeaderFields("Cmyself", "0003", "4", resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceScale", HeaderFields("CAIDAdmin", "0003", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
 #Device Model DeviceLight
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("Cmyself", "0004", "4", resourceTypes["FlexContainer"]), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1", HeaderFields("CAIDAdmin", "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
 #FlexContainer binarySwitch
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("Cmyself", "0005", "4", resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("CAIDAdmin", "0005", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
 #FlexContainer colour
-CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("Cmyself", "0006", "4", resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))
+CheckResponse(CreateResource(url + "/Regal-AE/Box-1/DeviceLight", HeaderFields("CAIDAdmin", "0006", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))

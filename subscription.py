@@ -44,7 +44,7 @@ def CheckResponse(response:requests.models.Response):
 
 url = "http://localhost:8080/cse-in/StreetLight-AE-2/Light-Container-2"  # URL includes AE and Container names
 
-cse = "http://192.168.1.108:8080/cse-in" + "/"  # URL includes AE and resource names
+cse = "http://192.168.1.106:8080/cse-asn" + "/"  # URL includes AE and resource names
 ae = "Regal-AE" + "/"
 box = "Box-1" + "/"
 
