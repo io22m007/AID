@@ -162,22 +162,22 @@ def CheckResponse(response:requests.models.Response):
 #ContentInstance
 #CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", CMyself, "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
-cse = "http://192.168.32.189:8080/cse-asn" # URL includes AE and resource names
+cse = "http://acme-regal-1:8080/cse-asn" # URL includes AE and resource names
 ae =  "/Regal-AE"
 box = "/Box-1"
-user = "CAdmin"
+user = "CAIDAdmin"
 
 #Application Entity
-CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "4", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["4"])))
+CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["3"])))
 #Container
-CheckResponse(CreateResource(cse + ae, HeaderFields(user, "0002", "4", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
+CheckResponse(CreateResource(cse + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
 #Device Model DeviceScale
-CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
 #FlexContainer Weight
-CheckResponse(CreateResource(cse + ae + box + "/DeviceScale", HeaderFields(user, "0003", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceScale", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
 #Device Model DeviceLight
-CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "4", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
 #FlexContainer binarySwitch
-CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0005", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0005", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
 #FlexContainer colour
-CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0006", "4", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0006", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))

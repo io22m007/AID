@@ -39,7 +39,7 @@ def create(connection) :
     json_data = json.dumps(payload)
     connection.request('POST', 'id-in', json_data, header)
 
-def put(connection):
+def put(connection:http.client.HTTPConnection):
     header = { 
     'Content-Type': 'application/json;ty=1',
     'Accept': 'application/json',

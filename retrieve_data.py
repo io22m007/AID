@@ -8,7 +8,7 @@ def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:
         'X-M2M-Origin': originator,
         'X-M2M-RI': requestIdentifier,
         'X-M2M-RVI': releaseVersionIndicator,
-    'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
         'Accept': 'application/json'
     }
     return headers
@@ -26,8 +26,8 @@ def CheckResponse(response:requests.models.Response):
         print()
 
 
-cse = "http://192.168.1.108:8080/cse-in/asn-id" + "/"  # URL includes AE and resource names
-ae = "Regal-AE" + "/"
-box = "Box-1" + "/"
+cse = "http://acme-in:8080/cse-in/cse-asn" # URL includes AE and resource names
+ae = "/Regal-AE"
+box = "/Box-1"
 
-CheckResponse(GetResource(cse + ae + box + "DeviceLight/binarySwitch", HeaderFields("CAIDAdmin", "0501", "3")))
+CheckResponse(GetResource(cse + ae + box + "/DeviceScale/weight", HeaderFields("CAIDAdmin", "0501", "3")))

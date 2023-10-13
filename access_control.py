@@ -50,7 +50,7 @@ def CreateAccessControlPolicyPrimitiveContent(resourceName:str, accessControlOpe
     }
     return data
 
-def UpdateAccessControlOperationsPrimitiveContent( accessControlOperations:str, accessControlOriginators:list) -> dict:
+def UpdateAccessControlOperationsPrimitiveContent(accessControlOperations:str, accessControlOriginators:list) -> dict:
     data = {
         "m2m:acp":{
             "pv": {
@@ -85,3 +85,8 @@ def CheckResponse(response:requests.models.Response):
             print(response.text)
             print()
 
+#cse = "http://acme-regal-1:8080/cse-asn"
+cse = "http://acme-in:8080/cse-in"
+acp =  "/acpCreateACPs"
+
+CheckResponse(UpdateAccessControlPolicy(cse + acp, HeaderFields("CAIDAdmin", "7777", "3", resourceTypes["AccessControlPolicy"]), UpdateAccessControlOperationsPrimitiveContent(63, ["all"])))
