@@ -18,15 +18,13 @@ def CreateResource(url:str, headers:dict, primitiveContent:dict) -> requests.mod
     print(primitiveContent)
     return requests.post(url, headers=headers, json=primitiveContent)
 
-def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str, announceTo:str, announceSyncType:str) -> dict:
+def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str) -> dict:
     headers = {
         'X-M2M-Origin': originator,
         'X-M2M-RI': requestIdentifier,
         'X-M2M-RVI': releaseVersionIndicator,
         'Content-Type': 'application/json;' + resourceType,
-        'Accept': 'application/json',
-        "at": announceTo,
-        "ast": announceSyncType
+        'Accept': 'application/json'
     }
     return headers
 
@@ -34,18 +32,6 @@ def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:
 def ApplicationEntityPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict) -> dict:
     data = {
         "m2m:ae": {
-            "rn": resourceName,
-            "api": App_ID,
-            "rr": requestReachability,
-            "srv": supportedReleaseVersions
-        }
-    }
-    return data
-
-#ApplicationEntityAnnouced
-def ApplicationEntityAnnoucedPrimitiveContent(resourceName:str, App_ID:str, requestReachability:str, supportedReleaseVersions:dict) -> dict:
-    data = {
-        "m2m:aeA": {
             "rn": resourceName,
             "api": App_ID,
             "rr": requestReachability,
@@ -63,29 +49,10 @@ def ContainerPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
-#ContainerAnnouced
-def ContainerAnnoucedPrimitiveContent(resourceName:str) -> dict:
-    data = {
-        "m2m:cntA": {
-            "rn": resourceName
-        }
-    }
-    return data
-
 #ContentInstance
 def ContentInstancePrimitiveContent(content:str) -> dict:
     data = {
         "m2m:cin": {
-            "cnf": "text/plain:0",
-            "con": content
-        }
-    }
-    return data
-
-#ContentInstanceAnnouced
-def ContentInstanceAnnoucedPrimitiveContent(content:str) -> dict:
-    data = {
-        "m2m:cinA": {
             "cnf": "text/plain:0",
             "con": content
         }
@@ -168,16 +135,16 @@ box = "/Box-1"
 user = "CAdmin"
 
 #Application Entity
-CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["3"])))
+CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["3"])))
 #Container
-CheckResponse(CreateResource(cse + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"], "id-in", "2"), ContainerPrimitiveContent("Box-1")))
+CheckResponse(CreateResource(cse + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"]), ContainerPrimitiveContent("Box-1")))
 #Device Model DeviceScale
-CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), DeviceModelDeviceScalePrimitiveContent("DeviceScale")))
 #FlexContainer Weight
-CheckResponse(CreateResource(cse + ae + box + "/DeviceScale", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerWeightPrimitiveContent("weight")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceScale", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
 #Device Model DeviceLight
-CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"], "id-in", "2"), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
+CheckResponse(CreateResource(cse + ae + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), DeviceModelDeviceLightPrimitiveContent("DeviceLight")))
 #FlexContainer binarySwitch
-CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0005", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0005", "3", resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
 #FlexContainer colour
-CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0006", "3", resourceTypes["FlexContainer"], "id-in", "2"), FlexContainerColorPrimitiveContent("colour")))
+CheckResponse(CreateResource(cse + ae + box + "/DeviceLight", HeaderFields(user, "0006", "3", resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))

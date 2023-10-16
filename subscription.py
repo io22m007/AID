@@ -44,11 +44,11 @@ def CheckResponse(response:requests.models.Response):
 
 url = "http://localhost:8080/cse-in/StreetLight-AE-2/Light-Container-2"  # URL includes AE and Container names
 
-cse = "http://192.168.1.106:8080/cse-asn" + "/"  # URL includes AE and resource names
+cse = "http://acme-regal-1:8080/cse-asn" + "/"  # URL includes AE and resource names
 ae = "Regal-AE" + "/"
 box = "Box-1" + "/"
 user = "CAIDAdmin"
 
-CheckResponse(SubscribeResource(cse + ae + box + "DeviceLight/binarySwitch", HeaderFields(user, "0011", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription1", ["http://192.168.1.108:9999"], 2, [1])))
-CheckResponse(SubscribeResource(cse + ae + box + "DeviceLight/colour", HeaderFields(user, "0012", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription2", ["http://192.168.1.108:9999"], 2, [1])))
-CheckResponse(SubscribeResource(cse + ae + box + "DeviceScale/weight", HeaderFields(user, "0013", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription3", ["http://192.168.1.108:9999"], 2, [1])))
+CheckResponse(SubscribeResource(cse + ae + box + "DeviceLight/binarySwitch", HeaderFields(user, "0011", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription1", ["http://192.168.1.108:1880"], 2, [1])))
+CheckResponse(SubscribeResource(cse + ae + box + "DeviceLight/colour", HeaderFields(user, "0012", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription2", ["http://192.168.1.108:1880"], 2, [1])))
+CheckResponse(SubscribeResource(cse + ae + box + "DeviceScale/weight", HeaderFields(user, "0013", "4", resourceTypes["Subscription"]), SubscriptionPrimitiveContent("Subscription3", ["http://192.168.1.108:1880"], 2, [1])))

@@ -8,9 +8,8 @@
 #	from a CSE.
 #
 
-from __future__ import annotations
 from http.server import HTTPServer, BaseHTTPRequestHandler
-import json, ssl, signal
+import json, ssl
 
 ##############################################################################
 #
@@ -18,21 +17,9 @@ import json, ssl, signal
 #
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
-
-	def do_GET(self) -> None:
-		"""	Just provide a simple web page.
-		"""
-		self.send_response(200)
-		self.send_header('Content-type', 'text/html')
-		self.end_headers()
-		self.wfile.write(bytes("<html><head><title>[ACME] Notification Server</title></head><body>This server doesn't provide a web page.</body></html>","utf-8")) 
-
-
 	def do_POST(self) -> None:
 		"""	Handle notification.
 		"""
-
-		_responseHeaders:list = []
 
 		# Get headers and content data
 		length = int(self.headers['Content-Length'])
@@ -48,8 +35,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 		self.send_response(200)
 		self.send_header('X-M2M-RSC', '2000')
 		self.send_header('X-M2M-RI', requestID)
-		_responseHeaders = self._headers_buffer	# type:ignore [attr-defined]
 		self.end_headers()
+
+		# HTTP Response
+		self.wfile.write(b'') 
 
 		# Print JSON
 		if contentType in [ 'application/json', 'application/vnd.onem2m-res+json' ]:
@@ -59,32 +48,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 		else:
 			print("not json:")
 			print(post_data, highlight=False)
-		
-		# Print HTTP Response
-		# This looks a it more complicated but is necessary to render nicely in Jupyter
-		print('Sent Notification Response (http)')
-		print(_responseHeaders)
-
 
 	def log_message(self, format:str, *args:int) -> None:
 		if (msg := format%args).startswith(('"GET', '"POST')):	return	# ignore GET log messages
 		print(msg, highlight = False)
-
-	
-##############################################################################
-
-#
-#	Help with exiting and terminating all the threads programmatically
-#	
-class ExitCommand(Exception):
-	pass
-
-def exitSignalHandler(signal, frame) -> None:	# type: ignore [no-untyped-def]
-	raise ExitCommand()
-
-signal.signal(signal.SIGTERM, exitSignalHandler)
-
-##############################################################################
 
 #
 #	Entry
@@ -97,7 +64,7 @@ httpd = HTTPServer(('', port), SimpleHTTPRequestHandler)
 
 # init ssl socket
 #context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)					# Create a SSL Context
-#context.load_cert_chain(args.certfile, args.keyfile)				# Load the certificate and private key
+#context.load_cert_chain(certfile, keyfile)				# Load the certificate and private key
 #httpd.socket = context.wrap_socket(httpd.socket, server_side=True)	# wrap the original http server socket as an SSL/TLS socket
 
 print('Notification server started.')
@@ -108,8 +75,6 @@ try:
 except KeyboardInterrupt as e:
 	pass
 	# The http server is stopped implicitly
-except ExitCommand:
-	pass
 except Exception:
 	print()
 finally:
