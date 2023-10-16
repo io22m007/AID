@@ -4,12 +4,7 @@ resourceTypes = { # TS0004 6.3.4.2.1
     "ApplicationEntity" : "ty=2",
     "Container" : "ty=3",
     "ContentInstance" : "ty=4",
-    "FlexContainer" : "ty=28",
-    "ApplicationEntityAnnouced" : "ty=10002",
-    "ContainerAnnouced" : "ty=10003",
-    "ContentInstanceAnnouced" : "ty=10004",
-    "FlexContainerAnnouced" : "ty=10028"
-
+    "FlexContainer" : "ty=28"
 }
 
 def CreateResource(url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
