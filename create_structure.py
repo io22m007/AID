@@ -165,7 +165,7 @@ def CheckResponse(response:requests.models.Response):
 cse = "http://acme-regal-1:8080/cse-asn" # URL includes AE and resource names
 ae =  "/Regal-AE"
 box = "/Box-1"
-user = "CAIDAdmin"
+user = "CAdmin"
 
 #Application Entity
 CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"], "id-in", "2"), ApplicationEntityPrimitiveContent("Regal-AE", "NRegalAE", True, ["3"])))
