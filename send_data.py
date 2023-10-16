@@ -51,11 +51,12 @@ def CheckResponse(response:requests.models.Response):
         print(response.text)
         print()
 
-cse = "http://192.168.32.189:8080/cse-asn" + "/"  # URL includes AE and resource names
-ae = "Regal-AE" + "/"
-box = "Box-1" + "/"
+cse = "http://192.168.32.189:8080/cse-asn"  # URL includes AE and resource names
+ae = "/Regal-AE"
+box = "/Box-1"
+user = "CAIDAdmin"
 
-CheckResponse(UpdateResource(cse + ae + box + "DeviceLight/binarySwitch", HeaderFields("CAIDAdmin", "0101", "4"), RegalBoxDeviceLightBinarySwitchUpdatePrimitiveContent(True)))
-CheckResponse(UpdateResource(cse + ae + box + "DeviceLight/colour", HeaderFields("CAIDAdmin", "0102", "4"), RegalBoxDeviceLightColourUpdatePrimitiveContent(11,22,33)))
-CheckResponse(UpdateResource(cse + ae + box + "DeviceScale/weight", HeaderFields("CAIDAdmin", "0103", "4"), RegalBoxDeviceScaleWeightUpdatePrimitiveContent(0.125)))
+CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/binarySwitch", HeaderFields(user, "0101", "4"), RegalBoxDeviceLightBinarySwitchUpdatePrimitiveContent(True)))
+CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/colour", HeaderFields(user, "0102", "4"), RegalBoxDeviceLightColourUpdatePrimitiveContent(11,22,33)))
+CheckResponse(UpdateResource(cse + ae + box + "/DeviceScale/weight", HeaderFields(user, "0103", "4"), RegalBoxDeviceScaleWeightUpdatePrimitiveContent(0.125)))
 
