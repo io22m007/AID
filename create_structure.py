@@ -1,5 +1,13 @@
 import requests
 
+class RequestCounterClass:
+    def __init__(self):
+        self.count = 0  # Initialize the instance variable
+
+    def increment(self):
+        self.count += 1
+        return f"{self.count:03}" # return with at least three numbers
+
 resourceTypes = { # TS0004 6.3.4.2.1
     "ApplicationEntity" : "ty=2",
     "Container" : "ty=3",
@@ -128,21 +136,28 @@ def CheckResponse(response:requests.models.Response):
 #CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", CMyself, "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
 cse = "http://acme-regal-1:8080/cse-asn" # URL includes AE and resource names
-ae =  "Regal-AE"
-box = "Box-1"
+ae =  "Regal-1-AE"
+app_id = "NRegal1AE"
+box_count = 2
+
 user = "CAdmin"
+request_counter = RequestCounterClass()
+releaseVersionIndicator = "3"
+
 
 #Application Entity
-CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent(ae, "NRegalAE", True, ["3"])))
-#Container
-CheckResponse(CreateResource(cse + "/" + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"]), ContainerPrimitiveContent(box)))
-#Device Model DeviceScale
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), FlexContainerDeviceScalePrimitiveContent("DeviceScale")))
-#FlexContainer Weight
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceScale", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
-#Device Model DeviceLight
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), FlexContainerDeviceLightPrimitiveContent("DeviceLight")))
-#FlexContainer binarySwitch
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceLight", HeaderFields(user, "0005", "3", resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
-#FlexContainer colour
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceLight", HeaderFields(user, "0006", "3", resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))
+CheckResponse(CreateResource(cse, HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent(ae, app_id, True, ["3"])))
+
+for box_counter in range(1, box_count+1):
+    #Container
+    CheckResponse(CreateResource(cse + "/" + ae, HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["Container"]), ContainerPrimitiveContent("Box-" + str(box_counter))))
+    #Device Model DeviceScale
+    CheckResponse(CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) , HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["FlexContainer"]), FlexContainerDeviceScalePrimitiveContent("DeviceScale")))
+    #FlexContainer Weight
+    CheckResponse(CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) + "/DeviceScale", HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
+    #Device Model DeviceLight
+    CheckResponse(CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) , HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["FlexContainer"]), FlexContainerDeviceLightPrimitiveContent("DeviceLight")))
+    #FlexContainer binarySwitch
+    CheckResponse(CreateResource(cse + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+    #FlexContainer colour
+    CheckResponse(CreateResource(cse + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", HeaderFields(user, app_id + request_counter.increment(), releaseVersionIndicator, resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))
