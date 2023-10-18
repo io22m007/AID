@@ -54,8 +54,30 @@ def ContentInstancePrimitiveContent(content:str) -> dict:
     }
     return data
 
-#FlexContainer weight
-def FlexContainerWeightPrimitiveContent(resourceName:str) -> dict:
+#FlexContainer amountPiecesInBox
+def FlexContainerAmountPiecesInBoxPrimitiveContent(resourceName:str) -> dict:
+    data = {
+        "mio:amPIB": {
+            "rn": resourceName,
+            "cnd": "org.fhtwmio.common.moduleclass.amountPiecesInBox",
+            "pices": 0
+        }
+    }
+    return data
+
+#FlexContainer minimumPiecesInBox
+def FlexContainerMinimumPiecesInBoxPrimitiveContent(resourceName:str) -> dict:
+    data = {
+        "mio:miPIB": {
+            "rn": resourceName,
+            "cnd": "org.fhtwmio.common.moduleclass.minimumPiecesInBox",
+            "pices": 0
+        }
+    }
+    return data
+
+#FlexContainer weightPerPiece
+def FlexContainerWeightPerPiecePrimitiveContent(resourceName:str) -> dict:
     data = {
         "cod:weigt": {
             "rn": resourceName,
@@ -65,51 +87,26 @@ def FlexContainerWeightPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
-#FlexContainer colour
-def FlexContainerColorPrimitiveContent(resourceName:str) -> dict:
+#FlexContainer orderstatusBox
+def FlexContainerOrderstatusBoxPrimitiveContent(resourceName:str) -> dict:
     data = {
-        "cod:color": {
+        "mio:osBox": {
             "rn": resourceName,
-            "cnd": "org.onem2m.common.moduleclass.colour",
-            "red": 0,
-            "green": 0,
-            "blue": 0
+            "cnd": "org.fhtwmio.common.moduleclass.orderstatusBox",
+            "orsta": 0
         }
     }
     return data
 
-#FlexContainer binarySwitch
-def FlexContainerBinarySwitchPrimitiveContent(resourceName:str) -> dict:
+def DeviceModelDeviceVariablesPrimitiveContent(resourceName:str) -> dict:
     data = {
-        "cod:binSh": {
+        "mio:devVar": {
             "rn": resourceName,
-            "cnd": "org.onem2m.common.moduleclass.binarySwitch",
-            "powSe": False
+            "cnd": "org.fhtwmio.common.device.mioDeviceVariables"
         }
     }
     return data
 
-#FlexContainer deviceLight
-def FlexContainerDeviceLightPrimitiveContent(resourceName:str) -> dict:
-    data = {
-        "cod:devLt": {
-            "rn": resourceName,
-            "cnd": "org.onem2m.common.device.deviceLight"
-        }
-    }
-    return data
-
-#FlexContainer mioDeviceScale
-def FlexContainerDeviceScalePrimitiveContent(resourceName:str) -> dict:
-    data = {
-        "mio:devSca": {
-            "rn": resourceName,
-            "cnd": "org.fhtwmio.common.device.mioDeviceScale"
-        }
-    }
-    return data
-
-#Print response of POST request
 def CheckResponse(response:requests.models.Response):
     if response.status_code == 201:
         print("POST request successful")
@@ -127,22 +124,22 @@ def CheckResponse(response:requests.models.Response):
 #ContentInstance
 #CheckResponse(Create("http://localhost:8080/cse-in/Notebook-AE/Container", CMyself, "0003", "3", resourceTypes["ContentInstance"], ContentInstancePrimitiveContent("Hello, World!")))
 
-cse = "http://acme-regal-1:8080/cse-asn" # URL includes AE and resource names
-ae =  "Regal-AE"
+cse = "http://acme-in:8080/cse-in" # URL includes AE and resource names
+ae =  "Regal-NodeRed-AE"
 box = "Box-1"
 user = "CAdmin"
 
 #Application Entity
-CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent(ae, "NRegalAE", True, ["3"])))
+CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent(ae, "NRegalNodeRedAE", True, ["3"])))
 #Container
 CheckResponse(CreateResource(cse + "/" + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"]), ContainerPrimitiveContent(box)))
-#Device Model DeviceScale
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), FlexContainerDeviceScalePrimitiveContent("DeviceScale")))
-#FlexContainer Weight
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceScale", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerWeightPrimitiveContent("weight")))
-#Device Model DeviceLight
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), FlexContainerDeviceLightPrimitiveContent("DeviceLight")))
-#FlexContainer binarySwitch
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceLight", HeaderFields(user, "0005", "3", resourceTypes["FlexContainer"]), FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
-#FlexContainer colour
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceLight", HeaderFields(user, "0006", "3", resourceTypes["FlexContainer"]), FlexContainerColorPrimitiveContent("colour")))
+#Device Model DeviceVariables
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), DeviceModelDeviceVariablesPrimitiveContent("DeviceVariables")))
+#FlexContainer amountPiecesInBox
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceVariables", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerAmountPiecesInBoxPrimitiveContent("amountPiecesInBox")))
+#FlexContainer minimumPiecesInBox
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceVariables", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerMinimumPiecesInBoxPrimitiveContent("minimumPiecesInBox")))
+#FlexContainer weightPerPiece
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceVariables", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerWeightPerPiecePrimitiveContent("weightPerPiece")))
+#FlexContainer orderstatusBox
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceVariables", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerOrderstatusBoxPrimitiveContent("orderstatusBox")))

@@ -59,4 +59,3 @@ user = "CAIDAdmin"
 CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/binarySwitch", HeaderFields(user, "0101", "4"), RegalBoxDeviceLightBinarySwitchUpdatePrimitiveContent(True)))
 CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/colour", HeaderFields(user, "0102", "4"), RegalBoxDeviceLightColourUpdatePrimitiveContent(11,22,33)))
 CheckResponse(UpdateResource(cse + ae + box + "/DeviceScale/weight", HeaderFields(user, "0103", "4"), RegalBoxDeviceScaleWeightUpdatePrimitiveContent(0.125)))
-
