@@ -40,7 +40,7 @@
                 "sname" : "orsta",
                 "lname" : "orderstatus", 
                 "type" : "enum",
-                "evalues" : [0-2]
+                "evalues" : [0-2],
                 "car" : "1" //mandatory
             }
         ]

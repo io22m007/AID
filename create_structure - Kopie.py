@@ -98,7 +98,8 @@ def FlexContainerOrderstatusBoxPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
-def DeviceModelDeviceVariablesPrimitiveContent(resourceName:str) -> dict:
+#FlexContainer deviceVariables
+def FlexContainerDeviceVariablesPrimitiveContent(resourceName:str) -> dict:
     data = {
         "mio:devVar": {
             "rn": resourceName,
@@ -107,6 +108,7 @@ def DeviceModelDeviceVariablesPrimitiveContent(resourceName:str) -> dict:
     }
     return data
 
+#Print response of POST request
 def CheckResponse(response:requests.models.Response):
     if response.status_code == 201:
         print("POST request successful")
@@ -133,8 +135,8 @@ user = "CAdmin"
 CheckResponse(CreateResource(cse, HeaderFields(user, "0001", "3", resourceTypes["ApplicationEntity"]), ApplicationEntityPrimitiveContent(ae, "NRegalNodeRedAE", True, ["3"])))
 #Container
 CheckResponse(CreateResource(cse + "/" + ae, HeaderFields(user, "0002", "3", resourceTypes["Container"]), ContainerPrimitiveContent(box)))
-#Device Model DeviceVariables
-CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), DeviceModelDeviceVariablesPrimitiveContent("DeviceVariables")))
+#FlexContainer DeviceVariables
+CheckResponse(CreateResource(cse + "/" + ae + "/" + box , HeaderFields(user, "0004", "3", resourceTypes["FlexContainer"]), FlexContainerDeviceVariablesPrimitiveContent("DeviceVariables")))
 #FlexContainer amountPiecesInBox
 CheckResponse(CreateResource(cse + "/" + ae + "/" + box + "/DeviceVariables", HeaderFields(user, "0003", "3", resourceTypes["FlexContainer"]), FlexContainerAmountPiecesInBoxPrimitiveContent("amountPiecesInBox")))
 #FlexContainer minimumPiecesInBox
