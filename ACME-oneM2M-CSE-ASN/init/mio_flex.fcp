@@ -9,7 +9,7 @@
             { 
                 "sname" : "pices",
                 "lname" : "pieces", 
-                "type" : "nonNegativeInteger",
+                "type" : "integer",
                 "car" : "1" //mandatory
             }
         ]
@@ -24,7 +24,7 @@
             { 
                 "sname" : "pices",
                 "lname" : "pieces", 
-                "type" : "nonNegativeInteger",
+                "type" : "integer",
                 "car" : "1" //mandatory
             }
         ]
@@ -40,7 +40,7 @@
                 "sname" : "orsta",
                 "lname" : "orderstatus", 
                 "type" : "enum",
-                "evalues" : [0-2],
+                "evalues" : [0,1,2],
                 "car" : "1" //mandatory
             }
         ]
