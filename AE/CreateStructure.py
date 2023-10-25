@@ -111,7 +111,7 @@ class AE_Creation:
             }
         }
         return data
-    
+
     def SubscriptionPrimitiveContent(self, resourceName:str, notificationURL, notificationContentType:int, notificationEventType) -> dict:
         data = {
             "m2m:sub": {

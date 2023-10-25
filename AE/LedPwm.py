@@ -28,7 +28,7 @@ class LedPwm(threading.Thread):
             'Accept': 'application/json'
         }
         return headers
-    
+
     def CheckResponse(self, response:requests.models.Response) -> str:
         return_value = ""
         if response.status_code == 200:
@@ -44,11 +44,11 @@ class LedPwm(threading.Thread):
             print()
             return_value = "request failed"
         return return_value
-    
+
     def GetSubscriptionResourceName(self, response_text):
         json_object = json.loads(response_text)
         return json_object["m2m:sub"]["rn"]
-    
+
     def SetupLEDs(self, leds:list) -> list:
         GPIO.setmode(GPIO.BCM)
         led_list = []
@@ -74,7 +74,7 @@ class LedPwm(threading.Thread):
             led_list.append([red_pwm, green_pwm, blue_pwm, status, red_color, green_color, blue_color])
 
         return led_list
-    
+
     def UpdatePWM(self, led_list:list, led_id:int):
         if led_list[led_id][3] == False:
             led_list[led_id][0].ChangeDutyCycle(0)
@@ -113,3 +113,5 @@ class LedPwm(threading.Thread):
                 print(subscription_resources[json_message["m2m:sgn"]["sur"]])
                 led_list = self.UpdateLEDs(led_list, json_message, subscription_resources[json_message["m2m:sgn"]["sur"]])
             self.data_queue.task_done()
+
+        GPIO.cleanup()
