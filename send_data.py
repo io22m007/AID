@@ -52,7 +52,7 @@ def CheckResponse(response:requests.models.Response):
         print()
 
 cse = "http://acme-regal-1:8080/cse-asn"  # URL includes AE and resource names
-ae = "/Regal-AE"
+ae = "/Regal-1-AE"
 box = "/Box-1"
 user = "CAIDAdmin"
 
