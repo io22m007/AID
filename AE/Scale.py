@@ -72,12 +72,28 @@ class Scale(threading.Thread):
 
     def run(self):
         scale_list = self.SetupScale(self.scales)
+        recent_values = []
+        for box_counter in range(1, self.box_count + 1):
+            recent_values.append([0,0,0])
+
+        value_counter = 0
         while not self.exit_event.is_set():
             start = time.time()
             for box_counter in range(1, self.box_count + 1):
                 reading = scale_list[box_counter - 1].get_weight_mean(50)
                 if reading:
-                    self.CheckResponse(self.UpdateResource(self.cse + "/" + self.cse_rn + "/" + self.ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), self.RegalBoxDeviceScaleWeightUpdatePrimitiveContent(reading/1000)))
+                    recent_values[box_counter - 1][value_counter] = reading
+                    if value_counter == 2:
+                        if abs((recent_values[box_counter - 1][0] - recent_values[box_counter - 1][1]) / recent_values[box_counter - 1][0]) <= 0.03 and abs((recent_values[box_counter - 1][1] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][1]) <= 0.03 and abs((recent_values[box_counter - 1][0] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][0]):
+                            self.CheckResponse(self.UpdateResource(self.cse + "/" + self.cse_rn + "/" + self.ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), self.RegalBoxDeviceScaleWeightUpdatePrimitiveContent(reading/1000)))
+                        else:
+                            print("scale values don't agree")
+            
+            if value_counter == 2:
+                value_counter = 0
+            else:
+                value_counter = value_counter + 1
+                
             try:
                 time.sleep(time.time() - start - 10)
             except:

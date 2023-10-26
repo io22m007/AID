@@ -5,5 +5,4 @@ RUN wget https://github.com/ankraft/ACME-oneM2M-CSE/archive/refs/heads/master.zi
 RUN unzip master.zip -d ACME-oneM2M-CSE
 RUN rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 RUN pip3 install -r ACME-oneM2M-CSE/ACME-oneM2M-CSE-master/requirements.txt
-RUN apt-get install -y iputils-ping
 CMD cd ACME-oneM2M-CSE/ACME-oneM2M-CSE-master && python3 -m acme
