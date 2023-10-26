@@ -3,18 +3,19 @@ import queue
 import requests
 import time
 import json
-import RPi.GPIO as GPIO
+import RPi.GPIO
 
 class LedPwm(threading.Thread):
-    def __init__(self, data_queue:queue.Queue, cse:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, leds:list):
+    def __init__(self, exit_event:threading.Event, data_queue:queue.Queue, cse:str, app_id:str, user:str, releaseVersionIndicator:str, leds:list, GPIO:RPi.GPIO):
         super().__init__()
+        self.exit_event = exit_event
         self.data_queue = data_queue
         self.cse = cse
         self.app_id = app_id
-        self.box_count = box_count
         self.user = user
         self.releaseVersionIndicator = releaseVersionIndicator
         self.leds = leds
+        self.GPIO = GPIO
 
     def GetResource(self, url:str, headers:dict) -> requests.models.Response:
         return requests.get(url, headers=headers)
@@ -50,7 +51,6 @@ class LedPwm(threading.Thread):
         return json_object["m2m:sub"]["rn"]
 
     def SetupLEDs(self, leds:list) -> list:
-        GPIO.setmode(GPIO.BCM)
         led_list = []
 
         status = False
@@ -59,13 +59,13 @@ class LedPwm(threading.Thread):
         blue_color = 0
 
         for led_pins in leds:
-            GPIO.setup(led_pins[0], GPIO.OUT)
-            GPIO.setup(led_pins[1], GPIO.OUT)
-            GPIO.setup(led_pins[2], GPIO.OUT)
+            self.GPIO.setup(led_pins[0], self.GPIO.OUT)
+            self.GPIO.setup(led_pins[1], self.GPIO.OUT)
+            self.GPIO.setup(led_pins[2], self.GPIO.OUT)
 
-            red_pwm = GPIO.PWM(led_pins[0], 100)
-            green_pwm = GPIO.PWM(led_pins[1], 100)
-            blue_pwm = GPIO.PWM(led_pins[2], 100)
+            red_pwm = self.GPIO.PWM(led_pins[0], 100)
+            green_pwm = self.GPIO.PWM(led_pins[1], 100)
+            blue_pwm = self.GPIO.PWM(led_pins[2], 100)
 
             red_pwm.start(0)
             green_pwm.start(0)
@@ -100,7 +100,7 @@ class LedPwm(threading.Thread):
     def run(self):
         subscription_resources = {}
         led_list = self.SetupLEDs(self.leds)
-        while True:
+        while not self.exit_event.is_set():
             json_message = self.data_queue.get()
             print(f"Consumed: {json_message}")
             if json_message["m2m:sgn"]["sur"] not in subscription_resources:
@@ -113,5 +113,3 @@ class LedPwm(threading.Thread):
                 print(subscription_resources[json_message["m2m:sgn"]["sur"]])
                 led_list = self.UpdateLEDs(led_list, json_message, subscription_resources[json_message["m2m:sgn"]["sur"]])
             self.data_queue.task_done()
-
-        GPIO.cleanup()

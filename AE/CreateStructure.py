@@ -141,25 +141,25 @@ class AE_Creation:
             return_value = "request failed"
         return return_value
 
-    def __init__(self, cse:str, ae:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, notificationURL:str):
+    def __init__(self, cse:str, cse_rn:str, ae:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, notificationURL:str):
         #Application Entity
-        self.CheckResponse(self.CreateResource(cse, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["ApplicationEntity"]), self.ApplicationEntityPrimitiveContent(ae, app_id, True, ["3"])))
+        self.CheckResponse(self.CreateResource(cse + "/" + cse_rn, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["ApplicationEntity"]), self.ApplicationEntityPrimitiveContent(ae, app_id, True, ["3"])))
 
         for box_counter in range(1, box_count+1):
             #Container
-            self.CheckResponse(self.CreateResource(cse + "/" + ae, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Container"]), self.ContainerPrimitiveContent("Box-" + str(box_counter))))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Container"]), self.ContainerPrimitiveContent("Box-" + str(box_counter))))
             #Device Model DeviceScale
-            self.CheckResponse(self.CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) , self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerDeviceScalePrimitiveContent("DeviceScale")))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) , self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerDeviceScalePrimitiveContent("DeviceScale")))
             #FlexContainer Weight
-            self.CheckResponse(self.CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) + "/DeviceScale", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerWeightPrimitiveContent("weight")))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceScale", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerWeightPrimitiveContent("weight")))
             #Device Model DeviceLight
-            self.CheckResponse(self.CreateResource(cse + "/" + ae + "/Box-" + str(box_counter) , self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerDeviceLightPrimitiveContent("DeviceLight")))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) , self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerDeviceLightPrimitiveContent("DeviceLight")))
             #FlexContainer binarySwitch
-            self.CheckResponse(self.CreateResource(cse + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerBinarySwitchPrimitiveContent("binarySwitch")))
             #FlexContainer colour
-            self.CheckResponse(self.CreateResource(cse + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerColorPrimitiveContent("colour")))
+            self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerColorPrimitiveContent("colour")))
 
             #Subscribe LED Status
-            self.CheckResponse(self.SubscribeResource(cse + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/binarySwitch", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightBinarySwitch", [notificationURL], 2, [1])))
+            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/binarySwitch", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightBinarySwitch", [notificationURL], 2, [1])))
             #Subscribe LED Color
-            self.CheckResponse(self.SubscribeResource(cse + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/colour", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightColour", [notificationURL], 2, [1])))
+            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/colour", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightColour", [notificationURL], 2, [1])))
