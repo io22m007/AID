@@ -21,10 +21,10 @@ if __name__ == "__main__":
         config = configparser.ConfigParser()
         config.read('ae.ini')
 
-        notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServer', 'port')), config.get('NotificationServer', 'certfile'), config.get('NotificationServer', 'keyfile'))
+        notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
         notificationServer_thread.start()
 
-        AE_Creation(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('AE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('NotificationServer', 'ip_host') + ":" + config.get('NotificationServer', 'port'))
+        AE_Creation(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('AE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('NotificationServerRegal', 'ip_host') + ":" + config.get('NotificationServerRegal', 'port'), config.get('NotificationServerNodeRed', 'ip_host') + ":" + config.get('NotificationServerNodeRed', 'port'))
 
         ledPWM_thread = LedPwm(exit_event, data_queue, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('LED', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('LED', 'devices')), GPIO)
         scale_thread = Scale(exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('Scale', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('Scale', 'devices')))

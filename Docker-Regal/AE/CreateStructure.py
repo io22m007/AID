@@ -141,7 +141,7 @@ class AE_Creation:
             return_value = "request failed"
         return return_value
 
-    def __init__(self, cse:str, cse_rn:str, ae:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, notificationURL:str):
+    def __init__(self, cse:str, cse_rn:str, ae:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, notificationURLRegal:str, notificationURLNodeRed:str):
         #Application Entity
         self.CheckResponse(self.CreateResource(cse + "/" + cse_rn, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["ApplicationEntity"]), self.ApplicationEntityPrimitiveContent(ae, app_id, True, ["3"])))
 
@@ -160,6 +160,8 @@ class AE_Creation:
             self.CheckResponse(self.CreateResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter)  + "/DeviceLight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["FlexContainer"]), self.FlexContainerColorPrimitiveContent("colour")))
 
             #Subscribe LED Status
-            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/binarySwitch", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightBinarySwitch", [notificationURL], 2, [1])))
+            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/binarySwitch", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightBinarySwitch", [notificationURLRegal], 2, [1])))
             #Subscribe LED Color
-            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/colour", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightColour", [notificationURL], 2, [1])))
+            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceLight/colour", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceLightColour", [notificationURLRegal], 2, [1])))
+            #Subscribe Weight
+            self.CheckResponse(self.SubscribeResource(cse + "/" + cse_rn + "/" + ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["Subscription"]), self.SubscriptionPrimitiveContent("Box" + str(box_counter) + "SubscriptionDeviceScaleWeight", [notificationURLNodeRed], 2, [1])))
