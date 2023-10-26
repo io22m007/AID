@@ -2,6 +2,7 @@ import threading
 import configparser
 import queue
 import json
+import time
 import RPi.GPIO as GPIO
 from CreateStructure import AE_Creation
 from NotificationServerSmall import NotificationServer
@@ -9,6 +10,8 @@ from LedPwm import LedPwm
 from Scale import Scale
 
 if __name__ == "__main__":
+    print("wait 60 seconds")
+    time.sleep(60)
     try:
         data_queue = queue.Queue()
         GPIO.setmode(GPIO.BCM)

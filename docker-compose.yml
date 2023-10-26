@@ -23,6 +23,9 @@ services:
     # set the time zone
     environment:
       - TZ=Europe/Vienna
+    #
+    ports:
+      - "9999:9999"
     depends_on:
       - asn
     devices:
