@@ -24,6 +24,23 @@ sudo apt install git
 ```
 git clone https://<your_token>@github.com/io22m007/AID
 ```
+### git commands
+get latest version update from GitHub:
+```
+git pull
+```
+add a file to git:
+```
+git add <filepath>
+```
+prepare for upload (an editor will open, add commit message at the bottom of the file):
+```
+git commit -a
+```
+upload to GitHub
+```
+git push
+```
 ### to run acme on bare metal
 This command in the acme folder:
 ```
