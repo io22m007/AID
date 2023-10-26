@@ -14,12 +14,16 @@ class Scale(threading.Thread):
         self.box_count = box_count
         self.user = user
         self.releaseVersionIndicator = releaseVersionIndicator
-        self.scales = scales   
+        self.scales = scales
 
-    def UpdateResource(url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
+    def UpdateResource(self, url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
+        print(url)
+        print(url)
+        print(url)
+        print(url)
         return requests.put(url, headers=headers, json=primitiveContent)
 
-    def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
+    def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {
             'X-M2M-Origin': originator,
             'X-M2M-RI': requestIdentifier,
@@ -29,7 +33,7 @@ class Scale(threading.Thread):
         }
         return headers
 
-    def RegalBoxDeviceScaleWeightUpdatePrimitiveContent(weight:float) -> dict:
+    def RegalBoxDeviceScaleWeightUpdatePrimitiveContent(self, weight:float) -> dict:
         data = {
             "cod:weigt": {
                 "weigt": weight
@@ -70,8 +74,8 @@ class Scale(threading.Thread):
         scale_list = self.SetupScale(self.scales)
         while not self.exit_event.is_set():
             start = time.time()
-            for box_counter in range(0, self.box_count):
-                reading = scale_list[box_counter].get_weight_mean(50)
+            for box_counter in range(1, self.box_count + 1):
+                reading = scale_list[box_counter - 1].get_weight_mean(50)
                 if reading:
                     self.CheckResponse(self.UpdateResource(self.cse + "/" + self.cse_rn + "/" + self.ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), self.RegalBoxDeviceScaleWeightUpdatePrimitiveContent(reading/1000)))
             try:

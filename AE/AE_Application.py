@@ -23,15 +23,15 @@ if __name__ == "__main__":
 
         AE_Creation(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('AE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('NotificationServer', 'ip_host') + ":" + config.get('NotificationServer', 'port'))
 
-        ledPWM_thread = LedPwm(data_queue, exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('LED', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('LED', 'devices')), GPIO)
-        scale_thread = Scale(exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), config.get('AE', 'box_count'), config.get('Scale', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('Scale', 'devices')))
-        
+        ledPWM_thread = LedPwm(exit_event, data_queue, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('LED', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('LED', 'devices')), GPIO)
+        scale_thread = Scale(exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('Scale', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('Scale', 'devices')))
+
         ledPWM_thread.start()
         scale_thread.start()
 
     except KeyboardInterrupt:
         exit_event.set()
-        
+
         GPIO.cleanup()
 
         ledPWM_thread.join()
