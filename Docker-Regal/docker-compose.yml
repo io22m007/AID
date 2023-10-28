@@ -13,8 +13,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./cse-asn/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-master/acme.ini
-      - ./cse-asn/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-master/init/mio_flex.fcp
+      - ./cse-asn/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/acme.ini
+      - ./cse-asn/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/init/mio_flex.fcp
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
   ae:
     build: AE
