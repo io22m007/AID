@@ -2,16 +2,14 @@ import threading
 import configparser
 import queue
 import json
-import time
 import RPi.GPIO as GPIO
+from OnlineCheck import CheckOnline
 from CreateStructure import AE_Creation
 from NotificationServerSmall import NotificationServer
 from LedPwm import LedPwm
 from Scale import Scale
 
 if __name__ == "__main__":
-    print("wait 60 seconds")
-    time.sleep(60)
     try:
         data_queue = queue.Queue()
         GPIO.setmode(GPIO.BCM)
@@ -20,6 +18,8 @@ if __name__ == "__main__":
 
         config = configparser.ConfigParser()
         config.read('ae.ini')
+
+        CheckOnline(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_id'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('General', 'releaseVersionIndicator'))
 
         notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
         notificationServer_thread.start()
