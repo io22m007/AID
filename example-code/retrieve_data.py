@@ -27,7 +27,7 @@ def CheckResponse(response:requests.models.Response):
 
 cse = "http://acme-in:8080"
 cse_remote = "/~/id-asn/cse-asn" #ri of remote cse + rn of remote cse
-ressource = "/Regal-AE/Box-1/DeviceLight/colour"
+ressource = "/Regal-1-AE/Box-1/DeviceLight/colour"
 user = "CAIDAdmin"
 
 CheckResponse(GetResource(cse + cse_remote + ressource, HeaderFields(user, "0501", "3")))

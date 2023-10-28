@@ -29,6 +29,11 @@ get latest version update from GitHub:
 ```
 git pull
 ```
+configure git account for upload:
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 add a file to git:
 ```
 git add <filepath>
@@ -41,29 +46,28 @@ upload to GitHub
 ```
 git push
 ```
-### to run acme on bare metal
-This command in the acme folder:
-```
-sudo apt install pyhton3-pip  pyhton3-venv
-```
-```
-python3 -m venv .
-```
-Then install requirements:
-```
-./bin/pip3 install -r requirements.txt
-```
-
 ### docker
+install docker:
 ```
 sudo apt install docker.io docker-compose
 ```
+add current user to docker group:
 ```
 sudo usermod -aG docker $USER
 ```
+enable docker at startup:
 ```
 sudo systemctl enable --now docker
 ```
+restart system:
 ```
 sudo shutdown -r now
+```
+start docker container:
+```
+docker-compose up --build
+```
+start docker container in the background:
+```
+docker-compose up --build -d
 ```
