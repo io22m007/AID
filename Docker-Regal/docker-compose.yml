@@ -36,6 +36,7 @@ services:
     volumes:
       - ./AE/AE_Application.py:/AE_Application.py
       - ./AE/ae.ini:/ae.ini
+      - ./AE/OnlineCheck.py:/OnlineCheck.py
       - ./AE/CreateStructure.py:/CreateStructure.py
       - ./AE/LedPwm.py:/LedPwm.py
       - ./AE/NotificationServerSmall.py:/NotificationServerSmall.py
