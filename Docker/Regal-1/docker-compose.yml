@@ -34,11 +34,11 @@ services:
     cap_add:
       - SYS_RAWIO
     volumes:
-      - ./AE/AE_Application.py:/AE_Application.py
-      - ./AE/ae.ini:/ae.ini
-      - ./AE/OnlineCheck.py:/OnlineCheck.py
-      - ./AE/CreateStructure.py:/CreateStructure.py
-      - ./AE/LedPwm.py:/LedPwm.py
-      - ./AE/NotificationServerSmall.py:/NotificationServerSmall.py
-      - ./AE/Scale.py:/Scale.py
+      - ./ae/AE_Application.py:/AE_Application.py
+      - ./ae/ae.ini:/ae.ini
+      - ./ae/OnlineCheck.py:/OnlineCheck.py
+      - ./ae/CreateStructure.py:/CreateStructure.py
+      - ./ae/LedPwm.py:/LedPwm.py
+      - ./ae/NotificationServerSmall.py:/NotificationServerSmall.py
+      - ./ae/Scale.py:/Scale.py
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
