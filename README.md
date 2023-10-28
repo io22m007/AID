@@ -1,4 +1,4 @@
-# Raspberry Pi Setup
+# Advanced IoT Systems Development
 ## Raspberry Pi OS Config:
 - hostname: `acme-in` (everyone needs this one), `acme-regal-1` (already one) or `acme-regal-2` (none so far)
 - enable ssh with password
