@@ -1,7 +1,7 @@
 version: '3'
 services:
   # 
-  asn:
+  in:
     # 
     build: cse-in
     # restart the container if a crash occurs but stop when stopped by user
