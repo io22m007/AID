@@ -3,7 +3,7 @@ import time
 
 class CheckOnline:
     def GetResource(self, url:str, headers:dict) -> requests.models.Response:
-        return requests.get(url, headers=headers)
+        return requests.get(url, headers=headers, verify=False)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {
@@ -22,5 +22,7 @@ class CheckOnline:
             try:
                 self.GetResource(cse + "/" + cse_id, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator))
                 connected = True
-            except requests.exceptions.ConnectionError:
+                print("acme online")
+            except requests.exceptions.ConnectionError as e:
                 print("acme not online, retrying")
+                print(str(e))

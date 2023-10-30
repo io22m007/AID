@@ -17,7 +17,7 @@ class Scale(threading.Thread):
         self.scales = scales
 
     def UpdateResource(self, url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
-        return requests.put(url, headers=headers, json=primitiveContent)
+        return requests.put(url, headers=headers, json=primitiveContent, verify=False)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {

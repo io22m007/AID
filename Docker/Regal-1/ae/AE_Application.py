@@ -7,10 +7,11 @@ from OnlineCheck import CheckOnline
 from CreateStructure import AE_Creation
 from NotificationServerSmall import NotificationServer
 from LedPwm import LedPwm
-from Scale import Scale
+#from Scale import Scale
 
 if __name__ == "__main__":
     try:
+        print("hello")
         data_queue = queue.Queue()
         GPIO.setmode(GPIO.BCM)
 
@@ -19,18 +20,21 @@ if __name__ == "__main__":
         config = configparser.ConfigParser()
         config.read('ae.ini')
 
+        print("online check")
         CheckOnline(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_id'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('General', 'releaseVersionIndicator'))
 
+        print("notification server")
         notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
         notificationServer_thread.start()
 
+        print("ae creation")
         AE_Creation(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('AE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('NotificationServerRegal', 'ip_host') + ":" + config.get('NotificationServerRegal', 'port'), config.get('NotificationServerNodeRed', 'ip_host') + ":" + config.get('NotificationServerNodeRed', 'port'))
 
         ledPWM_thread = LedPwm(exit_event, data_queue, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('LED', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('LED', 'devices')), GPIO)
-        scale_thread = Scale(exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('Scale', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('Scale', 'devices')))
+        #scale_thread = Scale(exit_event, config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'ae'), config.get('AE', 'app_id'), int(config.get('AE', 'box_count')), config.get('Scale', 'user'), config.get('General', 'releaseVersionIndicator'), json.loads(config.get('Scale', 'devices')))
 
         ledPWM_thread.start()
-        scale_thread.start()
+        #scale_thread.start()
 
     except KeyboardInterrupt:
         exit_event.set()

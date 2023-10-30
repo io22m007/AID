@@ -61,9 +61,9 @@ class NotificationServer(threading.Thread):
 		httpd = HTTPServer(('', self.port), lambda *args, **kwargs: SimpleHTTPRequestHandler(data_queue=self.data_queue, *args, **kwargs))
 
 		# init ssl socket
-		#context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)					# Create a SSL Context
-		#context.load_cert_chain(self.certfile, self.keyfile)				# Load the certificate and private key
-		#httpd.socket = context.wrap_socket(httpd.socket, server_side=True)	# wrap the original http server socket as an SSL/TLS socket
+		context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)					# Create a SSL Context
+		context.load_cert_chain(self.certfile, self.keyfile)				# Load the certificate and private key
+		httpd.socket = context.wrap_socket(httpd.socket, server_side=True)	# wrap the original http server socket as an SSL/TLS socket
 
 		print('Notification server started.')
 		try:

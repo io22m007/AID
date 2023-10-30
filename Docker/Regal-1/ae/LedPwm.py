@@ -18,7 +18,7 @@ class LedPwm(threading.Thread):
         self.GPIO = GPIO
 
     def GetResource(self, url:str, headers:dict) -> requests.models.Response:
-        return requests.get(url, headers=headers)
+        return requests.get(url, headers=headers, verify=False)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {

@@ -11,10 +11,10 @@ class AE_Creation:
     }
 
     def CreateResource(self, url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
-        return requests.post(url, headers=headers, json=primitiveContent)
+        return requests.post(url, headers=headers, json=primitiveContent, verify=False)
 
     def SubscribeResource(self, url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
-        return requests.post(url, headers=headers, json=primitiveContent)
+        return requests.post(url, headers=headers, json=primitiveContent, verify=False)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str) -> dict:
         headers = {
