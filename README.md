@@ -71,3 +71,24 @@ start docker container in the background:
 ```
 docker-compose up --build -d
 ```
+### certificates
+root certificate authority key (passphrase will be `acme`):
+```
+openssl genrsa -des3 -out ca.key 2048
+```
+root certificate authority (with Country Name `AT`, State `Vienna` and Organization Name `MIO-3`):
+```
+openssl req -new -x509 -days 3650 -key ca.key -out ca.crt
+```
+create a key:
+```
+openssl genrsa -out server.key 2048
+```
+create a certificate request:
+```
+openssl req -new -out server.csr -key server.key -addext "subjectAltName = DNS:hostname.local" -subj "/C=AT/ST=Vienna/L=/O=MIO-3/OU=/CN=hostname.local"
+```
+from the certificate request create a certificate signed by the root certificate authority:
+```
+openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 3650
+```

@@ -1,7 +1,7 @@
 import requests
 
 def UpdateResource(url:str, headers:dict, primitiveContent:dict) -> requests.models.Response:
-    return requests.put(url, headers=headers, json=primitiveContent)
+    return requests.put(url, headers=headers, json=primitiveContent, verify=False)
 
 def HeaderFields(originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
     headers = {
@@ -51,11 +51,11 @@ def CheckResponse(response:requests.models.Response):
         print(response.text)
         print()
 
-cse = "http://acme-regal-1:8080/cse-asn"  # URL includes AE and resource names
+cse = "https://acme-regal-1.local:8080/cse-asn"  # URL includes AE and resource names
 ae = "/Regal-1-AE"
 box = "/Box-1"
 user = "CAIDAdmin"
 
 CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/binarySwitch", HeaderFields(user, "0101", "4"), RegalBoxDeviceLightBinarySwitchUpdatePrimitiveContent(True)))
 CheckResponse(UpdateResource(cse + ae + box + "/DeviceLight/colour", HeaderFields(user, "0102", "4"), RegalBoxDeviceLightColourUpdatePrimitiveContent(11,22,33)))
-CheckResponse(UpdateResource(cse + ae + box + "/DeviceScale/weight", HeaderFields(user, "0103", "4"), RegalBoxDeviceScaleWeightUpdatePrimitiveContent(0.125)))
+#CheckResponse(UpdateResource(cse + ae + box + "/DeviceScale/weight", HeaderFields(user, "0103", "4"), RegalBoxDeviceScaleWeightUpdatePrimitiveContent(0.125)))
