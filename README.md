@@ -5,6 +5,8 @@
 - username `acme`
 - password `acme`
 - setup your Wifi (don't forget the WiFi country)
+- SSID: acme
+- passwort `emcaacmecmca`
 - setting the keyboard language to de is usefull if you would need to connect a keyboard via USB
 
 ## Install on Pi:
