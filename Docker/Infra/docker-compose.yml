@@ -18,3 +18,51 @@ services:
       - ./cse-in/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
       - ./cse-in/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+
+  nodered:
+    #
+    build: nodered
+    # restart the container if a crash occurs but stop when stopped by user
+    restart: unless-stopped
+    # set the time zone
+    environment:
+      - TZ=Europe/Vienna
+    #
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered/server.crt:/data/server.crt
+      - ./nodered/server.key:/data/server.key
+      - nodered-storage:/data
+
+#  mosquitto:
+#    image: eclipse-mosquitto
+#    restart: unless-stopped
+#    environment:
+#      - TZ=Europe/Vienna
+#    ports:
+#      - "8883:8883"
+#    volumes:
+#      - mosquitto-data-storage:/mosquitto/data
+#      - mosquitto-log-storage:/mosquitto/log
+#      - ./mosquitto/broker/mosquitto.conf:/mosquitto/config/mosquitto.conf
+#      - ./mosquitto/broker/certs/ca.crt:/mosquitto/config/ca.crt
+#      - ./mosquitto/broker/certs/server.key:/mosquitto/config/server.key
+#      - ./mosquitto/broker/certs/server.crt:/mosquitto/config/server.crt
+#      - ./mosquitto/broker/passwd:/mosquitto/config/passwd
+#  client:
+#    build: ./mosquitto/client
+#    depends_on:
+#      - mosquitto
+#    volumes:
+#      - ./mosquitto/client/certs:/client_certs
+##      - .mosquitto/client/test.py:/test.py
+#      - /run/dbus:/run/dbus
+#      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+
+volumes:
+  nodered-storage:
+#  mosquitto-data-storage:
+#  mosquitto-log-storage:
+
+
