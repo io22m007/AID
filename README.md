@@ -26,10 +26,18 @@ sudo apt install git
 ```
 git clone https://<your_token>@github.com/io22m007/AID
 ```
+### tell git that the directory is a save directory
+```
+git config --global --add safe.directory /home/acme/AID
+```
 ### git commands
 get latest version update from GitHub:
 ```
 git pull
+```
+### Resolve `pulling without specifying how to reconcile divergent branches is discouraged` issue:
+```
+git config pull.rebase false
 ```
 configure git account for upload:
 ```
