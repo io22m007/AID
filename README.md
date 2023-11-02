@@ -5,8 +5,8 @@
 - username `acme`
 - password `acme`
 - setup your Wifi (don't forget the WiFi country)
-- SSID: `acme`
-- passwort `emcaacmecmca`
+- SSID: `150PowerToGo`
+- passwort `htmt4954`
 - setting the keyboard language to de is usefull if you would need to connect a keyboard via USB
 
 ## Install on Pi:
