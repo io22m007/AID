@@ -102,7 +102,7 @@ class LedPwm(threading.Thread):
         led_list = self.SetupLEDs(self.leds)
         while not self.exit_event.is_set():
             json_message = self.data_queue.get()
-            print(f"Consumed: {json_message}")
+            print(f"Recieved: {json_message}")
             if json_message["m2m:sgn"]["sur"] not in subscription_resources:
                 subscription_resource_split = str(json_message["m2m:sgn"]["sur"]).split('/')
                 subscription_resource_name = self.GetSubscriptionResourceName(self.CheckResponse(self.GetResource(self.cse + "/" + subscription_resource_split[-1], self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator))))
