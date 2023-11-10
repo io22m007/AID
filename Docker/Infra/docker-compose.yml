@@ -18,3 +18,19 @@ services:
       - ./cse-in/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
       - ./cse-in/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+
+  nodered:
+    #
+    build: nodered
+    # restart the container if a crash occurs but stop when stopped by user
+    restart: unless-stopped
+    # set the time zone
+    environment:
+      - TZ=Europe/Vienna
+    #
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered/server.crt:/data/server.crt
+      - ./nodered/server.key:/data/server.key
+      - ./nodered/data:/data
