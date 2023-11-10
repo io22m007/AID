@@ -106,7 +106,7 @@ class LedPwm(threading.Thread):
             print(f"Recieved: {json_message}")
             if json_message["m2m:sgn"]["sur"] not in subscription_resources:
                 subscription_resource_split = str(json_message["m2m:sgn"]["sur"]).split('/')
-                subscription_resource_name = self.GetSubscriptionResourceName(self.CheckResponse(self.GetResource(self.cse + "/" + subscription_resource_split[-1], self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), certificateAuthority)))
+                subscription_resource_name = self.GetSubscriptionResourceName(self.CheckResponse(self.GetResource(self.cse + "/" + subscription_resource_split[-1], self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), self.certificateAuthority)))
                 if subscription_resource_name != "request failed":
                     subscription_resources[json_message["m2m:sgn"]["sur"]] = subscription_resource_name
 
