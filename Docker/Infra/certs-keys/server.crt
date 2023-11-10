@@ -1,0 +1,81 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            6a:c4:85:22:22:67:f7:13:ed:7d:ca:e9:1a:0c:ff:31:09:4d:f1:34
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=AT, ST=Vienna, O=MIO-3, CN=CA
+        Validity
+            Not Before: Nov 10 02:43:36 2023 GMT
+            Not After : Nov  9 02:43:36 2024 GMT
+        Subject: C=AT, ST=Vienna, O=MIO-3, CN=acme-in.local
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b0:0d:a2:e6:d8:9c:c8:ce:cf:8e:f8:81:ca:13:
+                    5c:12:b0:6f:20:16:00:8a:3d:02:0a:40:d2:e6:92:
+                    0b:2d:f7:a6:14:59:a3:ff:33:1e:dd:1c:09:39:77:
+                    bf:cb:1c:7f:2f:85:4d:75:96:df:51:5e:e1:ba:ea:
+                    df:94:20:dd:fe:83:bd:8a:2f:4e:e1:cf:16:02:42:
+                    0c:80:53:5c:c9:17:b5:b8:94:e8:c3:ab:0b:f6:d9:
+                    46:36:09:1b:ea:1c:71:36:e1:82:3a:18:99:a2:d9:
+                    f6:b2:07:88:22:30:d2:51:06:92:58:c3:62:ab:b9:
+                    12:63:d1:9f:40:ab:74:ae:3c:57:50:45:d0:94:b6:
+                    4c:63:b4:72:2a:db:0f:d4:c8:37:a0:a4:ad:1f:95:
+                    38:98:eb:15:f9:59:76:d3:45:5c:64:db:f1:62:90:
+                    f9:75:07:79:1a:13:e5:e3:49:9a:ee:c3:06:4c:f8:
+                    48:9a:4e:6a:b2:93:bf:f7:00:3d:b9:3d:aa:d6:51:
+                    c1:7d:64:fb:ff:55:0b:ab:79:55:02:a4:d0:18:ac:
+                    a2:6e:cd:f7:e4:74:b1:4c:60:46:d8:50:fa:d7:80:
+                    3a:73:1b:5d:63:72:48:9e:3e:50:32:24:88:67:26:
+                    07:f7:92:5b:30:bc:6b:6f:c0:9c:96:17:2b:55:e2:
+                    3e:cd
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Alternative Name: 
+                DNS:acme-in.local
+            X509v3 Subject Key Identifier: 
+                22:79:4B:B9:8F:8B:A3:C9:69:2E:B9:C0:B4:3F:AE:14:6F:26:1E:DF
+            X509v3 Authority Key Identifier: 
+                19:DC:99:45:38:70:D6:7B:9D:7E:F1:97:B3:5E:E8:FC:3B:10:CA:20
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        59:67:d2:59:c8:fe:14:b0:53:f5:c7:52:5e:44:39:fd:8a:a7:
+        5e:55:67:e8:28:cd:43:88:c9:75:66:b6:09:1f:e9:1c:30:d1:
+        81:69:14:d1:0e:2f:61:75:6d:d9:89:24:c8:22:b1:0b:12:9c:
+        cc:fe:49:22:9e:4a:89:c0:0e:b6:c4:d3:b5:3c:e5:05:29:06:
+        ad:3d:22:82:4d:fb:12:24:be:1b:06:24:b5:cd:9c:48:49:b8:
+        57:d4:71:f7:c4:01:56:b1:bd:e1:8c:97:cd:1f:e6:f2:7c:c0:
+        f5:f1:50:80:a2:fa:15:f3:ef:76:88:60:17:a8:ba:75:05:c4:
+        05:2d:bd:66:f4:6d:44:e4:ed:61:8f:67:fd:fb:d5:19:a5:52:
+        fd:ab:02:e4:5c:11:fc:e3:3f:f6:6e:c9:85:82:82:6c:50:d6:
+        23:9a:16:66:7f:5a:44:24:57:72:bd:c6:5b:9a:a6:06:a1:6c:
+        4a:24:ae:8d:5f:a9:3d:b6:78:89:92:17:81:0e:39:f7:e6:bd:
+        61:5e:82:60:bc:50:ad:6e:ee:03:74:29:c5:a1:b1:ad:35:a6:
+        61:6d:a0:8c:9c:67:27:d9:ac:8e:51:b3:7b:ca:99:58:90:46:
+        b8:df:e8:b6:36:7b:ac:5b:0e:8c:06:56:8e:6e:28:9a:ff:8c:
+        ae:64:59:ed
+-----BEGIN CERTIFICATE-----
+MIIDdjCCAl6gAwIBAgIUasSFIiJn9xPtfcrpGgz/MQlN8TQwDQYJKoZIhvcNAQEL
+BQAwOzELMAkGA1UEBhMCQVQxDzANBgNVBAgMBlZpZW5uYTEOMAwGA1UECgwFTUlP
+LTMxCzAJBgNVBAMMAkNBMB4XDTIzMTExMDAyNDMzNloXDTI0MTEwOTAyNDMzNlow
+RjELMAkGA1UEBhMCQVQxDzANBgNVBAgMBlZpZW5uYTEOMAwGA1UECgwFTUlPLTMx
+FjAUBgNVBAMMDWFjbWUtaW4ubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCwDaLm2JzIzs+O+IHKE1wSsG8gFgCKPQIKQNLmkgst96YUWaP/Mx7d
+HAk5d7/LHH8vhU11lt9RXuG66t+UIN3+g72KL07hzxYCQgyAU1zJF7W4lOjDqwv2
+2UY2CRvqHHE24YI6GJmi2fayB4giMNJRBpJYw2KruRJj0Z9Aq3SuPFdQRdCUtkxj
+tHIq2w/UyDegpK0flTiY6xX5WXbTRVxk2/FikPl1B3kaE+XjSZruwwZM+EiaTmqy
+k7/3AD25ParWUcF9ZPv/VQureVUCpNAYrKJuzffkdLFMYEbYUPrXgDpzG11jckie
+PlAyJIhnJgf3klswvGtvwJyWFytV4j7NAgMBAAGjZzBlMAkGA1UdEwQCMAAwGAYD
+VR0RBBEwD4INYWNtZS1pbi5sb2NhbDAdBgNVHQ4EFgQUInlLuY+Lo8lpLrnAtD+u
+FG8mHt8wHwYDVR0jBBgwFoAUGdyZRThw1nudfvGXs17o/DsQyiAwDQYJKoZIhvcN
+AQELBQADggEBAFln0lnI/hSwU/XHUl5EOf2Kp15VZ+gozUOIyXVmtgkf6Rww0YFp
+FNEOL2F1bdmJJMgisQsSnMz+SSKeSonADrbE07U85QUpBq09IoJN+xIkvhsGJLXN
+nEhJuFfUcffEAVaxveGMl80f5vJ8wPXxUICi+hXz73aIYBeounUFxAUtvWb0bUTk
+7WGPZ/371RmlUv2rAuRcEfzjP/ZuyYWCgmxQ1iOaFmZ/WkQkV3K9xluapgahbEok
+ro1fqT22eImSF4EOOffmvWFegmC8UK1u7gN0KcWhsa01pmFtoIycZyfZrI5Rs3vK
+mViQRrjf6LY2e6xbDowGVo5uKJr/jK5kWe0=
+-----END CERTIFICATE-----

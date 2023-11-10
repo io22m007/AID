@@ -15,8 +15,8 @@ services:
     volumes:
       - ./cse-in/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/acme.ini
       - ./cse-in/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/init/mio_flex.fcp
-      - ./cse-in/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
-      - ./cse-in/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
+      - ./certs-keys/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
+      - ./certs-keys/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
 
   nodered:
@@ -31,6 +31,6 @@ services:
     ports:
       - "1880:1880"
     volumes:
-      - ./nodered/server.crt:/data/server.crt
-      - ./nodered/server.key:/data/server.key
+      - ./certs-keys/server.crt:/data/server.crt
+      - ./certs-keys/server.key:/data/server.key
       - ./nodered/data:/data
