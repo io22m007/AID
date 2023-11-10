@@ -6,7 +6,7 @@ import json
 import RPi.GPIO
 
 class LedPwm(threading.Thread):
-    def __init__(self, exit_event:threading.Event, data_queue:queue.Queue, cse:str, app_id:str, user:str, releaseVersionIndicator:str, leds:list, GPIO:RPi.GPIO):
+    def __init__(self, exit_event:threading.Event, data_queue:queue.Queue, cse:str, app_id:str, user:str, releaseVersionIndicator:str, leds:list, GPIO:RPi.GPIO, certificateAuthority:str):
         super().__init__()
         self.exit_event = exit_event
         self.data_queue = data_queue
@@ -16,9 +16,10 @@ class LedPwm(threading.Thread):
         self.releaseVersionIndicator = releaseVersionIndicator
         self.leds = leds
         self.GPIO = GPIO
+        self.certificateAuthority = certificateAuthority
 
-    def GetResource(self, url:str, headers:dict) -> requests.models.Response:
-        return requests.get(url, headers=headers, verify=False)
+    def GetResource(self, url:str, headers:dict, certificateAuthority:str) -> requests.models.Response:
+        return requests.get(url, headers=headers, verify=certificateAuthority)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {
@@ -105,7 +106,7 @@ class LedPwm(threading.Thread):
             print(f"Consumed: {json_message}")
             if json_message["m2m:sgn"]["sur"] not in subscription_resources:
                 subscription_resource_split = str(json_message["m2m:sgn"]["sur"]).split('/')
-                subscription_resource_name = self.GetSubscriptionResourceName(self.CheckResponse(self.GetResource(self.cse + "/" + subscription_resource_split[-1], self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator))))
+                subscription_resource_name = self.GetSubscriptionResourceName(self.CheckResponse(self.GetResource(self.cse + "/" + subscription_resource_split[-1], self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), certificateAuthority)))
                 if subscription_resource_name != "request failed":
                     subscription_resources[json_message["m2m:sgn"]["sur"]] = subscription_resource_name
 

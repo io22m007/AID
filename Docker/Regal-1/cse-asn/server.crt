@@ -1,19 +1,81 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            3c:09:81:c6:e1:ff:63:e0:07:81:3d:d0:f3:a0:b5:39:88:17:e8:1a
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=AT, ST=Vienna, O=MIO-3
+        Validity
+            Not Before: Nov  9 18:55:41 2023 GMT
+            Not After : Nov  8 18:55:41 2024 GMT
+        Subject: C=AT, ST=Vienna, O=MIO-3, CN=acme-regal-1.local
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c6:95:9e:4e:6b:d6:0c:62:2a:8f:c7:3c:dc:ae:
+                    39:2b:08:c4:c1:6e:4b:db:08:0a:d0:12:12:57:6c:
+                    20:4d:19:b8:1b:0c:c7:65:d7:c7:14:7a:b5:b6:37:
+                    25:f3:36:17:a3:8b:05:93:bc:77:b9:70:8e:bc:14:
+                    84:a3:f9:9d:6d:d4:05:75:53:ac:69:5b:5f:77:13:
+                    23:80:30:3b:39:93:1e:26:c2:01:7b:02:dc:f0:cb:
+                    02:c7:63:8c:5b:92:cc:00:46:b3:20:f6:1a:26:ac:
+                    5d:30:c5:c4:b2:56:a1:fb:ac:06:c9:eb:62:b6:44:
+                    5d:46:37:02:d1:c7:28:21:6e:8d:de:2c:eb:6d:c7:
+                    d0:7e:8d:c1:ae:e6:11:c7:12:0f:3d:d8:cc:fb:46:
+                    73:d5:8d:81:1e:17:41:4d:fb:c1:55:79:e8:88:b9:
+                    86:9e:64:e4:f7:d5:ec:15:7b:e5:fd:db:83:e8:5b:
+                    38:9e:96:95:c8:30:ca:d3:14:fe:00:9b:c6:c1:df:
+                    d5:3f:54:93:f4:9c:3d:95:d9:22:4e:0d:93:2c:fc:
+                    9c:47:bd:6f:fb:a6:eb:41:1d:cf:13:8c:79:36:06:
+                    52:ab:0e:72:ea:98:ae:f2:61:52:d9:18:50:f0:72:
+                    75:dd:a6:44:81:e4:20:83:9a:b8:d4:c7:43:b8:9e:
+                    f9:47
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                8A:26:07:BC:91:E2:6D:5C:23:1B:4F:EA:31:E2:6B:68:22:67:CF:67
+            X509v3 Authority Key Identifier: 
+                E9:FD:D8:2F:42:BB:46:CF:66:C4:34:DA:48:96:9D:05:DA:51:C8:89
+            X509v3 Subject Alternative Name: 
+                DNS:acme-regal-1.local
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        5f:74:8d:6c:99:56:7e:b1:3f:40:f6:60:bb:6d:e1:43:8d:e0:
+        3e:10:6b:36:84:9e:b4:97:07:88:2b:43:7f:e7:0b:a0:97:fa:
+        db:bd:aa:a7:ca:9d:be:fe:d2:e8:6b:e7:c8:8f:f3:06:71:92:
+        09:e9:5c:34:f8:2e:1b:89:ae:88:e6:e8:ed:ba:5e:36:3f:0f:
+        f3:de:37:03:13:47:2c:fa:56:c6:9d:47:0b:9f:b6:60:9e:0d:
+        f8:29:93:da:1a:5d:9e:2f:f0:2c:5c:73:db:05:34:72:14:85:
+        44:00:91:d5:c4:f3:82:17:f3:e8:38:fa:cb:f1:d6:6d:49:93:
+        ad:85:7d:eb:cb:84:39:16:8a:a6:49:e2:86:a9:88:ee:48:f6:
+        87:13:fe:90:c3:49:6c:be:5f:f3:7f:c8:a4:93:61:ba:88:44:
+        f9:e0:2f:8b:fa:7b:54:6a:23:03:0f:04:ce:89:79:0f:2c:34:
+        c7:7b:0b:ff:93:a5:35:14:17:7b:6f:20:96:48:79:88:84:d9:
+        46:c5:fd:11:ae:db:c1:bc:d1:64:41:4d:c8:fd:93:f5:a5:3c:
+        1a:c9:2b:f3:ee:5a:19:e9:85:b9:67:83:d0:00:4e:fc:d5:0b:
+        4e:46:f5:ad:10:c7:f5:c4:9a:81:82:d4:ab:47:78:e9:5a:94:
+        2c:18:da:53
 -----BEGIN CERTIFICATE-----
-MIIDADCCAegCFDwJgcbh/2PgB4E90POgtTmIF+gXMA0GCSqGSIb3DQEBCwUAMC4x
-CzAJBgNVBAYTAkFUMQ8wDQYDVQQIDAZWaWVubmExDjAMBgNVBAoMBU1JTy0zMB4X
-DTIzMTAzMDAwMTg1OVoXDTMzMTAyNzAwMTg1OVowSzELMAkGA1UEBhMCQVQxDzAN
-BgNVBAgMBlZpZW5uYTEOMAwGA1UECgwFTUlPLTMxGzAZBgNVBAMMEmFjbWUtcmVn
-YWwtMS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMaVnk5r
-1gxiKo/HPNyuOSsIxMFuS9sICtASEldsIE0ZuBsMx2XXxxR6tbY3JfM2F6OLBZO8
-d7lwjrwUhKP5nW3UBXVTrGlbX3cTI4AwOzmTHibCAXsC3PDLAsdjjFuSzABGsyD2
-GiasXTDFxLJWofusBsnrYrZEXUY3AtHHKCFujd4s623H0H6Nwa7mEccSDz3YzPtG
-c9WNgR4XQU37wVV56Ii5hp5k5PfV7BV75f3bg+hbOJ6WlcgwytMU/gCbxsHf1T9U
-k/ScPZXZIk4Nkyz8nEe9b/um60EdzxOMeTYGUqsOcuqYrvJhUtkYUPBydd2mRIHk
-IIOauNTHQ7ie+UcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEASFlNdDdYSs+YCmtQ
-FzDI088jaCzdY7dUQd6mrH45oTCBED1UvkrAGg2fVA30Id/5onQicZsMPISgcUgA
-rMPfB47ZBE14z3JB8VPjUm8MilRH0ctzD6PUZQGqjhkHZGA6ADMVMJsWNn2lWU9K
-v0d5hsImCxYBb0pDv1LXxRrHdQtl3lEZ8db40XoCE2JH2/aEwYWAVGAsj0RCpiIt
-+u6N0ZdIdzPKmIXf6BbH6kE3lcNYFyF/3gjOxZEvyKiJE4obBUKK8d5WbBVRPtN5
-v1CxV+z3GlRTcDlO+NOC3rwSJCybbVH9mY8oNcj71xRdC0fiVXwfIBWXQqJJhKCC
-yg1EYg==
+MIIDczCCAlugAwIBAgIUPAmBxuH/Y+AHgT3Q86C1OYgX6BowDQYJKoZIhvcNAQEL
+BQAwLjELMAkGA1UEBhMCQVQxDzANBgNVBAgMBlZpZW5uYTEOMAwGA1UECgwFTUlP
+LTMwHhcNMjMxMTA5MTg1NTQxWhcNMjQxMTA4MTg1NTQxWjBLMQswCQYDVQQGEwJB
+VDEPMA0GA1UECAwGVmllbm5hMQ4wDAYDVQQKDAVNSU8tMzEbMBkGA1UEAwwSYWNt
+ZS1yZWdhbC0xLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+xpWeTmvWDGIqj8c83K45KwjEwW5L2wgK0BISV2wgTRm4GwzHZdfHFHq1tjcl8zYX
+o4sFk7x3uXCOvBSEo/mdbdQFdVOsaVtfdxMjgDA7OZMeJsIBewLc8MsCx2OMW5LM
+AEazIPYaJqxdMMXEslah+6wGyetitkRdRjcC0ccoIW6N3izrbcfQfo3BruYRxxIP
+PdjM+0Zz1Y2BHhdBTfvBVXnoiLmGnmTk99XsFXvl/duD6Fs4npaVyDDK0xT+AJvG
+wd/VP1ST9Jw9ldkiTg2TLPycR71v+6brQR3PE4x5NgZSqw5y6piu8mFS2RhQ8HJ1
+3aZEgeQgg5q41MdDuJ75RwIDAQABo2wwajAJBgNVHRMEAjAAMB0GA1UdDgQWBBSK
+Jge8keJtXCMbT+ox4mtoImfPZzAfBgNVHSMEGDAWgBTp/dgvQrtGz2bENNpIlp0F
+2lHIiTAdBgNVHREEFjAUghJhY21lLXJlZ2FsLTEubG9jYWwwDQYJKoZIhvcNAQEL
+BQADggEBAF90jWyZVn6xP0D2YLtt4UON4D4QazaEnrSXB4grQ3/nC6CX+tu9qqfK
+nb7+0uhr58iP8wZxkgnpXDT4LhuJrojm6O26XjY/D/PeNwMTRyz6VsadRwuftmCe
+Dfgpk9oaXZ4v8Cxcc9sFNHIUhUQAkdXE84IX8+g4+svx1m1Jk62FfevLhDkWiqZJ
+4oapiO5I9ocT/pDDSWy+X/N/yKSTYbqIRPngL4v6e1RqIwMPBM6JeQ8sNMd7C/+T
+pTUUF3tvIJZIeYiE2UbF/RGu28G80WRBTcj9k/WlPBrJK/PuWhnphblng9AATvzV
+C05G9a0Qx/XEmoGC1KtHeOlalCwY2lM=
 -----END CERTIFICATE-----

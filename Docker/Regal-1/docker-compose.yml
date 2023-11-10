@@ -15,8 +15,8 @@ services:
     volumes:
       - ./cse-asn/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/acme.ini
       - ./cse-asn/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/init/mio_flex.fcp
-      - ./cse-asn/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
-      - ./cse-asn/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
+      - ./certs-keys/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
+      - ./certs-keys/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
   ae:
     build: ae
@@ -41,6 +41,7 @@ services:
       - ./ae/LedPwm.py:/LedPwm.py
       - ./ae/NotificationServerSmall.py:/NotificationServerSmall.py
       - ./ae/Scale.py:/Scale.py
-      - ./ae/server.key:/server.key
-      - ./ae/server.crt:/server.crt
+      - ./certs-keys/server.key:/server.key
+      - ./certs-keys/server.crt:/server.crt
+      - ./certs-keys/demoCA/cacert.pem:/ca.crt
       - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket

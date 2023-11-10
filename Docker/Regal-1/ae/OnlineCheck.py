@@ -2,8 +2,8 @@ import requests
 import time
 
 class CheckOnline:
-    def GetResource(self, url:str, headers:dict) -> requests.models.Response:
-        return requests.get(url, headers=headers, verify=False)
+    def GetResource(self, url:str, headers:dict, certificateAuthority:str) -> requests.models.Response:
+        return requests.get(url, headers=headers, verify=certificateAuthority)
 
     def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
         headers = {
@@ -15,12 +15,13 @@ class CheckOnline:
         }
         return headers
 
-    def __init__(self, cse:str, cse_id:str, app_id:str, user:str, releaseVersionIndicator:str):
+    def __init__(self, cse:str, cse_id:str, app_id:str, user:str, releaseVersionIndicator:str, certificateAuthority:str):
         connected = False
 
         while not connected:
+            time.sleep(10)
             try:
-                self.GetResource(cse + "/" + cse_id, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator))
+                self.GetResource(cse + "/" + cse_id, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator), certificateAuthority)
                 connected = True
                 print("acme online")
             except requests.exceptions.ConnectionError as e:
