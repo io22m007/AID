@@ -48,9 +48,13 @@ add a file to git:
 ```
 git add <filepath>
 ```
-prepare for upload (an editor will open, add commit message at the bottom of the file):
+view status of git:
 ```
-git commit -a
+git status
+```
+prepare for upload (replace the word message with a commit message):
+```
+git commit -a -m "message"
 ```
 upload to GitHub
 ```
