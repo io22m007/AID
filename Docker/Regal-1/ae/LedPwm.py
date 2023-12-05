@@ -82,10 +82,10 @@ class LedPwm(threading.Thread):
             led_list[led_id][1].ChangeDutyCycle(0)
             led_list[led_id][2].ChangeDutyCycle(0)
         elif led_list[led_id][3] == True:
-            led_list[led_id][0].ChangeDutyCycle(led_list[led_id][4]/255*100)
-            led_list[led_id][1].ChangeDutyCycle(led_list[led_id][5]/255*100)
-            led_list[led_id][2].ChangeDutyCycle(led_list[led_id][6]/255*100)
-
+            led_list[led_id][0].ChangeDutyCycle(round(led_list[led_id][4]/255*100))
+            led_list[led_id][1].ChangeDutyCycle(round(led_list[led_id][5]/255*100))
+            led_list[led_id][2].ChangeDutyCycle(round(led_list[led_id][6]/255*100))
+            print(str(led_list[led_id][4]/255*100) + " " + str(round(led_list[led_id][4]/255*100)))
     def UpdateLEDs(self, led_list:list, json_message:dict, subscription_resource_name:str) -> list:
         led_id = int(subscription_resource_name[3]) -1
         if "SubscriptionDeviceLightBinarySwitch" in subscription_resource_name and "cod:binSh" in json_message["m2m:sgn"]["nev"]["rep"]:
