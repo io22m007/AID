@@ -33,4 +33,5 @@ services:
     volumes:
       - ./certs-keys/server.crt:/data/server.crt
       - ./certs-keys/server.key:/data/server.key
+      - ./certs-keys/cacert.pem:/data/ca.crt
       - ./nodered/data:/data

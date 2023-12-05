@@ -1,0 +1,2 @@
+﻿PROTOCOL;CSE;PORT;EXTENSION;AE;BOX;DEVICE_SWITCH;USER_SWITCH;CODE_SWITCH;TYPE_SWITCH;CONTENT-TYPE_SWITCH;ACCEPT_SWITCH;DEVICE_COLOR;USER_COLOR;CODE_COLOR;TYPE_COLOR;CONTENT-TYPE_COLOR;ACCEPT_COLOR;DEVICE_SCALE;USER_SCALE;CODE_SCALE;TYPE_SCALE;CONTENT-TYPE_SCALE;ACCEPT_SCALE
+https;acme-regal-1;8080;cse-asn;Regal-1-AE;Box-1;DeviceLight/binarySwitch;CAIDAdmin;101;4;application/json;application/json;DeviceLight/colour;CAIDAdmin;102;4;application/json;application/json;DeviceScale/weight;CAIDAdmin;103;4;application/json;application/json

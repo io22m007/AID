@@ -1,4 +1,4 @@
-FROM nodered/node-red:latest
+FROM nodered/node-red
 #COPY package.json .
 #RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 
@@ -8,8 +8,9 @@ FROM nodered/node-red:latest
 
 #RUN npm install node-red-node-smooth
 
-
+#RUN npm install mdns
 RUN npm install node-red-dashboard
+
 
 #RUN cd /usr/src/node-red && npm install --save node-red-contrib-influxdb
 
