@@ -21,7 +21,7 @@ if __name__ == "__main__":
         config.read('ae.ini')
 
         print("online check")
-        CheckOnline(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_id'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
+        CheckOnline(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
 
         print("notification server")
         notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
