@@ -1,0 +1,26 @@
+{
+    "m2m:acp": {
+        "pv": {
+            "acr": [ 
+            {   
+                "acop": 55,
+                "acor": ["CRegalX"]
+            },
+            {
+                "acop": 38,
+                "acor": "CLager"
+            }
+            ]
+        },
+        "pvs": {
+            "acr": [{
+                "acop": 63,
+                "acor": [
+                    "CAdmin" 
+                ]
+            }
+            ]
+        },
+        "rn": "ACPRegalX"
+    }
+}
