@@ -60,6 +60,10 @@ upload to GitHub
 ```
 git push
 ```
+roll back file
+```
+git restore filepath
+```
 ### docker
 install docker:
 ```
@@ -123,6 +127,7 @@ subjectKeyIdentifier = hash
 
 [ my_subject_alt_names ]
 DNS.1 = hostname.local
+DNS.2 = hostname
 ```
 ### create symbolic link example
 target -> symbolic link file location
