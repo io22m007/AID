@@ -1,0 +1,136 @@
+{
+    "Regal": [
+        {
+            "Box": [
+                {
+                    "LED": {
+                        "onoff": true,
+                        "color": "green"
+                    },
+                    "weight": {
+                        "piece": 0.1,
+                        "tare": 0.1,
+                        "dateoftare": "1704776935482",
+                        "measured": 8.1,
+                        "calibrated": false,
+                        "dashboardSetup": {
+                            "min": 0,
+                            "max": 100
+                        }
+                    },
+                    "state": {
+                        "ordered": 1
+                    },
+                    "description": "Schrauben M3"
+                },
+                {
+                    "LED": {
+                        "onoff": true,
+                        "color": ""
+                    },
+                    "weight": {
+                        "piece": 1,
+                        "tare": 0,
+                        "dateoftare": "",
+                        "measured": null,
+                        "calibrated": false,
+                        "dashboardSetup": {
+                            "min": 0,
+                            "max": 100
+                        }
+                    },
+                    "state": {
+                        "ordered": 1
+                    },
+                    "description": "Schrauben M4"
+                }
+            ]
+        },
+        {
+            "Box": [
+                {
+                    "LED": {
+                        "onoff": true,
+                        "color": ""
+                    },
+                    "weight": {
+                        "piece": 1,
+                        "tare": 0,
+                        "dateoftare": "",
+                        "measured": null,
+                        "calibrated": false,
+                        "dashboardSetup": {
+                            "min": 0,
+                            "max": 100
+                        }
+                    },
+                    "state": {
+                        "ordered": 1
+                    },
+                    "description": "Muttern M3"
+                },
+                {
+                    "LED": {
+                        "onoff": true,
+                        "color": ""
+                    },
+                    "weight": {
+                        "piece": 1,
+                        "tare": 0,
+                        "dateoftare": "",
+                        "measured": null,
+                        "calibrated": false,
+                        "dashboardSetup": {
+                            "min": 0,
+                            "max": 100
+                        }
+                    },
+                    "state": {
+                        "ordered": 1
+                    },
+                    "description": "Muttern M4"
+                }
+            ]
+        }
+    ],
+    "control": {
+        "communication": {
+            "protocol": "https",
+            "port": 8080
+        },
+        "notification": {
+            "acmein": "acme-in"
+        },
+        "acme": "acme-regal-",
+        "cse": "cse-asn-regal-",
+        "ae": "Regal-",
+        "ea": "-AE",
+        "box": "Box-",
+        "device": {
+            "led": {
+                "name": "DeviceLight",
+                "breaker": {
+                    "name": "binarySwitch",
+                    "code": 101
+                },
+                "color": {
+                    "name": "colour",
+                    "code": 102
+                }
+            },
+            "scale": {
+                "name": "DeviceScale",
+                "property": {
+                    "name": "weight",
+                    "code": 103
+                }
+            }
+        },
+        "headers": {
+            "user": "CAIDAdmin",
+            "type": 4,
+            "contenttype": "application/json",
+            "accept": "application/json"
+        }
+    }
+}

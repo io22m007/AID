@@ -78,7 +78,7 @@ class Scale(threading.Thread):
             start = time.time()
             for box_counter in range(1, self.box_count + 1):
                 print(str(box_counter))
-                reading = scale_list[box_counter - 1].get_weight_mean(50)
+                reading = scale_list[box_counter - 1].get_weight_mean(10) 	// orig = 50
                 if reading:
                     recent_values[box_counter - 1][value_counter] = reading
                     if value_counter == 2:
@@ -94,6 +94,6 @@ class Scale(threading.Thread):
                 value_counter = value_counter + 1
 
             try:
-                time.sleep(time.time() - start - 10)
+                time.sleep(time.time() - start - 3)		// orig 10
             except:
                 pass

@@ -5,6 +5,8 @@ services:
     # 
     build: cse-in
     # restart the container if a crash occurs but stop when stopped by user
+    depends_on:
+      - nodered
     restart: unless-stopped
     # set the time zone
     environment:
@@ -33,5 +35,7 @@ services:
     volumes:
       - ./certs-keys/server.crt:/data/server.crt
       - ./certs-keys/server.key:/data/server.key
-      - ./certs-keys/cacert.pem:/data/ca.crt
+      - ./certs-keys/demoCA/cacert.pem:/data/ca.crt
       - ./nodered/data:/data
+#      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+
