@@ -126,6 +126,11 @@ class AE_Creation:
         return data
 
     def CheckResponse(self, response:requests.models.Response) -> str:
+        """
+        Check if a HTTP REST API request was successful.
+        
+        """
+
         return_value = ""
         if response.status_code == 201:
             print("POST request successful")
@@ -142,6 +147,23 @@ class AE_Creation:
         return return_value
 
     def __init__(self, cse:str, cse_rn:str, ae:str, app_id:str, box_count:int, user:str, releaseVersionIndicator:str, notificationURLRegal:str, notificationURLNodeRed:str, certificateAuthority:str):
+        """
+        Application to create the complete application entity on the ASN CSE ACME.
+        
+        Parameters:
+            self (the class)
+            cse (protocol http/https, ip or hostname, colon and port of the ASN CSE ACME) : str
+            cse_rn (the resourcename of the ASN CSE ACME) : str
+            ae (the name of the application entity which will be created) : str
+            app_id (the ID of the application entity which will be created - this information will also form part of the request identifier) : str
+            box_count (the number of boxes on the Raspi) : int
+            user (the user which will create the AE on the ASN CSE ACME) : str
+            releaseVersionIndicator (the version of oneM2M) : str
+            notificationURLRegal (protocol http/https, ip or hostname, colon and port of the notification server of this application) : str
+            notificationURLNodeRed (protocol http/https, ip or hostname, colon and port of the notification server of the remote NodeRed application) : str
+            certificateAuthority (the path to the certificate authority certificate which was used to sign the certificate of the ASN CSE ACME) : str
+        """
+        
         #Application Entity
         self.CheckResponse(self.CreateResource(cse + "/" + cse_rn, self.HeaderFields(user, app_id + "-" + str(time.time()), releaseVersionIndicator, self.resourceTypes["ApplicationEntity"]), self.ApplicationEntityPrimitiveContent(ae, app_id, True, ["3"]), certificateAuthority))
 
