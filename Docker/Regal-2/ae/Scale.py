@@ -59,10 +59,8 @@ class Scale(threading.Thread):
 
         for scale_data in scales:
             hx = HX711(dout_pin=scale_data[0], pd_sck_pin=scale_data[1])
-            err = hx.zero()
-            if err:
-                raise ValueError('Tare is unsuccessful.')
-            hx.set_scale_ratio(scale_data[2])
+            hx.set_offset(scale_data[2], channel=hx.get_current_channel(), gain_A=hx.get_current_gain_A())
+            hx.set_scale_ratio(scale_data[3])
             scale_list.append(hx)
 
         return scale_list
