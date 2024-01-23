@@ -1,0 +1,47 @@
+version: '3'
+services:
+  # 
+  asn:
+    # 
+    build: cse-asn
+    # restart the container if a crash occurs but stop when stopped by user
+    restart: unless-stopped
+    # set the time zone
+    environment:
+      - TZ=Europe/Vienna
+    #
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./cse-asn/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/acme.ini
+      - ./cse-asn/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/init/mio_flex.fcp
+      - ./certs-keys/server.crt:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.crt
+      - ./certs-keys/server.key:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/server.key
+      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+  ae:
+    build: ae
+    # restart the container if a crash occurs but stop when stopped by user
+    restart: unless-stopped
+    # set the time zone
+    environment:
+      - TZ=Europe/Vienna
+    #
+    ports:
+      - "9999:9999"
+    devices:
+      - /dev/gpiomem:/dev/gpiomem
+      - /dev/mem:/dev/mem
+    cap_add:
+      - SYS_RAWIO
+    volumes:
+      - ./ae/AE_Application.py:/AE_Application.py
+      - ./ae/ae.ini:/ae.ini
+      - ./ae/OnlineCheck.py:/OnlineCheck.py
+      - ./ae/CreateStructure.py:/CreateStructure.py
+      - ./ae/LedPwm.py:/LedPwm.py
+      - ./ae/NotificationServerSmall.py:/NotificationServerSmall.py
+      - ./ae/Scale.py:/Scale.py
+      - ./certs-keys/server.key:/server.key
+      - ./certs-keys/server.crt:/server.crt
+      - ./certs-keys/demoCA/cacert.pem:/ca.crt
+      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
