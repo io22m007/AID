@@ -8,39 +8,39 @@
                         "color": "green"
                     },
                     "weight": {
-                        "piece": 0.1,
-                        "tare": 0.1,
-                        "dateoftare": "1704776935482",
-                        "measured": 8.1,
+                        "piece": 0.01141,
+                        "tare": 0.010984141791044776,
+                        "dateoftare": "1704817176726",
+                        "measured": 0.1961604168043115,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
-                            "max": 100
+                            "max": 10
                         }
                     },
                     "state": {
                         "ordered": 1
                     },
-                    "description": "Schrauben M3"
+                    "description": "AAA-Batterie"
                 },
                 {
                     "LED": {
                         "onoff": true,
-                        "color": ""
+                        "color": "red"
                     },
                     "weight": {
-                        "piece": 1,
-                        "tare": 0,
-                        "dateoftare": "",
-                        "measured": null,
+                        "piece": 0.02,
+                        "tare": 0.10913987910688674,
+                        "dateoftare": "1704817176726",
+                        "measured": 0.10903574251754938,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
-                            "max": 100
+                            "max": 10
                         }
                     },
                     "state": {
-                        "ordered": 1
+                        "ordered": 4
                     },
                     "description": "Schrauben M4"
                 }
@@ -51,17 +51,17 @@
                 {
                     "LED": {
                         "onoff": true,
-                        "color": ""
+                        "color": "green"
                     },
                     "weight": {
-                        "piece": 1,
-                        "tare": 0,
-                        "dateoftare": "",
-                        "measured": null,
+                        "piece": 0.02,
+                        "tare": -0.003138992537313433,
+                        "dateoftare": "1704817176726",
+                        "measured": 0.29666904125569543,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
-                            "max": 100
+                            "max": 10
                         }
                     },
                     "state": {
@@ -75,14 +75,14 @@
                         "color": ""
                     },
                     "weight": {
-                        "piece": 1,
+                        "piece": 0.01141,
                         "tare": 0,
                         "dateoftare": "",
-                        "measured": null,
+                        "measured": -0.15309180059929176,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
-                            "max": 100
+                            "max": 10
                         }
                     },
                     "state": {

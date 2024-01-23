@@ -34,12 +34,20 @@
             "ae0c0f015d23ba98",
             "fb4fe75db74665a6",
             "d5200202227d96e8",
-            "f8fd87ffbfba9a24"
+            "f8fd87ffbfba9a24",
+            "7508700f439bc40c",
+            "6ab5db091ac5b6ee",
+            "383852033fcb0b6d",
+            "96b22366456b4125",
+            "37d3beca8dd091b9",
+            "73d56f8042f2a151",
+            "dec643171e37a325",
+            "90318b39c2fc2c62"
         ],
         "x": 54,
         "y": 639,
         "w": 932,
-        "h": 422
+        "h": 562
     },
     {
         "id": "54f78cbe45083d94",
@@ -113,17 +121,6 @@
         "y": 459,
         "w": 812,
         "h": 162
-    },
-    {
-        "id": "c9e7667df616c430",
-        "type": "ui_group",
-        "name": "Wien",
-        "tab": "9df319e1d1200861",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "9df319e1d1200861",
@@ -317,17 +314,6 @@
         "className": ""
     },
     {
-        "id": "586bf571c370a406",
-        "type": "ui_group",
-        "name": "Nord-Box01",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "427e71050558f503",
         "type": "ui_group",
         "name": "Nord-Box02",
@@ -427,7 +413,7 @@
         "id": "257a61c0430a9cb3",
         "type": "ui_group",
         "name": "Room2 Chart",
-        "tab": "2138fe55c86f3567",
+        "tab": "",
         "order": 2,
         "disp": true,
         "width": "10",
@@ -438,7 +424,7 @@
         "id": "0af03610d67f631b",
         "type": "ui_group",
         "name": "Room2 Gauge",
-        "tab": "2138fe55c86f3567",
+        "tab": "",
         "order": 3,
         "disp": true,
         "width": 10,
@@ -449,7 +435,7 @@
         "id": "4f92bcb415184ca4",
         "type": "ui_group",
         "name": "Room2 Control",
-        "tab": "2138fe55c86f3567",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": 6,
@@ -460,7 +446,7 @@
         "id": "92e3b52820d26ea1",
         "type": "ui_group",
         "name": "Room1 Chart",
-        "tab": "990bfb7a00eda453",
+        "tab": "",
         "order": 2,
         "disp": true,
         "width": "10",
@@ -471,7 +457,7 @@
         "id": "5f4c2a4d9359fbd1",
         "type": "ui_group",
         "name": "Room1 Gauge",
-        "tab": "990bfb7a00eda453",
+        "tab": "",
         "order": 3,
         "disp": true,
         "width": 10,
@@ -482,7 +468,7 @@
         "id": "d9f6de851b9059cb",
         "type": "ui_group",
         "name": "Room1 Control",
-        "tab": "990bfb7a00eda453",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": 6,
@@ -490,59 +476,25 @@
         "className": ""
     },
     {
-        "id": "2138fe55c86f3567",
-        "type": "ui_tab",
-        "name": "Air Quality Monitoring Room2",
-        "icon": "dashboard",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "990bfb7a00eda453",
-        "type": "ui_tab",
-        "name": "Air Quality Monitoring Room1",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "205fd73e.b5c718",
         "type": "ui_group",
         "name": "Computers",
-        "tab": "95ed8000.75e99",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "95ed8000.75e99",
-        "type": "ui_tab",
-        "name": "DIY Smart Socket",
-        "icon": "dashboard",
-        "order": 6
-    },
-    {
         "id": "0df4552f9d69039d",
         "type": "ui_group",
         "name": "DEFAULT",
-        "tab": "f3a8a67ff0904e39",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "44",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "f3a8a67ff0904e39",
-        "type": "ui_tab",
-        "name": "HOME",
-        "icon": "dashboard",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "563dd05169796db4",
@@ -613,32 +565,6 @@
         "height": 1
     },
     {
-        "id": "89cd0457effd61de",
-        "type": "ui_tab",
-        "name": "Tab 8",
-        "icon": "dashboard",
-        "order": 8
-    },
-    {
-        "id": "3d9dab5c6462d2f9",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "89cd0457effd61de",
-        "order": 1,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "97e29229f6a2c4e9",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "3d9dab5c6462d2f9",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "d5174411e8449277",
         "type": "ui_group",
         "name": "System Steuerung",
@@ -653,34 +579,39 @@
         "id": "3ba37fd4.6558f",
         "type": "ui_group",
         "name": "Example Flow",
-        "tab": "72415252.b2cadc",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "72415252.b2cadc",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "8b4eebb1.340838",
         "type": "ui_group",
         "name": "Formating Date",
-        "tab": "dab8e1c7.15c7a",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "10"
     },
     {
-        "id": "dab8e1c7.15c7a",
-        "type": "ui_tab",
-        "name": "Formating Date",
-        "icon": "dashboard"
+        "id": "38b97bb0190bbc30",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d7f58b6dfa741578",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "f0ae12d916a91f1c",
@@ -696,7 +627,7 @@
         "legend": "true",
         "xformat": "HH:mm",
         "interpolate": "linear",
-        "nodata": "",
+        "nodata": "keine Daten",
         "dot": true,
         "ymin": "0",
         "ymax": "1000",
@@ -720,8 +651,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 710,
-        "y": 540,
+        "x": 810,
+        "y": 360,
         "wires": [
             []
         ]
@@ -736,15 +667,15 @@
         "height": 0,
         "name": "",
         "label": "Bestellstatus:",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.state}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 500,
+        "x": 830,
+        "y": 320,
         "wires": []
     },
     {
@@ -764,29 +695,8 @@
         "font": "",
         "fontSize": "26",
         "color": "#000000",
-        "x": 740,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "9ab2bacce97c81cb",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "1fb1ade5341e8198",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Box-01",
-        "format": "",
-        "layout": "row-spread",
-        "className": "overviewTextS01",
-        "style": true,
-        "font": "",
-        "fontSize": "26",
-        "color": "#000000",
-        "x": 1600,
-        "y": 240,
+        "x": 840,
+        "y": 120,
         "wires": []
     },
     {
@@ -806,8 +716,8 @@
         "font": "",
         "fontSize": "26",
         "color": "#000000",
-        "x": 760,
-        "y": 1180,
+        "x": 860,
+        "y": 980,
         "wires": []
     },
     {
@@ -827,8 +737,8 @@
         "font": "",
         "fontSize": "26",
         "color": "#000000",
-        "x": 1620,
-        "y": 1180,
+        "x": 1960,
+        "y": 1020,
         "wires": []
     },
     {
@@ -846,11 +756,12 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 580,
-        "y": 300,
+        "x": 680,
+        "y": 120,
         "wires": [
             [
-                "f6023a0733d7f836"
+                "f6023a0733d7f836",
+                "92607bb771f41e87"
             ]
         ]
     },
@@ -869,34 +780,11 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 600,
-        "y": 1180,
+        "x": 700,
+        "y": 980,
         "wires": [
             [
                 "b227048a804acde8"
-            ]
-        ]
-    },
-    {
-        "id": "c30f201411f97b8c",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "1fb1ade5341e8198",
-        "name": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    .overviewTextS01 {\n        color: {{msg.payload.setBoxColor}} !important;\n        font-weight: bold !important;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1440,
-        "y": 240,
-        "wires": [
-            [
-                "9ab2bacce97c81cb"
             ]
         ]
     },
@@ -915,31 +803,12 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1460,
-        "y": 1180,
+        "x": 1800,
+        "y": 1020,
         "wires": [
             [
                 "e6878d37f9b33df5"
             ]
-        ]
-    },
-    {
-        "id": "4b946f34992887f6",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "d": true,
-        "name": "function 14",
-        "func": "if (msg.payload.color != null) {\n    switch (msg.payload.color) {\n        case \"red\":\n            msg.payload.setBoxColor = \"rgb(255,0,0)\";\n            break;\n        case \"yellow\":\n            msg.payload.setBoxColor = \"rgb(255,255,0)\";\n            break;\n        case \"green\":\n            msg.payload.setBoxColor = \"rgb(0,255,0)\";\n            break;\n        case \"blue\":\n            msg.payload.setBoxColor = \"rgb(0,0,255)\";\n            break;\n        default:\n            msg.payload.setBoxColor = \"rgb(0,0,0)\";\n            break;\n    }\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1190,
-        "y": 140,
-        "wires": [
-            []
         ]
     },
     {
@@ -948,39 +817,19 @@
         "z": "f6f2187d.f17ca8",
         "name": "link in 3",
         "links": [
-            "08a4f55b5e335467",
             "3704c0b1c8051013",
-            "c04df3c0e2f685d2",
             "3fc043f21258ef8f",
-            "c9f29e9a06129ae6",
+            "9d0182927d842af0",
             "a9210a32079dd0c8",
-            "9d0182927d842af0"
+            "c04df3c0e2f685d2",
+            "c426fec1a6fcdd81",
+            "0113032f34852a75"
         ],
-        "x": 45,
-        "y": 360,
+        "x": 145,
+        "y": 260,
         "wires": [
             [
                 "ea6ef44ce7633f80"
-            ]
-        ]
-    },
-    {
-        "id": "73d56f8042f2a151",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 15",
-        "func": "var data = global.get(\"data\");\n\nif (msg.payload.onoff != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.onoff = msg.payload.onoff;\n    global.set(\"data\", data);\n    return msg\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 180,
-        "wires": [
-            [
-                "876d88bff2324c8f"
             ]
         ]
     },
@@ -1001,8 +850,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 740,
-        "y": 340,
+        "x": 840,
+        "y": 160,
         "wires": []
     },
     {
@@ -1010,19 +859,18 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 19",
-        "func": "var data = global.get(\"data\");\n\nif ((msg.weight != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null) || msg.payload.init == true) {\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload = Math.round((weight / weightperpiece) * 1) / 1;\n\n         if (msg.payload < 0) {\n            msg.payload = 0;\n        } else {\n            msg.payload = msg.payload;\n        }\n    } else {\n        msg.payload = 0;\n    }\n\n    return msg;\n}\n",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload = 0;\n    return msg;\n}\n\nelse if ((msg.weight != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null) {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (msg.payload < 0) {\n            msg.payload = 0;\n        }\n    } else {\n        msg.payload = 0;\n    }\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 540,
+        "x": 510,
+        "y": 360,
         "wires": [
             [
-                "f0ae12d916a91f1c",
-                "8c49e53dac04259a"
+                "f0ae12d916a91f1c"
             ]
         ]
     },
@@ -1031,15 +879,15 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 20",
-        "func": "const REGAL_NR = 0;\nconst BOX_NR = 0;\n\nvar data = global.get(\"data\");\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n\n    if (msg.payload.init) {\n        if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == \"\") {\n\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"black\";\n            msg.payload.color = \"black\";\n            \n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        }\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"blue\";\n        msg.payload.color = \"blue\";\n\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n        msg.payload.time = null;\n\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        msg.payload.tara = null;\n\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"white\";\n        msg.payload.color = \"white\";\n\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n        msg.payload.tare = Math.round(Number(msg.weight) * 10000) / 10000;\n\n        var time = Date.now();\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = time.toString;\n        msg.payload.time = time;\n\n    } else if (msg.weight != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        var boarder_min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max / 3;\n        var boarder_mid = boarder_min * 2;\n        boarder_min = Math.round(boarder_min * 1) / 1;\n        boarder_mid = Math.round(boarder_mid * 1) / 1;\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces >= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min && pieces <= boarder_min) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"red\";\n            msg.payload.color = \"red\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1 ||\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 2) {\n                msg.regalnr = msg.payload.regalnr;\n                msg.boxnr = msg.payload.boxnr;\n                //var topic = \"Material Status\"\n                //msg.topic = topic;\n                msg.payload.alarmmessage = \"Kritischer Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_min && pieces <= boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"yellow\";\n            msg.payload.color = \"yellow\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1 ||\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 3) {\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 2;\n                //var topic = \"Material Status\"\n                //msg.topic = topic;\n                msg.payload.warnmessage = \"Niedriger Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_mid && pieces <= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"green\";\n            msg.payload.color = \"green\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 1;\n        }\n    }\n     \n    global.set(\"data\", data);\n    return msg;\n}\n",
+        "func": "const REGAL_NR = 0;\nconst BOX_NR = 0;\n\nvar data = global.get(\"data\");\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n\n    if (msg.payload.init) {\n        if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == \"\" ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == 0) {\n           \n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"black\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n\n            msg.payload.dateoftare = null;\n            msg.weight = null;\n            msg.payload.tare = null;\n            msg.payload.color = \"black\";\n        } else {\n            msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n            msg.payload.tare = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;            \n            msg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n        }\n        msg.regalnr = msg.payload.regalnr;\n        msg.boxnr = msg.payload.boxnr;\n        \n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"blue\";\n\n        msg.payload.time = null;\n        msg.weight = null;\n        msg.payload.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n        msg.payload.color = \"blue\";\n\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n        var time = Date.now();\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = time.toString;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"white\";\n\n        msg.payload.time = time;\n        msg.payload.tare = msg.weight;\n        msg.payload.color = \"white\";       \n\n    } else if (msg.weight != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        var boarder_min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max / 3;\n        var boarder_mid = boarder_min * 2;\n        boarder_min = Math.round(boarder_min * 1) / 1;\n        boarder_mid = Math.round(boarder_mid * 1) / 1;\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n\n        var weight = 0;\n        var pieces = 0;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n\n        if (msg.weight > 0) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n            var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n            var pieces = Math.round((weight / weightperpiece) * 1) / 1;            \n        }\n\n        if ((pieces >= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min || \n            pieces <= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min) && (pieces <= boarder_min)) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"red\";\n            msg.payload.color = \"red\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != 4) {\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 3;\n                msg.regalnr = msg.payload.regalnr;\n                msg.boxnr = msg.payload.boxnr;\n                msg.payload.alarmmessage = \"Kritischer Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_min && pieces <= boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"yellow\";\n            msg.payload.color = \"yellow\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 2;\n\n        } else if (pieces > boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"green\";\n            msg.payload.color = \"green\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 1;\n        }\n    }\n    global.set(\"data\", data);\n    return msg;\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 170,
-        "y": 360,
+        "x": 270,
+        "y": 260,
         "wires": [
             [
                 "268b25637cece5f5",
@@ -1047,13 +895,11 @@
                 "b9355ee80f24b943",
                 "5473e909d23ceaa8",
                 "6309a2cc44988f5f",
-                "eeb7850a2b3c3776",
-                "73d56f8042f2a151",
-                "dec643171e37a325",
                 "1868194fbc5dcf4e",
                 "f1d5ba4dee117d8f",
-                "e95aacbd966faf86",
-                "72bfbce0a078809f"
+                "876d88bff2324c8f",
+                "dfda29a079239a62",
+                "559a729ef37362bd"
             ]
         ]
     },
@@ -1062,15 +908,15 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 22",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\n\nreturn msg;",
+        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 340,
+        "x": 510,
+        "y": 160,
         "wires": [
             [
                 "d3e5de920bd662c8"
@@ -1094,8 +940,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 710,
-        "y": 380,
+        "x": 810,
+        "y": 200,
         "wires": []
     },
     {
@@ -1103,15 +949,15 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 23",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.piece = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece * 100) / 100;\n\nreturn msg;",
+        "func": "var data = global.get(\"data\");\n\n\nmsg.payload.piece = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece * 100) / 100;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 380,
+        "x": 510,
+        "y": 200,
         "wires": [
             [
                 "b7c1b40f0807cfa7"
@@ -1135,8 +981,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 710,
-        "y": 420,
+        "x": 810,
+        "y": 240,
         "wires": []
     },
     {
@@ -1144,19 +990,18 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 24",
-        "func": "var data = global.get(\"data\");\n\nif (msg.weight != null || msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated != true) {\n\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.weight = Math.round(weight * 100) / 100;\n    } else {\n        msg.payload.weight = null;\n    }\n    return msg;\n}",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.weight = msg.weight;\n    return msg;\n}\n\nelse if (msg.weight != null || msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated != true) {\n\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.weight = Math.round(weight * 100) / 100;\n    } else {\n        msg.payload.weight = null;\n    }\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 420,
+        "x": 510,
+        "y": 240,
         "wires": [
             [
-                "4cfd88e043d95761",
-                "685427a8604b9997"
+                "4cfd88e043d95761"
             ]
         ]
     },
@@ -1177,8 +1022,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 580,
+        "x": 830,
+        "y": 400,
         "wires": []
     },
     {
@@ -1198,8 +1043,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 700,
-        "y": 620,
+        "x": 800,
+        "y": 440,
         "wires": []
     },
     {
@@ -1207,15 +1052,15 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 25",
-        "func": "var data = global.get(\"data\");\n\nif ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"seg1\":Math.round(max/3), \"seg2\":Math.round(2*max/3), \"max\":max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces < 0) {\n            msg.payload.value = 0;\n        } else {\n            msg.payload.value = pieces;\n        }\n\n    } else {\n        msg.payload.value = 0;\n    }\n    return msg;\n}\n",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.value = 0;\n    return msg;\n}\n\nelse if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"seg1\":Math.round(max/3), \"seg2\":Math.round(2*max/3), \"max\":max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces < 0) {\n            msg.payload.value = 0;\n        } else {\n            msg.payload.value = pieces;\n        }\n\n    } else {\n        msg.payload.value = 0;\n    }\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 460,
+        "x": 510,
+        "y": 280,
         "wires": [
             [
                 "f2b539ed3672930f"
@@ -1246,8 +1091,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 700,
-        "y": 460,
+        "x": 800,
+        "y": 280,
         "wires": []
     },
     {
@@ -1270,156 +1115,11 @@
         "payloadType": "json",
         "topic": "topic",
         "topicType": "msg",
-        "x": 590,
-        "y": 820,
+        "x": 650,
+        "y": 500,
         "wires": [
             [
                 "c77bc3b82007dc7d"
-            ]
-        ]
-    },
-    {
-        "id": "62dc3ad829d7ae25",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 27",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight ;    \n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1440,
-        "wires": [
-            [
-                "83e19b9197a45b82"
-            ]
-        ]
-    },
-    {
-        "id": "49f4171be33fd375",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 28",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1240,
-        "wires": [
-            [
-                "c4db5ca158182d04"
-            ]
-        ]
-    },
-    {
-        "id": "bb623ac385547f8f",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 29",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.pice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1280,
-        "wires": [
-            [
-                "87f6b559e0812a8b"
-            ]
-        ]
-    },
-    {
-        "id": "666afd698646a810",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 30",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var weight = msg.weight;\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload.weight = weight;\n\n\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1320,
-        "wires": [
-            [
-                "76208439e8460f01"
-            ]
-        ]
-    },
-    {
-        "id": "f45185fcbd26230e",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 31",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"max\":max };\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1360,
-        "wires": [
-            [
-                "440b05f04a1bd728"
-            ]
-        ]
-    },
-    {
-        "id": "7f97d727cae5d709",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 32",
-        "func": "const REGAL_NR = 0;\nconst BOX_NR = 1;\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 190,
-        "y": 1280,
-        "wires": [
-            [
-                "828cc66aa05bc690",
-                "49f4171be33fd375",
-                "bb623ac385547f8f",
-                "666afd698646a810",
-                "f45185fcbd26230e",
-                "62dc3ad829d7ae25"
-            ]
-        ]
-    },
-    {
-        "id": "828cc66aa05bc690",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 33",
-        "func": "var data = global.get(\"data\");\n\n\n\nif (msg.payload.onoff != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.onoff = msg.payload.onoff;\n}\n\n\nif (msg.payload.color != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = msg.payload.color;\n}\n\nswitch (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color) {\n    case \"red\":\n        msg.payload.setBoxColor = \"rgb(255,0,0)\";\n        break;\n    case \"yellow\":\n        msg.payload.setBoxColor = \"rgb(255,255,0)\";\n        break;\n    case \"green\":\n        msg.payload.setBoxColor = \"rgb(0,255,0)\";\n        break;\n    case \"blue\":\n        msg.payload.setBoxColor = \"rgb(0,0,255)\";\n        break;\n    default:\n        msg.payload.setBoxColor = \"rgb(0,0,0)\";\n        break;\n}\n\nmsg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n\n\n\n\nglobal.set(\"data\", data);\n\nreturn msg; \n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1180,
-        "wires": [
-            [
-                "0fac55db59ec7132"
             ]
         ]
     },
@@ -1440,8 +1140,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 760,
-        "y": 1240,
+        "x": 860,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1482,8 +1182,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 730,
-        "y": 1440,
+        "x": 830,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -1498,15 +1198,15 @@
         "height": 0,
         "name": "",
         "label": "Bestellstatus:",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.state}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 750,
-        "y": 1400,
+        "x": 850,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1519,15 +1219,15 @@
         "height": 0,
         "name": "",
         "label": "Gewicht pro Stück:",
-        "format": "{{msg.payload.pice}} kg",
+        "format": "{{msg.payload.piece}} kg",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 1280,
+        "x": 830,
+        "y": 1060,
         "wires": []
     },
     {
@@ -1547,8 +1247,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 1320,
+        "x": 830,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1561,15 +1261,15 @@
         "height": 0,
         "name": "",
         "label": "Kalibrierung:",
-        "format": "{{msg.payload.pice}} kg",
+        "format": "{{msg.payload.tare}} kg",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 750,
-        "y": 1480,
+        "x": 850,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1582,15 +1282,15 @@
         "height": 0,
         "name": "",
         "label": "Kalibrierungsdatum:",
-        "format": "{{msg.payload.pice}}",
+        "format": "{{msg.payload.time | date:\"dd.MM.yyyy HH:mm\"}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 720,
-        "y": 1520,
+        "x": 820,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1605,7 +1305,7 @@
         "gtype": "gage",
         "title": "Aktueller Lagerstand",
         "label": "Stk.",
-        "format": "{{value}}",
+        "format": "{{msg.payload.value}}",
         "min": 0,
         "max": 10,
         "colors": [
@@ -1617,8 +1317,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 720,
-        "y": 1360,
+        "x": 820,
+        "y": 1140,
         "wires": []
     },
     {
@@ -1637,14 +1337,16 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"regalnr\":0,\"boxnr\":1}",
+        "payloadType": "json",
         "topic": "topic",
         "topicType": "msg",
-        "x": 750,
-        "y": 1580,
+        "x": 650,
+        "y": 1360,
         "wires": [
-            []
+            [
+                "16cfdf3377bd0f8c"
+            ]
         ]
     },
     {
@@ -1659,405 +1361,17 @@
             "3fc043f21258ef8f",
             "c9f29e9a06129ae6",
             "a9210a32079dd0c8",
-            "9d0182927d842af0"
+            "9d0182927d842af0",
+            "a4d70e219e169152",
+            "c426fec1a6fcdd81",
+            "0113032f34852a75"
         ],
-        "x": 65,
-        "y": 1280,
+        "x": 165,
+        "y": 1080,
         "wires": [
             [
-                "7f97d727cae5d709"
+                "7db4284f700ed112"
             ]
-        ]
-    },
-    {
-        "id": "927e59b8627fb40a",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 34",
-        "func": "var data = global.get(\"data\");\n\n\n\nif (msg.payload.onoff != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.onoff = msg.payload.onoff;\n}\n\n\nif (msg.payload.color != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = msg.payload.color;\n}\n\nswitch (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color) {\n    case \"red\":\n        msg.payload.setBoxColor = \"rgb(255,0,0)\";\n        break;\n    case \"yellow\":\n        msg.payload.setBoxColor = \"rgb(255,255,0)\";\n        break;\n    case \"green\":\n        msg.payload.setBoxColor = \"rgb(0,255,0)\";\n        break;\n    case \"blue\":\n        msg.payload.setBoxColor = \"rgb(0,0,255)\";\n        break;\n    default:\n        msg.payload.setBoxColor = \"rgb(0,0,0)\";\n        break;\n}\n\nmsg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n\n\n\n\nglobal.set(\"data\", data);\n\nreturn msg; \n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 240,
-        "wires": [
-            [
-                "c30f201411f97b8c"
-            ]
-        ]
-    },
-    {
-        "id": "424d8fee11f82817",
-        "type": "ui_chart",
-        "z": "f6f2187d.f17ca8",
-        "name": "Lagerstandsverlauf",
-        "group": "7e197a6ce2585433",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "label": "Lagerstandsverlauf",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "0",
-        "ymax": "1000",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "604800",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1570,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cb431db881a3ce65",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Bestellstatus:",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1590,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "391dec887b5fe329",
-        "type": "link in",
-        "z": "f6f2187d.f17ca8",
-        "name": "link in 5",
-        "links": [
-            "08a4f55b5e335467",
-            "3704c0b1c8051013",
-            "c04df3c0e2f685d2",
-            "3fc043f21258ef8f",
-            "c9f29e9a06129ae6",
-            "a9210a32079dd0c8",
-            "9d0182927d842af0"
-        ],
-        "x": 905,
-        "y": 360,
-        "wires": [
-            [
-                "e0c08f2686fc969f"
-            ]
-        ]
-    },
-    {
-        "id": "ea8003d6d495ede2",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Material:",
-        "format": "{{msg.payload.description}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1600,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "54fe66e776cdce59",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 35",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight ;    \n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 500,
-        "wires": [
-            [
-                "424d8fee11f82817"
-            ]
-        ]
-    },
-    {
-        "id": "e0c08f2686fc969f",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 36",
-        "func": "const REGAL_NR = 1;\nconst BOX_NR = 0;\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1030,
-        "y": 360,
-        "wires": [
-            [
-                "2743b453fcb3589b",
-                "ea648b5b9b4fa5cc",
-                "e0c7f6044b14d88c",
-                "b12c1a121b057a4c",
-                "54fe66e776cdce59",
-                "927e59b8627fb40a"
-            ]
-        ]
-    },
-    {
-        "id": "2743b453fcb3589b",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 37",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 300,
-        "wires": [
-            [
-                "ea8003d6d495ede2"
-            ]
-        ]
-    },
-    {
-        "id": "e6a68a38ce15d236",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Gewicht pro Stück:",
-        "format": "{{msg.payload.pice}} kg",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1570,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "ea648b5b9b4fa5cc",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 38",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.pice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 340,
-        "wires": [
-            [
-                "e6a68a38ce15d236"
-            ]
-        ]
-    },
-    {
-        "id": "748e2c43c6695c7a",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Aktuelles Gewicht:",
-        "format": "{{msg.payload.weight}} kg",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1570,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "e0c7f6044b14d88c",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 39",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var weight = msg.weight;\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload.weight = weight;\n\n\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 380,
-        "wires": [
-            [
-                "748e2c43c6695c7a"
-            ]
-        ]
-    },
-    {
-        "id": "207160fad0275534",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Kalibrierung:",
-        "format": "{{msg.payload.pice}} kg",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1590,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "5e262781038a804d",
-        "type": "ui_text",
-        "z": "f6f2187d.f17ca8",
-        "group": "7e197a6ce2585433",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Kalibrierungsdatum:",
-        "format": "{{msg.payload.pice}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1560,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "b12c1a121b057a4c",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 40",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"max\":max };\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 420,
-        "wires": [
-            [
-                "a4916f549d69fa94"
-            ]
-        ]
-    },
-    {
-        "id": "a4916f549d69fa94",
-        "type": "ui_gauge",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "group": "7e197a6ce2585433",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Aktueller Lagerstand",
-        "label": "Stk.",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1560,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "427ea2e1db285866",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "group": "7e197a6ce2585433",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Kalibrierung",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1590,
-        "y": 640,
-        "wires": [
-            []
         ]
     },
     {
@@ -2098,8 +1412,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1590,
-        "y": 1440,
+        "x": 1930,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -2114,15 +1428,15 @@
         "height": 0,
         "name": "",
         "label": "Bestellstatus:",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.state}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1610,
-        "y": 1400,
+        "x": 1950,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2137,13 +1451,16 @@
             "3fc043f21258ef8f",
             "c9f29e9a06129ae6",
             "a9210a32079dd0c8",
-            "9d0182927d842af0"
+            "9d0182927d842af0",
+            "a4d70e219e169152",
+            "c426fec1a6fcdd81",
+            "0113032f34852a75"
         ],
-        "x": 925,
-        "y": 1300,
+        "x": 1255,
+        "y": 1120,
         "wires": [
             [
-                "d7e057de9c8ca18d"
+                "5009725f7c0ebd14"
             ]
         ]
     },
@@ -2164,74 +1481,9 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1620,
-        "y": 1240,
+        "x": 1960,
+        "y": 1060,
         "wires": []
-    },
-    {
-        "id": "41597821b274b2b0",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 41",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight ;    \n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1440,
-        "wires": [
-            [
-                "3801cfd0fe451377"
-            ]
-        ]
-    },
-    {
-        "id": "d7e057de9c8ca18d",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 42",
-        "func": "const REGAL_NR = 1;\nconst BOX_NR = 1;\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 1300,
-        "wires": [
-            [
-                "51a51724a72a1c3c",
-                "5a44431d50f8eb83",
-                "5e08fd56696de638",
-                "e2fc3ef593d4b745",
-                "41597821b274b2b0",
-                "0df59f6c41afefb1"
-            ]
-        ]
-    },
-    {
-        "id": "51a51724a72a1c3c",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 43",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1240,
-        "wires": [
-            [
-                "ab86d4a162f42865"
-            ]
-        ]
     },
     {
         "id": "e71ff21c4e52b145",
@@ -2243,36 +1495,16 @@
         "height": 0,
         "name": "",
         "label": "Gewicht pro Stück:",
-        "format": "{{msg.payload.pice}} kg",
+        "format": "{{msg.payload.piece}} kg",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1590,
-        "y": 1280,
+        "x": 1930,
+        "y": 1100,
         "wires": []
-    },
-    {
-        "id": "5a44431d50f8eb83",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 44",
-        "func": "var data = global.get(\"data\");\n\nmsg.payload.pice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1280,
-        "wires": [
-            [
-                "e71ff21c4e52b145"
-            ]
-        ]
     },
     {
         "id": "b4090cf225e569ee",
@@ -2291,29 +1523,9 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1590,
-        "y": 1320,
+        "x": 1930,
+        "y": 1140,
         "wires": []
-    },
-    {
-        "id": "5e08fd56696de638",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 45",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n    \n    var weight = msg.weight;\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload.weight = weight;\n\n\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1320,
-        "wires": [
-            [
-                "b4090cf225e569ee"
-            ]
-        ]
     },
     {
         "id": "d206b5776879d967",
@@ -2325,15 +1537,15 @@
         "height": 0,
         "name": "",
         "label": "Kalibrierung:",
-        "format": "{{msg.payload.pice}} kg",
+        "format": "{{msg.payload.tare}} kg",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1610,
-        "y": 1480,
+        "x": 1950,
+        "y": 1300,
         "wires": []
     },
     {
@@ -2346,36 +1558,16 @@
         "height": 0,
         "name": "",
         "label": "Kalibrierungsdatum:",
-        "format": "{{msg.payload.pice}}",
+        "format": "{{msg.payload.time | date:\"dd.MM.yyyy HH:mm\"}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1580,
-        "y": 1520,
+        "x": 1920,
+        "y": 1340,
         "wires": []
-    },
-    {
-        "id": "e2fc3ef593d4b745",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 46",
-        "func": "if (msg.weight != null) {\n\n    var data = global.get(\"data\");\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"max\":max };\n    \n    var weightperpice = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.pice;\n    var weight = msg.weight;\n\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = weight;\n    msg.payload = (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured / weightperpice).toFixed(0);\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1360,
-        "wires": [
-            [
-                "554aaa4c275ab913"
-            ]
-        ]
     },
     {
         "id": "554aaa4c275ab913",
@@ -2389,7 +1581,7 @@
         "gtype": "gage",
         "title": "Aktueller Lagerstand",
         "label": "Stk.",
-        "format": "{{value}}",
+        "format": "{{msg.payload.value}}",
         "min": 0,
         "max": 10,
         "colors": [
@@ -2401,8 +1593,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1580,
-        "y": 1360,
+        "x": 1920,
+        "y": 1180,
         "wires": []
     },
     {
@@ -2421,33 +1613,15 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"regalnr\":1,\"boxnr\":1}",
+        "payloadType": "json",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1610,
-        "y": 1580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0df59f6c41afefb1",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 47",
-        "func": "var data = global.get(\"data\");\n\n\n\nif (msg.payload.onoff != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.onoff = msg.payload.onoff;\n}\n\n\nif (msg.payload.color != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = msg.payload.color;\n}\n\nswitch (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color) {\n    case \"red\":\n        msg.payload.setBoxColor = \"rgb(255,0,0)\";\n        break;\n    case \"yellow\":\n        msg.payload.setBoxColor = \"rgb(255,255,0)\";\n        break;\n    case \"green\":\n        msg.payload.setBoxColor = \"rgb(0,255,0)\";\n        break;\n    case \"blue\":\n        msg.payload.setBoxColor = \"rgb(0,0,255)\";\n        break;\n    default:\n        msg.payload.setBoxColor = \"rgb(0,0,0)\";\n        break;\n}\n\nmsg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n\n\n\n\nglobal.set(\"data\", data);\n\nreturn msg; \n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1180,
+        "x": 1710,
+        "y": 1420,
         "wires": [
             [
-                "2b67a4766d1d918c"
+                "d2f66f0b619ad9c4"
             ]
         ]
     },
@@ -2463,12 +1637,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 820,
+        "x": 830,
+        "y": 500,
         "wires": [
             [
-                "3fc043f21258ef8f",
-                "838c1b29b02bcb36"
+                "3fc043f21258ef8f"
             ]
         ]
     },
@@ -2489,8 +1662,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 410,
-        "y": 820,
+        "x": 490,
+        "y": 500,
         "wires": [
             [
                 "1553cc8927085845"
@@ -2509,77 +1682,28 @@
             "391dec887b5fe329",
             "233cbcef25daba71"
         ],
-        "x": 915,
-        "y": 820,
+        "x": 955,
+        "y": 500,
         "wires": []
-    },
-    {
-        "id": "eeb7850a2b3c3776",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 21",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "a6bf475ba4f09f85",
-        "type": "link out",
-        "z": "f6f2187d.f17ca8",
-        "name": "link out 5",
-        "mode": "link",
-        "links": [
-            "5d7197a07568184e"
-        ],
-        "x": 545,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "dec643171e37a325",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 53",
-        "func": "var data = global.get(\"data\");\n\nif (msg.payload.color != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = msg.payload.color;\n    global.set(\"data\", data);\n    return msg\n}\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 220,
-        "wires": [
-            [
-                "a6bf475ba4f09f85"
-            ]
-        ]
     },
     {
         "id": "1868194fbc5dcf4e",
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 54",
-        "func": "var data = global.get(\"data\");\n\nswitch (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color) {\n    case \"red\":\n        msg.payload.setBoxColor = \"rgb(255,0,0)\";\n        break;\n    case \"yellow\":\n        msg.payload.setBoxColor = \"rgb(255,255,0)\";\n        break;\n    case \"green\":\n        msg.payload.setBoxColor = \"rgb(0,255,0)\";\n        break;\n    case \"blue\":\n        msg.payload.setBoxColor = \"rgb(0,0,255)\";\n        break;\n    case \"white\":\n        msg.payload.setBoxColor = \"rgb(255,255,255)\";\n        break;\n    default:\n        msg.payload.setBoxColor = \"rgb(0,0,0)\";\n        break;\n}\n\nreturn msg; \n",
+        "func": "if (msg.payload.color != null) {\n    switch (msg.payload.color) {\n        case \"red\":\n            msg.payload.setBoxColor = \"rgb(255,0,0)\";\n            break;\n        case \"yellow\":\n            msg.payload.setBoxColor = \"rgb(255,255,0)\";\n            break;\n        case \"green\":\n            msg.payload.setBoxColor = \"rgb(0,255,0)\";\n            break;\n        case \"blue\":\n            msg.payload.setBoxColor = \"rgb(0,0,255)\";\n            break;\n        case \"white\":\n            msg.payload.setBoxColor = \"rgb(255,255,255)\";\n            break;\n        default:\n            msg.payload.setBoxColor = \"rgb(0,0,0)\";\n            break;\n    }\n    return msg; \n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 300,
+        "x": 510,
+        "y": 120,
         "wires": [
             [
-                "ecc548979ce46956"
+                "ecc548979ce46956",
+                "dfaa680ed3908a15"
             ]
         ]
     },
@@ -2590,10 +1714,12 @@
         "name": "link out 6",
         "mode": "link",
         "links": [
-            "3d1d12da6fbd4125"
+            "334c06621115c97c",
+            "3d1d12da6fbd4125",
+            "5d7197a07568184e"
         ],
-        "x": 545,
-        "y": 180,
+        "x": 455,
+        "y": 80,
         "wires": []
     },
     {
@@ -2601,122 +1727,19 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 50",
-        "func": "var data = global.get(\"data\");\n\n\nif (msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        \n        msg.payload.tare = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n    } else {\n        msg.payload.tare = null;\n        msg.payload.time = null;\n    }\n    return msg;\n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = msg.payload.time.toString();\n    \n    global.set(\"data\", data);\n    return msg;\n}\n\n\n\n\n\n/*\n else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n}*/",
+        "func": "var data = global.get(\"data\");\n\n\nif (msg.payload.init == true) {\n    msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n    if (msg.payload.tare != null) {\n        msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n    }\n    return msg;\n\n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n    \n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;   \n    msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n\n    global.set(\"data\", data);\n    return msg;\n}\n\n\n\n/*\nelse if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n}*/\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 580,
+        "x": 510,
+        "y": 400,
         "wires": [
             [
                 "fc8a46031f4e59e7",
                 "d6ae6da59b4f5977"
-            ]
-        ]
-    },
-    {
-        "id": "8bba5c4572499673",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "function 55",
-        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n    msg.payload.tare = null;\n    \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n    msg.payload.time = null;\n}\n\nelse if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n    global.set(\"data\", data);\n\n    msg.payload.tara = Math.round(Number(msg.weight) * 10000) / 10000 ;\n\n    var time = Date.now();\n    msg.payload.time = time;\n\n    \n    time.toString;\n\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1430,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "838c1b29b02bcb36",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 23",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "685427a8604b9997",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 24",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "8c49e53dac04259a",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "debug 22",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "e95aacbd966faf86",
-        "type": "change",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Material Status",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.warnmessage",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 700,
-        "wires": [
-            [
-                "9927e580bed5712e"
             ]
         ]
     },
@@ -2727,7 +1750,7 @@
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "OK",
         "cancel": "",
@@ -2735,8 +1758,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 630,
-        "y": 760,
+        "x": 650,
+        "y": 660,
         "wires": [
             [
                 "b962e23e4de4c320"
@@ -2769,8 +1792,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 760,
+        "x": 450,
+        "y": 660,
         "wires": [
             [
                 "479dfb722bcbb753"
@@ -2803,8 +1826,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
-        "y": 760,
+        "x": 850,
+        "y": 660,
         "wires": [
             [
                 "a34a30af937cdd31"
@@ -2818,7 +1841,7 @@
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "Nein",
         "cancel": "Ja",
@@ -2826,11 +1849,13 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1030,
-        "y": 760,
+        "x": 1050,
+        "y": 660,
         "wires": [
             [
-                "d8aed1a123ce9ec7"
+                "d8aed1a123ce9ec7",
+                "805d08f5c5c7fdda",
+                "1374aa907f5fd57c"
             ]
         ]
     },
@@ -2839,7 +1864,179 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "function 57",
-        "func": "var data = global.get(\"data\");\n\nif (msg.payload == \"Ja\") {\n    data.Regal[msg.regalnr].Box[msg.boxnr].state.ordered = 3;\n    global.set(\"data\", data);\n}\n\n",
+        "func": "var data = global.get(\"data\");\n\nif (msg.payload == \"Ja\") {\n    data.Regal[msg.regalnr].Box[msg.boxnr].state.ordered = 4;\n    msg.payload.aendern = true;\n    global.set(\"data\", data);\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 660,
+        "wires": [
+            [
+                "11563a801db78ee4"
+            ]
+        ]
+    },
+    {
+        "id": "4c2f4fcd7438d5ba",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "Lagerstandsverlauf",
+        "group": "7e197a6ce2585433",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Lagerstandsverlauf",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "keine Daten",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1750,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "427d96375426b639",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Bestellstatus:",
+        "format": "{{msg.payload.state}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5a708494a45b4f11",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "1fb1ade5341e8198",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Box-01",
+        "format": "",
+        "layout": "row-spread",
+        "className": "overviewTextS01",
+        "style": true,
+        "font": "",
+        "fontSize": "26",
+        "color": "#000000",
+        "x": 1780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d8931020b8e153bf",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "c53ebfb51f9f9121",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .overviewTextS01 {\n        color: {{msg.payload.setBoxColor}} !important;\n        font-weight: bold !important;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1620,
+        "y": 120,
+        "wires": [
+            [
+                "5a708494a45b4f11"
+            ]
+        ]
+    },
+    {
+        "id": "b5fbb04e30777126",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "link in 7",
+        "links": [
+            "08a4f55b5e335467",
+            "3704c0b1c8051013",
+            "c04df3c0e2f685d2",
+            "a4d70e219e169152",
+            "c9f29e9a06129ae6",
+            "a9210a32079dd0c8",
+            "9d0182927d842af0"
+        ],
+        "x": 1085,
+        "y": 260,
+        "wires": [
+            [
+                "08198bfe1fba9cd4"
+            ]
+        ]
+    },
+    {
+        "id": "e9bab1ca1f988934",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Material:",
+        "format": "{{msg.payload.description}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1780,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "08198bfe1fba9cd4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 60",
+        "func": "const REGAL_NR = 1;\nconst BOX_NR = 0;\n\nvar data = global.get(\"data\");\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n\n    if (msg.payload.init) {\n        if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == \"\" ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == 0) {\n           \n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"black\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n\n            msg.payload.dateoftare = null;\n            msg.weight = null;\n            msg.payload.tare = null;\n            msg.payload.color = \"black\";\n        } else {\n            msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n            msg.payload.tare = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;            \n            msg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n        }\n        msg.regalnr = msg.payload.regalnr;\n        msg.boxnr = msg.payload.boxnr;\n        \n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"blue\";\n\n        msg.payload.time = null;\n        msg.weight = null;\n        msg.payload.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n        msg.payload.color = \"blue\";\n\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n        var time = Date.now();\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = time.toString;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"white\";\n\n        msg.payload.time = time;\n        msg.payload.tare = msg.weight;\n        msg.payload.color = \"white\";       \n\n    } else if (msg.weight != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        var boarder_min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max / 3;\n        var boarder_mid = boarder_min * 2;\n        boarder_min = Math.round(boarder_min * 1) / 1;\n        boarder_mid = Math.round(boarder_mid * 1) / 1;\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n\n        var weight = 0;\n        var pieces = 0;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n\n        if (msg.weight > 0) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n            var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n            var pieces = Math.round((weight / weightperpiece) * 1) / 1;            \n        }\n\n        if ((pieces >= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min || \n            pieces <= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min) && (pieces <= boarder_min)) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"red\";\n            msg.payload.color = \"red\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != 4) {\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 3;\n                msg.regalnr = msg.payload.regalnr;\n                msg.boxnr = msg.payload.boxnr;\n                msg.payload.alarmmessage = \"Kritischer Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_min && pieces <= boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"yellow\";\n            msg.payload.color = \"yellow\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 2;\n\n        } else if (pieces > boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"green\";\n            msg.payload.color = \"green\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 1;\n        }\n    }\n    global.set(\"data\", data);\n    return msg;\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2847,30 +2044,1299 @@
         "finalize": "",
         "libs": [],
         "x": 1210,
-        "y": 760,
+        "y": 260,
         "wires": [
-            []
+            [
+                "6a4fb1bb67287884",
+                "423bedbce1641fa0",
+                "e86a14eea21c9b44",
+                "a6437880e70832dd",
+                "9c88aa1cec7c0b54",
+                "44e8fd93cbdacef2",
+                "ca27f31d5a0ed576",
+                "3706b52466504ded",
+                "a2b1ca0e951db075"
+            ]
         ]
     },
     {
-        "id": "9927e580bed5712e",
+        "id": "cc7671e0d99940cc",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gewicht pro Stück:",
+        "format": "{{msg.payload.piece}} kg",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1750,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1f8291b20f623272",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Aktuelles Gewicht:",
+        "format": "{{msg.payload.weight}} kg",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d437636236aeba08",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kalibrierung:",
+        "format": "{{msg.payload.tare}} kg",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8c65878ca35b8724",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "7e197a6ce2585433",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kalibrierungsdatum:",
+        "format": "{{msg.payload.time | date:\"dd.MM.yyyy HH:mm\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1740,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b64290730f4c2bcc",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "7e197a6ce2585433",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Aktueller Lagerstand",
+        "label": "Stk.",
+        "format": "{{msg.payload.value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1740,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ace682e1b2344553",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "7e197a6ce2585433",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Kalibrierung",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1590,
+        "y": 500,
+        "wires": [
+            [
+                "940642aeba588239"
+            ]
+        ]
+    },
+    {
+        "id": "940642aeba588239",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 65",
+        "func": "const REGAL_NR = 1;\nconst BOX_NR = 0;\n\nvar data = global.get(\"data\");\n\ndata.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = true;\nglobal.set(\"data\", data);\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 500,
+        "wires": [
+            [
+                "a4d70e219e169152"
+            ]
+        ]
+    },
+    {
+        "id": "07db633cf37e46a0",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1410,
+        "y": 500,
+        "wires": [
+            [
+                "ace682e1b2344553"
+            ]
+        ]
+    },
+    {
+        "id": "a4d70e219e169152",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "b5fbb04e30777126",
+            "aec30c78b29ec91e",
+            "dd890f706c60f7c3",
+            "233cbcef25daba71"
+        ],
+        "x": 1915,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6a4fb1bb67287884",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "334c06621115c97c",
+            "3d1d12da6fbd4125",
+            "5d7197a07568184e"
+        ],
+        "x": 1395,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "57d36db60beb0d0d",
         "type": "ui_toast",
         "z": "f6f2187d.f17ca8",
-        "position": "dialog",
+        "position": "top right",
         "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
+        "highlight": "green",
+        "sendall": false,
+        "outputs": 0,
         "ok": "OK",
-        "cancel": "NO",
+        "cancel": "",
         "raw": false,
         "className": "",
         "topic": "",
         "name": "",
-        "x": 630,
-        "y": 700,
+        "x": 1910,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ba0b70958416c08b",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Bestellung abgeschlossen",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Das Material wurde nachbestellt.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 640,
         "wires": [
-            []
+            [
+                "57d36db60beb0d0d",
+                "96d7ea6eafe2375e"
+            ]
+        ]
+    },
+    {
+        "id": "805d08f5c5c7fdda",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Ja",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Nein",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1390,
+        "y": 660,
+        "wires": [
+            [
+                "ba0b70958416c08b"
+            ],
+            [
+                "78b2cf1d024cd7dd"
+            ]
+        ]
+    },
+    {
+        "id": "78b2cf1d024cd7dd",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Nicht nachbestellt",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Das Material wurde nicht nachbestellt",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 680,
+        "wires": [
+            [
+                "5bceb4da8384d0f7",
+                "49077507d5106a6a"
+            ]
+        ]
+    },
+    {
+        "id": "5bceb4da8384d0f7",
+        "type": "ui_toast",
+        "z": "f6f2187d.f17ca8",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1910,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8ba98ce8a58ff2ce",
+        "type": "ui_audio",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "",
+        "voice": "Google Deutsch",
+        "always": true,
+        "x": 1940,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "49077507d5106a6a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 77",
+        "func": "msg.payload = \"Sie werden nochmal erinnert.\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 720,
+        "wires": [
+            [
+                "8ba98ce8a58ff2ce"
+            ]
+        ]
+    },
+    {
+        "id": "b5eb94b384fa0d7c",
+        "type": "ui_audio",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "",
+        "voice": "Google Deutsch",
+        "always": true,
+        "x": 1940,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "96d7ea6eafe2375e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 78",
+        "func": "msg.payload = \"Sie werden nicht mehr erinnert.\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 600,
+        "wires": [
+            [
+                "b5eb94b384fa0d7c"
+            ]
+        ]
+    },
+    {
+        "id": "334c06621115c97c",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "message out",
+        "links": [
+            "876d88bff2324c8f",
+            "6a4fb1bb67287884",
+            "7f34968871d3014f",
+            "07d779df6183ad60"
+        ],
+        "x": 305,
+        "y": 660,
+        "wires": [
+            [
+                "72bfbce0a078809f"
+            ]
+        ]
+    },
+    {
+        "id": "dfda29a079239a62",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 79",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true ||\n    (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == null && msg.weight == null) ) {\n    msg.state = \"\";\n    return msg;\n} else if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != null && msg.weight != null) || \n        (msg.payload.init == true)) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1) {\n        msg.state = \"vorrätig\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 2) {\n        msg.state = \"gering\"\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 3) {\n        msg.state = \"nachbestellen\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 4) {\n        msg.state = \"bestellt\";\n    }\n    return msg;\n}   \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "a9791278dd922577"
+            ]
+        ]
+    },
+    {
+        "id": "11563a801db78ee4",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1374aa907f5fd57c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "022895bb600b555e",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2474e362bee03aa2",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.aendern",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 560,
+        "wires": [
+            [
+                "022895bb600b555e"
+            ]
+        ]
+    },
+    {
+        "id": "92607bb771f41e87",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "dfaa680ed3908a15",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "559a729ef37362bd",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 40",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7db4284f700ed112",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 81",
+        "func": "const REGAL_NR = 0;\nconst BOX_NR = 1;\n\nvar data = global.get(\"data\");\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n\n    if (msg.payload.init) {\n        if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == \"\" ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == 0) {\n           \n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"black\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n\n            msg.payload.dateoftare = null;\n            msg.weight = null;\n            msg.payload.tare = null;\n            msg.payload.color = \"black\";\n        } else {\n            msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n            msg.payload.tare = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;            \n            msg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n        }\n        msg.regalnr = msg.payload.regalnr;\n        msg.boxnr = msg.payload.boxnr;\n        \n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"blue\";\n\n        msg.payload.time = null;\n        msg.weight = null;\n        msg.payload.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n        msg.payload.color = \"blue\";\n\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n        var time = Date.now();\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = time.toString;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"white\";\n\n        msg.payload.time = time;\n        msg.payload.tare = msg.weight;\n        msg.payload.color = \"white\";       \n\n    } else if (msg.weight != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        var boarder_min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max / 3;\n        var boarder_mid = boarder_min * 2;\n        boarder_min = Math.round(boarder_min * 1) / 1;\n        boarder_mid = Math.round(boarder_mid * 1) / 1;\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n\n        var weight = 0;\n        var pieces = 0;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n\n        if (msg.weight > 0) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n            var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n            var pieces = Math.round((weight / weightperpiece) * 1) / 1;            \n        }\n\n        if ((pieces >= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min || \n            pieces <= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min) && (pieces <= boarder_min)) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"red\";\n            msg.payload.color = \"red\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != 4) {\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 3;\n                msg.regalnr = msg.payload.regalnr;\n                msg.boxnr = msg.payload.boxnr;\n                msg.payload.alarmmessage = \"Kritischer Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_min && pieces <= boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"yellow\";\n            msg.payload.color = \"yellow\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 2;\n\n        } else if (pieces > boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"green\";\n            msg.payload.color = \"green\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 1;\n        }\n    }\n    global.set(\"data\", data);\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1080,
+        "wires": [
+            [
+                "fef0da3bc47fcf3c",
+                "b97621683f6fac1a",
+                "cfdb2af08ed9701d",
+                "a56fa9381253d02b",
+                "6f154d2996c31dbc",
+                "a1bd8bd5b0a75828",
+                "f91b413fa07d8fda",
+                "033c7a0ab66905a6",
+                "7f34968871d3014f"
+            ]
+        ]
+    },
+    {
+        "id": "a1bd8bd5b0a75828",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 82",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload = 0;\n    return msg;\n}\n\nelse if ((msg.weight != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null) {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (msg.payload < 0) {\n            msg.payload = 0;\n        }\n    } else {\n        msg.payload = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1220,
+        "wires": [
+            [
+                "83e19b9197a45b82"
+            ]
+        ]
+    },
+    {
+        "id": "033c7a0ab66905a6",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 83",
+        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1020,
+        "wires": [
+            [
+                "c4db5ca158182d04"
+            ]
+        ]
+    },
+    {
+        "id": "b97621683f6fac1a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 84",
+        "func": "var data = global.get(\"data\");\n\n\nmsg.payload.piece = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece * 100) / 100;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1060,
+        "wires": [
+            [
+                "87f6b559e0812a8b"
+            ]
+        ]
+    },
+    {
+        "id": "cfdb2af08ed9701d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 85",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.weight = msg.weight;\n    return msg;\n}\n\nelse if (msg.weight != null || msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated != true) {\n\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.weight = Math.round(weight * 100) / 100;\n    } else {\n        msg.payload.weight = null;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1100,
+        "wires": [
+            [
+                "76208439e8460f01"
+            ]
+        ]
+    },
+    {
+        "id": "a56fa9381253d02b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 86",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.value = 0;\n    return msg;\n}\n\nelse if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"seg1\":Math.round(max/3), \"seg2\":Math.round(2*max/3), \"max\":max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces < 0) {\n            msg.payload.value = 0;\n        } else {\n            msg.payload.value = pieces;\n        }\n\n    } else {\n        msg.payload.value = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            [
+                "440b05f04a1bd728"
+            ]
+        ]
+    },
+    {
+        "id": "fef0da3bc47fcf3c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 87",
+        "func": "if (msg.payload.color != null) {\n    switch (msg.payload.color) {\n        case \"red\":\n            msg.payload.setBoxColor = \"rgb(255,0,0)\";\n            break;\n        case \"yellow\":\n            msg.payload.setBoxColor = \"rgb(255,255,0)\";\n            break;\n        case \"green\":\n            msg.payload.setBoxColor = \"rgb(0,255,0)\";\n            break;\n        case \"blue\":\n            msg.payload.setBoxColor = \"rgb(0,0,255)\";\n            break;\n        case \"white\":\n            msg.payload.setBoxColor = \"rgb(255,255,255)\";\n            break;\n        default:\n            msg.payload.setBoxColor = \"rgb(0,0,0)\";\n            break;\n    }\n    return msg; \n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 980,
+        "wires": [
+            [
+                "0fac55db59ec7132"
+            ]
+        ]
+    },
+    {
+        "id": "7f34968871d3014f",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "334c06621115c97c",
+            "3d1d12da6fbd4125",
+            "5d7197a07568184e"
+        ],
+        "x": 455,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f91b413fa07d8fda",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 88",
+        "func": "var data = global.get(\"data\");\n\n\nif (msg.payload.init == true) {\n    msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n    if (msg.payload.tare != null) {\n        msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n    }\n    return msg;\n\n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n    \n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;   \n    msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n\n    global.set(\"data\", data);\n    return msg;\n}\n\n\n\n/*\nelse if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n}*/\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1260,
+        "wires": [
+            [
+                "140de69137217c16",
+                "9814870640f9a9d8"
+            ]
+        ]
+    },
+    {
+        "id": "6f154d2996c31dbc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 89",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true ||\n    (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == null && msg.weight == null) ) {\n    msg.state = \"\";\n    return msg;\n} else if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != null && msg.weight != null) || \n        (msg.payload.init == true)) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1) {\n        msg.state = \"vorrätig\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 2) {\n        msg.state = \"gering\"\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 3) {\n        msg.state = \"nachbestellen\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 4) {\n        msg.state = \"bestellt\";\n    }\n    return msg;\n}   \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1180,
+        "wires": [
+            [
+                "8534eedf1b0ccf65"
+            ]
+        ]
+    },
+    {
+        "id": "250156ecf4527699",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 490,
+        "y": 1360,
+        "wires": [
+            [
+                "dd4b0eef5f71f04d"
+            ]
+        ]
+    },
+    {
+        "id": "16cfdf3377bd0f8c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 90",
+        "func": "const REGAL_NR = 0;\nconst BOX_NR = 1;\n\nvar data = global.get(\"data\");\n\ndata.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = true;\nglobal.set(\"data\", data);\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1360,
+        "wires": [
+            [
+                "c426fec1a6fcdd81"
+            ]
+        ]
+    },
+    {
+        "id": "c426fec1a6fcdd81",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "02796594dea1bd6f",
+            "aec30c78b29ec91e",
+            "391dec887b5fe329",
+            "233cbcef25daba71"
+        ],
+        "x": 945,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "3706b52466504ded",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 91",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload = 0;\n    return msg;\n}\n\nelse if ((msg.weight != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null) {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (msg.payload < 0) {\n            msg.payload = 0;\n        }\n    } else {\n        msg.payload = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 360,
+        "wires": [
+            [
+                "4c2f4fcd7438d5ba"
+            ]
+        ]
+    },
+    {
+        "id": "e86a14eea21c9b44",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 92",
+        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 160,
+        "wires": [
+            [
+                "e9bab1ca1f988934"
+            ]
+        ]
+    },
+    {
+        "id": "a6437880e70832dd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 93",
+        "func": "var data = global.get(\"data\");\n\n\nmsg.payload.piece = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece * 100) / 100;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 200,
+        "wires": [
+            [
+                "cc7671e0d99940cc"
+            ]
+        ]
+    },
+    {
+        "id": "9c88aa1cec7c0b54",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 94",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.weight = msg.weight;\n    return msg;\n}\n\nelse if (msg.weight != null || msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated != true) {\n\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.weight = Math.round(weight * 100) / 100;\n    } else {\n        msg.payload.weight = null;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 240,
+        "wires": [
+            [
+                "1f8291b20f623272"
+            ]
+        ]
+    },
+    {
+        "id": "44e8fd93cbdacef2",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 95",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.value = 0;\n    return msg;\n}\n\nelse if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"seg1\":Math.round(max/3), \"seg2\":Math.round(2*max/3), \"max\":max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces < 0) {\n            msg.payload.value = 0;\n        } else {\n            msg.payload.value = pieces;\n        }\n\n    } else {\n        msg.payload.value = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 280,
+        "wires": [
+            [
+                "b64290730f4c2bcc"
+            ]
+        ]
+    },
+    {
+        "id": "423bedbce1641fa0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 96",
+        "func": "if (msg.payload.color != null) {\n    switch (msg.payload.color) {\n        case \"red\":\n            msg.payload.setBoxColor = \"rgb(255,0,0)\";\n            break;\n        case \"yellow\":\n            msg.payload.setBoxColor = \"rgb(255,255,0)\";\n            break;\n        case \"green\":\n            msg.payload.setBoxColor = \"rgb(0,255,0)\";\n            break;\n        case \"blue\":\n            msg.payload.setBoxColor = \"rgb(0,0,255)\";\n            break;\n        case \"white\":\n            msg.payload.setBoxColor = \"rgb(255,255,255)\";\n            break;\n        default:\n            msg.payload.setBoxColor = \"rgb(0,0,0)\";\n            break;\n    }\n    return msg; \n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 120,
+        "wires": [
+            [
+                "d8931020b8e153bf"
+            ]
+        ]
+    },
+    {
+        "id": "a2b1ca0e951db075",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 97",
+        "func": "var data = global.get(\"data\");\n\n\nif (msg.payload.init == true) {\n    msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n    if (msg.payload.tare != null) {\n        msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n    }\n    return msg;\n\n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n    \n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;   \n    msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n\n    global.set(\"data\", data);\n    return msg;\n}\n\n\n\n/*\nelse if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n}*/\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 400,
+        "wires": [
+            [
+                "d437636236aeba08",
+                "8c65878ca35b8724"
+            ]
+        ]
+    },
+    {
+        "id": "ca27f31d5a0ed576",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 98",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true ||\n    (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == null && msg.weight == null) ) {\n    msg.state = \"\";\n    return msg;\n} else if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != null && msg.weight != null) || \n        (msg.payload.init == true)) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1) {\n        msg.state = \"vorrätig\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 2) {\n        msg.state = \"gering\"\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 3) {\n        msg.state = \"nachbestellen\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 4) {\n        msg.state = \"bestellt\";\n    }\n    return msg;\n}   \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 320,
+        "wires": [
+            [
+                "427d96375426b639"
+            ]
+        ]
+    },
+    {
+        "id": "5009725f7c0ebd14",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 99",
+        "func": "const REGAL_NR = 1;\nconst BOX_NR = 1;\n\nvar data = global.get(\"data\");\n\nif (msg.payload.regalnr == REGAL_NR && msg.payload.boxnr == BOX_NR) {\n\n    if (msg.payload.init) {\n        if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare == \"\" ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == null ||\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece == 0) {\n           \n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"black\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n\n            msg.payload.dateoftare = null;\n            msg.weight = null;\n            msg.payload.tare = null;\n            msg.payload.color = \"black\";\n        } else {\n            msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n            msg.payload.tare = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;            \n            msg.payload.color = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color;\n        }\n        msg.regalnr = msg.payload.regalnr;\n        msg.boxnr = msg.payload.boxnr;\n        \n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"blue\";\n\n        msg.payload.time = null;\n        msg.weight = null;\n        msg.payload.tare = null;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = null;\n        msg.payload.color = \"blue\";\n\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n        var time = Date.now();\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare = time.toString;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare = Number(msg.weight);\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"white\";\n\n        msg.payload.time = time;\n        msg.payload.tare = msg.weight;\n        msg.payload.color = \"white\";       \n\n    } else if (msg.weight != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false && \n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n               data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n        var boarder_min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max / 3;\n        var boarder_mid = boarder_min * 2;\n        boarder_min = Math.round(boarder_min * 1) / 1;\n        boarder_mid = Math.round(boarder_mid * 1) / 1;\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n\n        var weight = 0;\n        var pieces = 0;\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n\n        if (msg.weight > 0) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured = msg.weight;\n            var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n            var pieces = Math.round((weight / weightperpiece) * 1) / 1;            \n        }\n\n        if ((pieces >= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min || \n            pieces <= data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min) && (pieces <= boarder_min)) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"red\";\n            msg.payload.color = \"red\";\n            if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != 4) {\n                data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 3;\n                msg.regalnr = msg.payload.regalnr;\n                msg.boxnr = msg.payload.boxnr;\n                msg.payload.alarmmessage = \"Kritischer Bestand in \" + data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description + \" im Regal: \" + msg.payload.regalnr + \" Box: \" + msg.payload.boxnr + \" !\";\n            }\n        } else if (pieces > boarder_min && pieces <= boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"yellow\";\n            msg.payload.color = \"yellow\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 2;\n\n        } else if (pieces > boarder_mid) {\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = \"green\";\n            msg.payload.color = \"green\";\n            data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered = 1;\n        }\n    }\n    global.set(\"data\", data);\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 1120,
+        "wires": [
+            [
+                "ee335f2a5eda02d8",
+                "c8c99ef19aef4965",
+                "1ef0106b124cb403",
+                "eaf2ea48e59a0a7d",
+                "f115ab3101568b9e",
+                "693091fbc91ae3a2",
+                "7f4f81d63abd1146",
+                "0693a767c0b749d9",
+                "07d779df6183ad60"
+            ]
+        ]
+    },
+    {
+        "id": "693091fbc91ae3a2",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 100",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload = 0;\n    return msg;\n}\n\nelse if ((msg.weight != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n    \n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"ymin\": min, \"ymax\": max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null) {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (msg.payload < 0) {\n            msg.payload = 0;\n        }\n    } else {\n        msg.payload = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1260,
+        "wires": [
+            [
+                "3801cfd0fe451377"
+            ]
+        ]
+    },
+    {
+        "id": "0693a767c0b749d9",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 101",
+        "func": "var data = global.get(\"data\");\n\nmsg.payload.description = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].description;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1060,
+        "wires": [
+            [
+                "ab86d4a162f42865"
+            ]
+        ]
+    },
+    {
+        "id": "c8c99ef19aef4965",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 102",
+        "func": "var data = global.get(\"data\");\n\n\nmsg.payload.piece = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece * 100) / 100;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1100,
+        "wires": [
+            [
+                "e71ff21c4e52b145"
+            ]
+        ]
+    },
+    {
+        "id": "1ef0106b124cb403",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 103",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.weight = msg.weight;\n    return msg;\n}\n\nelse if (msg.weight != null || msg.payload.init == true) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\" &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated != true) {\n\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n        msg.payload.weight = Math.round(weight * 100) / 100;\n    } else {\n        msg.payload.weight = null;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1140,
+        "wires": [
+            [
+                "b4090cf225e569ee"
+            ]
+        ]
+    },
+    {
+        "id": "eaf2ea48e59a0a7d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 104",
+        "func": "var data = global.get(\"data\");\n\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    msg.payload.value = 0;\n    return msg;\n}\n\nelse if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured != null && \n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == false) || msg.payload.init == true) {\n\n    var min = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.min;\n    var max = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dashboardSetup.max;\n    msg.ui_control = { \"min\":min, \"seg1\":Math.round(max/3), \"seg2\":Math.round(2*max/3), \"max\":max };\n\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare != null &&\n        data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare != \"\") {\n\n        var weightperpiece = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.piece;\n        var weight = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.measured - data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare;\n\n        var pieces = Math.round((weight / weightperpiece) * 1) / 1;\n\n        if (pieces < 0) {\n            msg.payload.value = 0;\n        } else {\n            msg.payload.value = pieces;\n        }\n\n    } else {\n        msg.payload.value = 0;\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1180,
+        "wires": [
+            [
+                "554aaa4c275ab913"
+            ]
+        ]
+    },
+    {
+        "id": "ee335f2a5eda02d8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 105",
+        "func": "if (msg.payload.color != null) {\n    switch (msg.payload.color) {\n        case \"red\":\n            msg.payload.setBoxColor = \"rgb(255,0,0)\";\n            break;\n        case \"yellow\":\n            msg.payload.setBoxColor = \"rgb(255,255,0)\";\n            break;\n        case \"green\":\n            msg.payload.setBoxColor = \"rgb(0,255,0)\";\n            break;\n        case \"blue\":\n            msg.payload.setBoxColor = \"rgb(0,0,255)\";\n            break;\n        case \"white\":\n            msg.payload.setBoxColor = \"rgb(255,255,255)\";\n            break;\n        default:\n            msg.payload.setBoxColor = \"rgb(0,0,0)\";\n            break;\n    }\n    return msg; \n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1020,
+        "wires": [
+            [
+                "2b67a4766d1d918c"
+            ]
+        ]
+    },
+    {
+        "id": "07d779df6183ad60",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "334c06621115c97c",
+            "3d1d12da6fbd4125",
+            "5d7197a07568184e"
+        ],
+        "x": 1555,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "7f4f81d63abd1146",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 106",
+        "func": "var data = global.get(\"data\");\n\n\nif (msg.payload.init == true) {\n    msg.payload.time = data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.dateoftare;\n    if (msg.payload.tare != null) {\n        msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n    }\n    return msg;\n\n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n    \n} else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = false;   \n    msg.payload.tare = Math.round(data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.tare * 10000) / 10000;\n\n    global.set(\"data\", data);\n    return msg;\n}\n\n\n\n/*\nelse if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true && msg.weight == null) {\n    return msg;\n}*/\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1300,
+        "wires": [
+            [
+                "d206b5776879d967",
+                "ccc8016f14aa5cd9"
+            ]
+        ]
+    },
+    {
+        "id": "f115ab3101568b9e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 107",
+        "func": "var data = global.get(\"data\");\n\nif (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated == true ||\n    (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == null && msg.weight == null) ) {\n    msg.state = \"\";\n    return msg;\n} else if ((data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered != null && msg.weight != null) || \n        (msg.payload.init == true)) {\n    if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 1) {\n        msg.state = \"vorrätig\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 2) {\n        msg.state = \"gering\"\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 3) {\n        msg.state = \"nachbestellen\";\n    } else if (data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].state.ordered == 4) {\n        msg.state = \"bestellt\";\n    }\n    return msg;\n}   \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1220,
+        "wires": [
+            [
+                "0064ead898f28002"
+            ]
+        ]
+    },
+    {
+        "id": "d2f66f0b619ad9c4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 108",
+        "func": "const REGAL_NR = 1;\nconst BOX_NR = 1;\n\nvar data = global.get(\"data\");\n\ndata.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].weight.calibrated = true;\nglobal.set(\"data\", data);\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1420,
+        "wires": [
+            [
+                "0113032f34852a75"
+            ]
+        ]
+    },
+    {
+        "id": "0113032f34852a75",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "02796594dea1bd6f",
+            "aec30c78b29ec91e",
+            "391dec887b5fe329",
+            "233cbcef25daba71"
+        ],
+        "x": 2005,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "67104eb473a6e4fd",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1550,
+        "y": 1420,
+        "wires": [
+            [
+                "397adc9a2347cf3f"
+            ]
         ]
     },
     {
@@ -2893,7 +3359,9 @@
         "x": 890,
         "y": 1000,
         "wires": [
-            []
+            [
+                "9141db09156ac426"
+            ]
         ]
     },
     {
@@ -2913,7 +3381,8 @@
         "y": 1000,
         "wires": [
             [
-                "7c319599489e5277"
+                "7c319599489e5277",
+                "90318b39c2fc2c62"
             ]
         ]
     },
@@ -2930,8 +3399,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 1180,
+        "x": 1100,
+        "y": 1440,
         "wires": []
     },
     {
@@ -2950,8 +3419,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 710,
-        "y": 1180,
+        "x": 930,
+        "y": 1440,
         "wires": [
             [
                 "286ed8369b0d5cd1"
@@ -2970,8 +3439,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 1180,
+        "x": 760,
+        "y": 1440,
         "wires": [
             [
                 "21fa50a67879f03d"
@@ -2993,13 +3462,13 @@
         "once": false,
         "onceDelay": "4",
         "topic": "",
-        "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":0.1}",
+        "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":0.01}",
         "payloadType": "json",
-        "x": 390,
-        "y": 1180,
+        "x": 110,
+        "y": 1440,
         "wires": [
             [
-                "64267ebb9ab30030"
+                "7caa3552795627ce"
             ]
         ]
     },
@@ -3013,7 +3482,7 @@
         "upload": true,
         "swaggerDoc": "",
         "x": 370,
-        "y": 1580,
+        "y": 1840,
         "wires": [
             [
                 "888a7ca50062a170",
@@ -3036,7 +3505,7 @@
         "finalize": "",
         "libs": [],
         "x": 540,
-        "y": 1580,
+        "y": 1840,
         "wires": [
             [
                 "1230effcadc3e8ca",
@@ -3049,7 +3518,7 @@
         "type": "debug",
         "z": "32a4376ec58dcb18",
         "name": "debug 10",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3058,7 +3527,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 1620,
+        "y": 1880,
         "wires": []
     },
     {
@@ -3066,7 +3535,7 @@
         "type": "debug",
         "z": "32a4376ec58dcb18",
         "name": "debug 11",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3075,7 +3544,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 1660,
+        "y": 1920,
         "wires": []
     },
     {
@@ -3092,7 +3561,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 720,
-        "y": 1620,
+        "y": 1880,
         "wires": []
     },
     {
@@ -3124,7 +3593,7 @@
         "senderr": false,
         "headers": [],
         "x": 850,
-        "y": 1900,
+        "y": 2160,
         "wires": [
             [
                 "b2548e75c5e3185b"
@@ -3154,7 +3623,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 520,
-        "y": 1900,
+        "y": 2160,
         "wires": [
             [
                 "93e44b374b2db968"
@@ -3175,7 +3644,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 1900,
+        "y": 2160,
         "wires": []
     },
     {
@@ -3192,7 +3661,7 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 1900,
+        "y": 2160,
         "wires": [
             [
                 "970bd836d8074e8d"
@@ -3206,7 +3675,7 @@
         "name": "Get Weight",
         "info": "",
         "x": 380,
-        "y": 1520,
+        "y": 1780,
         "wires": []
     },
     {
@@ -3215,8 +3684,8 @@
         "z": "32a4376ec58dcb18",
         "name": "Get Weight @Test Only",
         "info": "",
-        "x": 420,
-        "y": 1120,
+        "x": 140,
+        "y": 1320,
         "wires": []
     },
     {
@@ -3232,7 +3701,7 @@
         "finalize": "",
         "libs": [],
         "x": 540,
-        "y": 1700,
+        "y": 1960,
         "wires": [
             [
                 "751eec616ba6cb52",
@@ -3254,7 +3723,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 700,
-        "y": 1740,
+        "y": 2000,
         "wires": []
     },
     {
@@ -3274,7 +3743,7 @@
         "senderr": false,
         "headers": [],
         "x": 710,
-        "y": 1700,
+        "y": 1960,
         "wires": [
             [
                 "7b6362c6a8783c2a",
@@ -3296,7 +3765,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 880,
-        "y": 1740,
+        "y": 2000,
         "wires": []
     },
     {
@@ -3304,7 +3773,7 @@
         "type": "debug",
         "z": "32a4376ec58dcb18",
         "name": "debug 16",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3313,7 +3782,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1060,
-        "y": 1740,
+        "y": 2000,
         "wires": []
     },
     {
@@ -3329,7 +3798,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 1700,
+        "y": 1960,
         "wires": [
             [
                 "e70e400431f477bb",
@@ -3345,7 +3814,7 @@
         "statusCode": "200",
         "headers": {},
         "x": 720,
-        "y": 1580,
+        "y": 1840,
         "wires": []
     },
     {
@@ -3492,10 +3961,9 @@
         "mode": "link",
         "links": [
             "02796594dea1bd6f",
-            "c5d09fd94dec7abd",
+            "233cbcef25daba71",
             "aec30c78b29ec91e",
-            "391dec887b5fe329",
-            "233cbcef25daba71"
+            "b5fbb04e30777126"
         ],
         "x": 1225,
         "y": 220,
@@ -3511,10 +3979,12 @@
             "02796594dea1bd6f",
             "aec30c78b29ec91e",
             "391dec887b5fe329",
-            "233cbcef25daba71"
+            "233cbcef25daba71",
+            "b5fbb04e30777126",
+            "dd890f706c60f7c3"
         ],
         "x": 1015,
-        "y": 1700,
+        "y": 1960,
         "wires": []
     },
     {
@@ -3861,11 +4331,11 @@
         "topic": "",
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":6.1}",
         "payloadType": "json",
-        "x": 390,
-        "y": 1300,
+        "x": 110,
+        "y": 1560,
         "wires": [
             [
-                "64267ebb9ab30030"
+                "7caa3552795627ce"
             ]
         ]
     },
@@ -3886,11 +4356,11 @@
         "topic": "",
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":8.1}",
         "payloadType": "json",
-        "x": 390,
-        "y": 1360,
+        "x": 110,
+        "y": 1620,
         "wires": [
             [
-                "64267ebb9ab30030"
+                "7caa3552795627ce"
             ]
         ]
     },
@@ -3901,13 +4371,17 @@
         "g": "5a9f7571b5ef7b8d",
         "name": "set new LED color",
         "links": [
-            "a6bf475ba4f09f85"
+            "6a4fb1bb67287884",
+            "a6bf475ba4f09f85",
+            "876d88bff2324c8f",
+            "7f34968871d3014f",
+            "07d779df6183ad60"
         ],
-        "x": 605,
-        "y": 960,
+        "x": 205,
+        "y": 1000,
         "wires": [
             [
-                "d2b609c3233ed08a"
+                "dec643171e37a325"
             ]
         ]
     },
@@ -3915,7 +4389,7 @@
         "id": "bf9857aee7662784",
         "type": "inject",
         "z": "32a4376ec58dcb18",
-        "name": "3.1 kg",
+        "name": "0.1 kg",
         "props": [
             {
                 "p": "payload"
@@ -3926,13 +4400,13 @@
         "once": false,
         "onceDelay": "4",
         "topic": "",
-        "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":3.1}",
+        "payload": "{\"regalnr\":0,\"boxnr\":0,\"weight\":0.1}",
         "payloadType": "json",
-        "x": 390,
-        "y": 1240,
+        "x": 110,
+        "y": 1500,
         "wires": [
             [
-                "64267ebb9ab30030"
+                "7caa3552795627ce"
             ]
         ]
     },
@@ -4016,7 +4490,8 @@
         "y": 260,
         "wires": [
             [
-                "a9210a32079dd0c8"
+                "a9210a32079dd0c8",
+                "110a5fc7b2e572ff"
             ]
         ]
     },
@@ -4030,8 +4505,8 @@
         "links": [
             "02796594dea1bd6f",
             "233cbcef25daba71",
-            "391dec887b5fe329",
-            "aec30c78b29ec91e"
+            "aec30c78b29ec91e",
+            "b5fbb04e30777126"
         ],
         "x": 1225,
         "y": 260,
@@ -4119,13 +4594,16 @@
         "g": "5a9f7571b5ef7b8d",
         "name": "set new LED onoff",
         "links": [
-            "876d88bff2324c8f"
+            "876d88bff2324c8f",
+            "6a4fb1bb67287884",
+            "7f34968871d3014f",
+            "07d779df6183ad60"
         ],
-        "x": 605,
-        "y": 740,
+        "x": 205,
+        "y": 780,
         "wires": [
             [
-                "419070db5845acbf"
+                "73d56f8042f2a151"
             ]
         ]
     },
@@ -4140,7 +4618,9 @@
             "02796594dea1bd6f",
             "233cbcef25daba71",
             "391dec887b5fe329",
-            "aec30c78b29ec91e"
+            "aec30c78b29ec91e",
+            "b5fbb04e30777126",
+            "dd890f706c60f7c3"
         ],
         "x": 825,
         "y": 560,
@@ -4165,7 +4645,7 @@
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"color\":\"red\"}",
         "payloadType": "json",
         "x": 250,
-        "y": 1020,
+        "y": 1080,
         "wires": [
             [
                 "d2b609c3233ed08a"
@@ -4191,7 +4671,7 @@
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"color\":\"yellow\"}",
         "payloadType": "json",
         "x": 250,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "d2b609c3233ed08a"
@@ -4217,7 +4697,7 @@
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"onoff\": true}",
         "payloadType": "json",
         "x": 240,
-        "y": 760,
+        "y": 820,
         "wires": [
             [
                 "419070db5845acbf"
@@ -4243,11 +4723,371 @@
         "payload": "{\"regalnr\":0,\"boxnr\":0,\"onoff\": false}",
         "payloadType": "json",
         "x": 250,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "419070db5845acbf"
             ]
         ]
+    },
+    {
+        "id": "7508700f439bc40c",
+        "type": "debug",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "383852033fcb0b6d",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "Force reg: 1 box: 0 LED to color RED",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"color\":\"red\"}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 1160,
+        "wires": [
+            [
+                "d2b609c3233ed08a"
+            ]
+        ]
+    },
+    {
+        "id": "6ab5db091ac5b6ee",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "Force reg: 1 box: 0 LED to color Yellow",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"color\":\"yellow\"}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 1120,
+        "wires": [
+            [
+                "d2b609c3233ed08a"
+            ]
+        ]
+    },
+    {
+        "id": "96b22366456b4125",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "Force reg: 1 box: 0 LED to onoff true",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"onoff\": true}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 900,
+        "wires": [
+            [
+                "419070db5845acbf"
+            ]
+        ]
+    },
+    {
+        "id": "37d3beca8dd091b9",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "Force reg: 1 box: 0 LED to onoff false",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"onoff\": false}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 940,
+        "wires": [
+            [
+                "419070db5845acbf"
+            ]
+        ]
+    },
+    {
+        "id": "71b10d48dbfaef09",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "name": "tare",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"weight\":0.01}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 1440,
+        "wires": [
+            [
+                "34afdf78c13847bd"
+            ]
+        ]
+    },
+    {
+        "id": "743837f11556105b",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "name": "6.1 kg",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"weight\":6.1}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 1560,
+        "wires": [
+            [
+                "34afdf78c13847bd"
+            ]
+        ]
+    },
+    {
+        "id": "fc807dd35a1e1ada",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "name": "8.1 kg",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"weight\":8.1}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 1620,
+        "wires": [
+            [
+                "34afdf78c13847bd"
+            ]
+        ]
+    },
+    {
+        "id": "182cec2d08c04b42",
+        "type": "inject",
+        "z": "32a4376ec58dcb18",
+        "name": "3.1 kg",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "{\"regalnr\":1,\"boxnr\":0,\"weight\":3.1}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 1500,
+        "wires": [
+            [
+                "34afdf78c13847bd"
+            ]
+        ]
+    },
+    {
+        "id": "675fd85c552ebad3",
+        "type": "link in",
+        "z": "32a4376ec58dcb18",
+        "name": "Scale force test",
+        "links": [
+            "34afdf78c13847bd",
+            "7caa3552795627ce"
+        ],
+        "x": 655,
+        "y": 1440,
+        "wires": [
+            [
+                "64267ebb9ab30030"
+            ]
+        ]
+    },
+    {
+        "id": "34afdf78c13847bd",
+        "type": "link out",
+        "z": "32a4376ec58dcb18",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "675fd85c552ebad3"
+        ],
+        "x": 515,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "7caa3552795627ce",
+        "type": "link out",
+        "z": "32a4376ec58dcb18",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "675fd85c552ebad3"
+        ],
+        "x": 235,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "110a5fc7b2e572ff",
+        "type": "debug",
+        "z": "32a4376ec58dcb18",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "73d56f8042f2a151",
+        "type": "function",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "function 15",
+        "func": "var data = global.get(\"data\");\n\nif (msg.payload.onoff != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.onoff = msg.payload.onoff;\n    global.set(\"data\", data);\n    return msg\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "419070db5845acbf"
+            ]
+        ]
+    },
+    {
+        "id": "dec643171e37a325",
+        "type": "function",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "function 53",
+        "func": "var data = global.get(\"data\");\n\nif (msg.payload.color != null) {\n    data.Regal[msg.payload.regalnr].Box[msg.payload.boxnr].LED.color = msg.payload.color;\n    global.set(\"data\", data);\n    return msg\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1000,
+        "wires": [
+            [
+                "d2b609c3233ed08a",
+                "7508700f439bc40c"
+            ]
+        ]
+    },
+    {
+        "id": "90318b39c2fc2c62",
+        "type": "debug",
+        "z": "32a4376ec58dcb18",
+        "g": "5a9f7571b5ef7b8d",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "9141db09156ac426",
+        "type": "debug",
+        "z": "32a4376ec58dcb18",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1000,
+        "wires": []
     }
 ]
