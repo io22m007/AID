@@ -141,11 +141,19 @@ class Scale(threading.Thread):
             start = time.time()
             for box_counter in range(1, self.box_count + 1):
                 print(str(box_counter))
-                reading = scale_list[box_counter - 1].get_weight_mean(10) 	# orig = 50
+                #Get a scale reading by averaging of 10 values
+                reading = scale_list[box_counter - 1].get_weight_mean(10)
                 if reading:
+                    #Save the current reading in the list for the current scale and the current value_counter position (0-2)
                     recent_values[box_counter - 1][value_counter] = reading
+                    #When the three values have been read
                     if value_counter == 2:
-                        if abs((recent_values[box_counter - 1][0] - recent_values[box_counter - 1][1]) / recent_values[box_counter - 1][0]) <= 0.03 and abs((recent_values[box_counter - 1][1] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][1]) <= 0.03 and abs((recent_values[box_counter - 1][0] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][0]):
+                        #Check if the three recent values for a particular scale are within 3% of each other
+                        if abs(
+                            (recent_values[box_counter - 1][0] - recent_values[box_counter - 1][1]) / recent_values[box_counter - 1][0]) <= 0.03 and abs(
+                                (recent_values[box_counter - 1][1] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][1]) <= 0.03 and abs(
+                                    (recent_values[box_counter - 1][0] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][0]) <= 0.03:
+                            #When the three recent values for a particular scale are within 3% of each other send the latest value
                             self.CheckResponse(
                                 self.UpdateResource(self.cse + "/" + self.cse_rn + "/" + self.ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", 
                                                     self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), 
@@ -160,6 +168,9 @@ class Scale(threading.Thread):
                 value_counter = value_counter + 1
 
             try:
-                time.sleep(time.time() - start - 3)		# orig 10
+                #A cycle should last at least three seconds.
+                #If the cycle is shorter than three seconds then sleep for the remaining time
+                #If the cycle is already longer than three seconds then an error will occure (can't sleep negative time) which is why the try-except is in place
+                time.sleep(time.time() - start - 3)
             except:
                 pass

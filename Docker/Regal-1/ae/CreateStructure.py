@@ -215,7 +215,7 @@ class AE_Creation:
         }
         return data
 
-    def SubscriptionPrimitiveContent(self, resourceName:str, notificationURL:dict, notificationContentType:int, notificationEventType:dict) -> dict:
+    def SubscriptionPrimitiveContent(self, resourceName:str, notificationURL:list, notificationContentType:int, notificationEventType:list) -> dict:
         """
         Returns the primitive content for subscription as a dictionary.
         The dict contains the given parameters.
@@ -223,9 +223,9 @@ class AE_Creation:
         Parameters:
             self (the class)
             resourceName (name of the resource) : str
-            notificationURL (where the notification should be sen to, protocol + ip/hostname + port) : dict
+            notificationURL (where the notification should be sent to, protocol + ip/hostname + port) : list
             notificationContentType (which data should be send as a notification) : str
-            notificationEventType (the types of events notifications shoud be send about) : dict
+            notificationEventType (the types of events notifications shoud be send about) : list
         Returns:
             data : dict
         """

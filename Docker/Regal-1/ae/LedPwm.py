@@ -201,7 +201,7 @@ class LedPwm(threading.Thread):
             print(f"Recieved: {json_message}")
             #When the subscription id isn't in the subscription_resources dict
             if json_message["m2m:sgn"]["sur"] not in subscription_resources:
-                #
+                #Get just the subscription resource id
                 subscription_resource_split = str(json_message["m2m:sgn"]["sur"]).split('/')
                 #Send a HTTP REST API GET request to the ASN CSE ACME to resolve the subscription resource id to the name of the subscription resource
                 #With GetSubscriptionResourceName the name is extracted from the json response
@@ -221,3 +221,63 @@ class LedPwm(threading.Thread):
                 led_list = self.UpdateLEDs(led_list, json_message, subscription_resources[json_message["m2m:sgn"]["sur"]])
             #Tell that the current task is done    
             self.data_queue.task_done()
+"""
+Example notification:
+
+Host: acme-regal-1.local:9999
+User-Agent: ACME 0.12.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Date: Thu, 25 Jan 2024 12:36:52 GMT
+Content-Type: application/json
+cache-control: no-cache
+X-M2M-Origin: /id-asn-regal-1
+X-M2M-RI: 2082668436
+X-M2M-RVI: 4
+X-M2M-OT: 20240125T123652,440561
+Content-Length: 162
+
+
+{
+    "m2m:sgn": {
+        "nev": {
+            "rep": {
+                "cod:color": {
+                    "red": 255,
+                    "green": 0,
+                    "blue": 0,
+                    "lt": "20240125T123650,006993"
+                }
+            },
+            "net": 1
+        },
+        "sur": "/id-asn-regal-1/sub364576389"
+    }
+}
+"""
+
+"""
+Example subscription resoruce name retrieval
+
+{
+    "m2m:sub": {
+        "rn": "Box1SubscriptionDeviceLightBinarySwitch",
+        "nu": [
+            "https://acme-regal-1.local:9999"
+        ],
+        "nct": 2,
+        "enc": {
+            "net": [
+                1
+            ]
+        },
+        "ri": "sub2001021526",
+        "pi": "binSh394340947",
+        "ct": "20240125T123424,129571",
+        "lt": "20240125T123424,129571",
+        "ty": 23,
+        "et": "20290123T123353,112145"
+    }
+}
+"""
