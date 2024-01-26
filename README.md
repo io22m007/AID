@@ -1,18 +1,30 @@
 # Advanced IoT Systems Development
-## Raspberry Pi Pinout:
+## Introduction Intelligent Warehouse System
+
+The Intelligent Warehouse System aims to be a scaleable solution for giving an overview of the stock in a warehouse. It supports especially small goods with high quantities (e.g. screws). The system uses scales to determine the weight of these small goods in boxes and provides useful information via a dashboard to users. It also consists of LEDs to indicate the stock of each good directly in the warehouse to get a quick overview or easily find wares which need to be restocked. 
+
+### Basic Setup 
+The system consists of several Raspberry Pi Zero which are linked together over a network. The Raspberry Pis are split into two roles:
+- Central node: Consisting of one Raspberry Pi controling the Dashboard and the whole infrastructure. 
+- Shelf Nodes: Consisting of Raspberry Pis that collect weight data and controll the LEDs. 
+
+ using the OneM2M standard. 
+
+## Hardware Setup:
+### Raspberry Pi Pinout:
 ![](Pinout.png)
-## Raspberry Pi OS Config:
-- hostname: `acme-in` (everyone needs this one), `acme-regal-1` (already one) or `acme-regal-2` (none so far)
-- enable ssh with password
+## Software Setup:
+### Operating System:
+As the Operating System Raspbeery Pi OS Lite 32 bit is used. This OS can be downloaded and flashed onto a microSD card with the Raspberry Pi Imager utility.
+### Raspberry Pi OS Config:
+- hostname: `acme-in`, `acme-regal-1` or `acme-regal-2`
+- enable ssh
 - username `acme`
 - password `acme`
-- setup your WiFi (don't forget the WiFi country)
-- SSID: `150PowerToGo`
-- passwort `htmt4954`
-- setting the keyboard language to `de` is usefull if you need to connect a keyboard via USB
+- setup your WiFi (don't forget the WiFi country) or connect with an Ethernet adpater
+- setting the keyboard language is usefull if you need to connect a keyboard via USB
 
-## Install on Pi:
-### gerneral apt packages
+### Install gerneral apt packages
 ```
 sudo apt update
 ```
@@ -50,13 +62,23 @@ restart system:
 sudo shutdown -r now
 ```
 ### calibrate scale
-To calibrate the scale you need to run the `scale-calibrate.py` Python app.
-
-This app can be found in the `Tools` folder.
+Install python3 pip natively:
+```
+sudo apt install python3-pip 
+```
+Install the HX711 library natively:
+```
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+pip3 install 'git+https://github.com/gandalf15/HX711.git#egg=HX711&subdirectory=HX711_Python3'
+```
+To calibrate the scale you need to run the `scale-calibrate.py` python app. This app can be found in the `Tools` folder.
+```
+python /Tools/scale-calibrate.py
+```
 
 You'll need an object of which you know the exact weight.
 
-Follow the instructions in the Python app and copy the config string into the `ae.ini` file. This file can be found here:
+Follow the instructions in the python app and copy the config string into the `ae.ini` file. This file can be found here:
 - /AID/Docker/Regal-1/ae/ae.ini
 - /AID/Docker/Regal-2/ae/ae.ini
 
