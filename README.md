@@ -1,5 +1,5 @@
 # Advanced IoT Systems Development
-## Introduction Intelligent Warehouse System
+## Introduction Intelligent OneM2M Warehouse System
 
 The Intelligent Warehouse System aims to be a scaleable solution for giving an overview of the stock in a warehouse. It supports especially small goods with high quantities (e.g. screws). The system uses scales to determine the weight of these small goods in boxes and provides useful information via a dashboard to users. It also consists of LEDs to indicate the stock of each good directly in the warehouse to get a quick overview or easily find wares which need to be restocked. 
 
@@ -11,6 +11,16 @@ The system consists of several Raspberry Pi Zero which are linked together over 
  using the OneM2M standard. 
 
 ## Hardware Setup:
+### Hardware Components:
+- Raspberyy Pi Zero WH (WiFi and Header Pins) * 3
+- Transcend TS16GUSD300S-A 16GB microSDHC * 3
+- AZ-Delivery KY-016 FZ0455 3-colors RGB LED module * 4
+- DollaTek Small Scale 10 kg Load Cell with HX711 A/D * 4
+- Power Supply 5V 1A (or better) * 3
+- Additional Female to Female Jumper Wire
+
+### Hardware Systemoverview:
+![](warehousemanagement-system-diagramm.drawio.png)
 ### Raspberry Pi Pinout:
 ![](Pinout.png)
 ## Software Setup:
@@ -73,7 +83,7 @@ pip3 install 'git+https://github.com/gandalf15/HX711.git#egg=HX711&subdirectory=
 ```
 To calibrate the scale you need to run the `scale-calibrate.py` python app. This app can be found in the `Tools` folder.
 ```
-python /Tools/scale-calibrate.py
+python /AID/Tools/scale-calibrate.py
 ```
 
 You'll need an object of which you know the exact weight.
