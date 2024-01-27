@@ -24,6 +24,8 @@ The system consists of several Raspberry Pi Zero which are linked together over 
 ### Raspberry Pi Pinout:
 ![](Pinout.png)
 ## Software Setup:
+### System overview
+![](warehousemanagement-system-diagramm-with-software.drawio.png)
 ### Operating System:
 As the Operating System Raspbeery Pi OS Lite 32 bit is used. This OS can be downloaded and flashed onto a microSD card with the Raspberry Pi Imager utility.
 ### Raspberry Pi OS Config:
