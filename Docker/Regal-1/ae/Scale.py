@@ -84,7 +84,7 @@ class Scale(threading.Thread):
             response_text (response text) : str
         """
         return_value = ""
-        # When respone is of HTTP status code 200 (ok) 
+        #When respone is of HTTP status code 200 (ok) 
         if response.status_code == 200:
             print("PUT request successful")
             print("Response Content:")
@@ -131,29 +131,33 @@ class Scale(threading.Thread):
         scale_list = self.SetupScale(self.scales)
         #List to save three recent values per scale
         recent_values = []
-        #
+        #Create blank inital entries in the recent_values list for the number of boxes
         for box_counter in range(1, self.box_count + 1):
             recent_values.append([0,0,0])
             
+        #Print to the console that the setup of the scales has been completed
         print("scale setup done, run scale thread in endless loop")
         value_counter = 0
+        #Do the following while the exit event isn't set
         while not self.exit_event.is_set():
             start = time.time()
+            #Repeat for each box (scale+led)
             for box_counter in range(1, self.box_count + 1):
                 print(str(box_counter))
                 #Get a scale reading by averaging of 10 values
                 reading = scale_list[box_counter - 1].get_weight_mean(10)
+                #When there actually is a valid reading
                 if reading:
                     #Save the current reading in the list for the current scale and the current value_counter position (0-2)
                     recent_values[box_counter - 1][value_counter] = reading
                     #When the three values have been read
                     if value_counter == 2:
-                        #Check if the three recent values for a particular scale are within 3% of each other
+                        #Check if the three recent values for a particular scale are within 3% of each other - use abs() to always get a positive number
                         if abs(
                             (recent_values[box_counter - 1][0] - recent_values[box_counter - 1][1]) / recent_values[box_counter - 1][0]) <= 0.03 and abs(
                                 (recent_values[box_counter - 1][1] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][1]) <= 0.03 and abs(
                                     (recent_values[box_counter - 1][0] - recent_values[box_counter - 1][2]) / recent_values[box_counter - 1][0]) <= 0.03:
-                            #When the three recent values for a particular scale are within 3% of each other send the latest value
+                            #When the three recent values for a particular scale are within 3% of each other send the latest value to the ASN CSE ACME - convert from grams to kilograms by deviding by 1000
                             self.CheckResponse(
                                 self.UpdateResource(self.cse + "/" + self.cse_rn + "/" + self.ae + "/Box-" + str(box_counter) + "/DeviceScale/weight", 
                                                     self.HeaderFields(self.user, self.app_id + "-" + str(time.time()), self.releaseVersionIndicator), 
@@ -162,8 +166,10 @@ class Scale(threading.Thread):
                             print("scale values don't agree")
                 print(recent_values)
 
+            #Reset the value_counter when it reaches two
             if value_counter == 2:
                 value_counter = 0
+            #Otherwise increase the value_counter by one
             else:
                 value_counter = value_counter + 1
 
