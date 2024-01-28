@@ -41,6 +41,7 @@ services:
       - ./ae/AE_Application.py:/AE_Application.py
       - ./ae/ae.ini:/ae.ini
       - ./ae/OnlineCheck.py:/OnlineCheck.py
+      - ./ae/Access_Control.py:/Access_Control.py
       - ./ae/CreateStructure.py:/CreateStructure.py
       - ./ae/LedPwm.py:/LedPwm.py
       - ./ae/NotificationServerSmall.py:/NotificationServerSmall.py
