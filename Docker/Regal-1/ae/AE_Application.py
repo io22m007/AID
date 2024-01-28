@@ -47,15 +47,10 @@ if __name__ == "__main__":
         #Start the notification server thread
         notificationServer_thread.start()
 
-        #Start CheckOnline.py with the following parameters:
-        #- The protocol&IP/Hostname of the ASN CSE ACME + colon + port of the ASN CSE ACME
-        #- The ID of the application entity - the application entity has not been created yet, but this information will form part of the request identifier
-        #- The user which will be used to check the online state
-        #- The version of oneM2M
-        #- The path to the Certificate Authority certificate which was used to sign the certificate of the ASN CSE ACME
-        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), config.get('ACP', 'acr'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
 
-        #Print that the create of the application entity on the ASN CSE ACME will now start 
+        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), config.get('ACP', 'acr'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
+
+        #Print that the creation of the application entity on the ASN CSE ACME will now start 
         print("ae creation")
 
         #Start AE_Creation.py with the following parameters:
