@@ -10,7 +10,7 @@ class AccessControlEdit:
     def UpdateAccessControlPolicy(self, url:str, headers:dict, primitiveContent:dict, certificateAuthority:str) -> requests.models.Response:
         return requests.put(url, headers=headers, json=primitiveContent, verify=certificateAuthority)
 
-    def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str) -> dict:
+    def HeaderFields(self, originator:str, requestIdentifier:str, releaseVersionIndicator:str, resourceType:str) -> dict:
         """
         Returns the HTTP REST API header for communication with the ASN CSE ACME as a dictionary.
         The dict contains the given parameters and that json is the content exchange format.
@@ -20,6 +20,7 @@ class AccessControlEdit:
             originator (user that is sending the request) : str
             requestIdentifier (app id + timestamp) : str
             releaseVersionIndicator (version of oneM2M) : str
+            resourceType (type of ressource which will be created from resourceTypes dictionary): str
         Returns:
             headers : dict
         """
@@ -27,10 +28,11 @@ class AccessControlEdit:
             'X-M2M-Origin': originator,
             'X-M2M-RI': requestIdentifier,
             'X-M2M-RVI': releaseVersionIndicator,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json;' + resourceType,
             'Accept': 'application/json'
         }
         return headers
+
 
     
     def UpdateAccessControlOperationsPrimitiveContent(self, accessControlRessources:list) -> dict:
