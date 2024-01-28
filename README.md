@@ -24,10 +24,19 @@ The system consists of several Raspberry Pi Zero which are linked together over 
 ### Raspberry Pi Pinout:
 ![](Pinout.png)
 ## Software Setup:
+### Software List:
+- Raspberry Pi OS Lite 32 bit
+- Docker (docker.io and docker-compose)
+- ACME oneM2M CSE: https://github.com/ankraft/ACME-oneM2M-CSE
+- Node-RED w/ node-red-dashboard
+- HX711 python library: https://github.com/gandalf15/HX711
+- avahi-utils
 ### System overview
 ![](warehousemanagement-system-diagramm-with-software.drawio.png)
+### Software Data Flows
+![](software_data_flows.drawio.png)
 ### Operating System:
-As the Operating System Raspbeery Pi OS Lite 32 bit is used. This OS can be downloaded and flashed onto a microSD card with the Raspberry Pi Imager utility.
+As the Operating System Raspberry Pi OS Lite 32 bit is used. This OS can be downloaded and flashed onto a microSD card with the Raspberry Pi Imager utility.
 ### Raspberry Pi OS Config:
 - hostname: `acme-in`, `acme-regal-1` or `acme-regal-2`
 - enable ssh
@@ -35,7 +44,6 @@ As the Operating System Raspbeery Pi OS Lite 32 bit is used. This OS can be down
 - password `acme`
 - setup your WiFi (don't forget the WiFi country) or connect with an Ethernet adpater
 - setting the keyboard language is usefull if you need to connect a keyboard via USB
-
 ### Install gerneral apt packages
 ```
 sudo apt update
@@ -87,7 +95,6 @@ To calibrate the scale you need to run the `scale-calibrate.py` python app. This
 ```
 python /AID/Tools/scale-calibrate.py
 ```
-
 You'll need an object of which you know the exact weight.
 
 Follow the instructions in the python app and copy the config string into the `ae.ini` file. This file can be found here:
