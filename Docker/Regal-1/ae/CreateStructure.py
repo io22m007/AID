@@ -86,8 +86,7 @@ class AE_Creation:
                 "rn": resourceName,
                 "api": App_ID,
                 "rr": requestReachability,
-                "srv": supportedReleaseVersions,
-                "acpi": ["acpCreateACPs"]
+                "srv": supportedReleaseVersions
             }
         }
         return data

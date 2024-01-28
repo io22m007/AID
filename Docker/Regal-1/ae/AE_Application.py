@@ -4,7 +4,6 @@ import queue
 import json
 import RPi.GPIO as GPIO
 from OnlineCheck import CheckOnline
-from Access_Control import AccessControlEdit
 from CreateStructure import AE_Creation
 from NotificationServerSmall import NotificationServer
 from LedPwm import LedPwm
@@ -46,9 +45,6 @@ if __name__ == "__main__":
         notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
         #Start the notification server thread
         notificationServer_thread.start()
-
-
-        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), eval(config.get('ACP', 'acr')), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
 
         #Print that the creation of the application entity on the ASN CSE ACME will now start 
         print("ae creation")
