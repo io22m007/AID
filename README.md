@@ -8,7 +8,7 @@ The system consists of several Raspberry Pi Zero which are linked together over 
 - Central node: Consisting of one Raspberry Pi controling the Dashboard and the whole infrastructure. 
 - Shelf Nodes: Consisting of Raspberry Pis that collect weight data and controll the LEDs. 
 
- using the OneM2M standard. 
+using the OneM2M standard. 
 
 ## Hardware Setup:
 ### Hardware Components:
@@ -20,9 +20,9 @@ The system consists of several Raspberry Pi Zero which are linked together over 
 - Additional Female to Female Jumper Wire
 
 ### Hardware Systemoverview:
-![](warehousemanagement-system-diagramm.drawio.png)
+![](pics/warehousemanagement-system-diagramm.drawio.png)
 ### Raspberry Pi Pinout:
-![](Pinout.png)
+![](pics/raspberry-pinout.png)
 ## Software Setup:
 ### Software List:
 - Raspberry Pi OS Lite 32 bit
@@ -32,9 +32,9 @@ The system consists of several Raspberry Pi Zero which are linked together over 
 - HX711 python library: https://github.com/gandalf15/HX711
 - avahi-utils
 ### System overview
-![](warehousemanagement-system-diagramm-with-software.drawio.png)
+![](pics/warehousemanagement-system-diagramm-with-software.drawio.png)
 ### Software Data Flows
-![](software_data_flows.drawio.png)
+![](pics/software-data-flows.drawio.png)
 ### Operating System:
 As the Operating System Raspberry Pi OS Lite 32 bit is used. This OS can be downloaded and flashed onto a microSD card with the Raspberry Pi Imager utility.
 ### Raspberry Pi OS Config:

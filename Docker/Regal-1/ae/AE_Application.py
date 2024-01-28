@@ -4,6 +4,7 @@ import queue
 import json
 import RPi.GPIO as GPIO
 from OnlineCheck import CheckOnline
+from Access_Control import AccessControlEdit
 from CreateStructure import AE_Creation
 from NotificationServerSmall import NotificationServer
 from LedPwm import LedPwm
@@ -45,6 +46,14 @@ if __name__ == "__main__":
         notificationServer_thread = NotificationServer(data_queue, int(config.get('NotificationServerRegal', 'port')), config.get('NotificationServerRegal', 'certfile'), config.get('NotificationServerRegal', 'keyfile'))
         #Start the notification server thread
         notificationServer_thread.start()
+
+        #Start CheckOnline.py with the following parameters:
+        #- The protocol&IP/Hostname of the ASN CSE ACME + colon + port of the ASN CSE ACME
+        #- The ID of the application entity - the application entity has not been created yet, but this information will form part of the request identifier
+        #- The user which will be used to check the online state
+        #- The version of oneM2M
+        #- The path to the Certificate Authority certificate which was used to sign the certificate of the ASN CSE ACME
+        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), config.get('ACP', 'acr'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
 
         #Print that the create of the application entity on the ASN CSE ACME will now start 
         print("ae creation")
