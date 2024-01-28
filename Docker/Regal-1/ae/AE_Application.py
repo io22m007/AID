@@ -48,7 +48,7 @@ if __name__ == "__main__":
         notificationServer_thread.start()
 
 
-        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), config.get('ACP', 'acr'), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
+        AccessControlEdit(config.get('CSE', 'ip_host') + ":" + config.get('CSE', 'port'), config.get('CSE', 'cse_rn'), config.get('AE', 'app_id'), config.get('CSE', 'user'), config.get('ACP', 'acp'), eval(config.get('ACP', 'acr')), config.get('General', 'releaseVersionIndicator'), config.get('General', 'ca'))
 
         #Print that the creation of the application entity on the ASN CSE ACME will now start 
         print("ae creation")

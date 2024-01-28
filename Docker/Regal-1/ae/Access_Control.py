@@ -34,18 +34,19 @@ class AccessControlEdit:
         return headers
 
 
-    
+
     def UpdateAccessControlOperationsPrimitiveContent(self, accessControlRessources:list) -> dict:
         acr = []
-
+        print(str(accessControlRessources))
         for accessControlRessource in accessControlRessources:
+            print(str(accessControlRessource))
             acr.append(
                 {
                     "acop": accessControlRessource[0],
                     "acor": [accessControlRessource[1]]
                 }
             )
-        
+
         data = {
             "m2m:acp":{
                 "pv": {
