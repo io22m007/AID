@@ -46,7 +46,7 @@ if __name__ == "__main__":
         #Start the notification server thread
         notificationServer_thread.start()
 
-        #Print that the create of the application entity on the ASN CSE ACME will now start 
+        #Print that the creation of the application entity on the ASN CSE ACME will now start 
         print("ae creation")
 
         #Start AE_Creation.py with the following parameters:

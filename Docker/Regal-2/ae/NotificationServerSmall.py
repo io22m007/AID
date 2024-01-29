@@ -7,6 +7,9 @@
 #	Simple base implementation of a notification server to handle notifications 
 #	from a CSE.
 #
+#
+#   Modified by Mario Kolos, Florian Jeschek and Bernhard Monschiebl 2023-2024
+#
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import json, ssl
@@ -43,8 +46,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
 		# Print JSON
 		if contentType in [ 'application/json', 'application/vnd.onem2m-res+json' ]:
+			#Convert the post data into a json dict with utf8 decoding
 			notification = json.loads(post_data.decode('utf-8'))
 			if "m2m:sgn" in notification and "nev" in notification["m2m:sgn"] and "rep" in notification["m2m:sgn"]["nev"]:
+				#Put notification into the queue
 				self.data_queue.put(notification)
 			print(json.dumps(json.loads(post_data.decode('utf-8')), indent=4))
 
@@ -61,10 +66,12 @@ class NotificationServer(threading.Thread):
 		httpd = HTTPServer(('', self.port), lambda *args, **kwargs: SimpleHTTPRequestHandler(data_queue=self.data_queue, *args, **kwargs))
 
 		# init ssl socket
-		context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)					# Create a SSL Context
-		context.load_cert_chain(self.certfile, self.keyfile)				# Load the certificate and private key
-		httpd.socket = context.wrap_socket(httpd.socket, server_side=True)	# wrap the original http server socket as an SSL/TLS socket
-
+		# Create a SSL Context
+		context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)			
+		# Load the certificate and private key		
+		context.load_cert_chain(self.certfile, self.keyfile)		
+		# wrap the original http server socket as an SSL/TLS socket		
+		httpd.socket = context.wrap_socket(httpd.socket, server_side=True)	
 		print('Notification server started.')
 		try:
 			# run http server

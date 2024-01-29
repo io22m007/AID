@@ -1,17 +1,18 @@
 version: '3'
 services:
-  # 
+  # the container for the ASN CSE ACME
   asn:
-    # 
+    # the dockerfile in the cse-asn folder
     build: cse-asn
     # restart the container if a crash occurs but stop when stopped by user
     restart: unless-stopped
     # set the time zone
     environment:
       - TZ=Europe/Vienna
-    #
+    # forward the port to be able to access the ASN CSE ACME over the network
     ports:
       - "8080:8080"
+    # add all necessary files and the avahi-daemon mDNS dir
     volumes:
       - ./cse-asn/acme.ini:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/acme.ini
       - ./cse-asn/mio_flex.fcp:/ACME-oneM2M-CSE/ACME-oneM2M-CSE-0.12.0/init/mio_flex.fcp
@@ -25,14 +26,17 @@ services:
     # set the time zone
     environment:
       - TZ=Europe/Vienna
-    #
+    # forward the port to be able to access the notification server of the application entity
     ports:
       - "9999:9999"
+    # for access to GPIO
     devices:
       - /dev/gpiomem:/dev/gpiomem
       - /dev/mem:/dev/mem
+    # for access to GPIO
     cap_add:
       - SYS_RAWIO
+    # add all necessary files and the avahi-daemon mDNS dir
     volumes:
       - ./ae/AE_Application.py:/AE_Application.py
       - ./ae/ae.ini:/ae.ini

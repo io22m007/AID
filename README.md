@@ -12,7 +12,7 @@ using the OneM2M standard.
 
 ## Hardware Setup:
 ### Hardware Components:
-- Raspberyy Pi Zero WH (WiFi and Header Pins) * 3
+- Raspberry Pi Zero WH (WiFi and Header Pins) * 3
 - Transcend TS16GUSD300S-A 16GB microSDHC * 3
 - AZ-Delivery KY-016 FZ0455 3-colors RGB LED module * 4
 - DollaTek Small Scale 10 kg Load Cell with HX711 A/D * 4

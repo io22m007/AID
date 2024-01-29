@@ -5,14 +5,16 @@ class CheckOnline:
     
     def GetResource(self, url:str, headers:dict, certificateAuthority:str) -> requests.models.Response:
         """
-        Returns the response from the HTTP REST API request to the ASN CSE ACME.
+        Used to get a resource.
+        Returns the response from the HTTP REST API GET request to the ASN CSE ACME.
+
         Parameters:
             self (the class)
             url (full path incl. protocol, ip/hostname, port, path): str
             headers (headers created with HeaderFields method) : dict
             certificateAuthority (path to the certificate authority certificate which was used to sign the certificate of the ASN CSE ACME): str
         Returns:
-            request-response : requests.models.Response
+            response (response from the request) : requests.models.Response
         """
         return requests.get(url, headers=headers, verify=certificateAuthority)
 
