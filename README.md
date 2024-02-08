@@ -114,5 +114,20 @@ start docker container in the background:
 ```
 docker-compose up --build -d
 ```
+## Node-RED:
+### Flow
+```
+https://acme-in:1880
+```
+![](pics/node-red-flow-01.jpg)
+![](pics/node-red-flow-02.jpg)
+### User Interface
+```
+https://acme-in:1880/ui
+```
+![](pics/node-red-overview.jpg)
+![](pics/node-red-lager-nord.jpg)
+![](pics/node-red-lager-sued.jpg)
+
 ## Helpful commands:
 [a list of helpful commands can be found here](Command-Help.md)
