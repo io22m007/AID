@@ -9,9 +9,9 @@
                     },
                     "weight": {
                         "piece": 0.01141,
-                        "tare": 0.010984141791044776,
-                        "dateoftare": "1704817176726",
-                        "measured": 0.1961604168043115,
+                        "tare": 0.10662714395218283,
+			"dateoftare": null,
+                        "measured": 0.21540322473448445,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
@@ -26,23 +26,23 @@
                 {
                     "LED": {
                         "onoff": true,
-                        "color": "red"
+                        "color": "green"
                     },
                     "weight": {
-                        "piece": 0.02,
-                        "tare": 0.10913987910688674,
-                        "dateoftare": "1704817176726",
-                        "measured": 0.10903574251754938,
+                        "piece": 0.022,
+                        "tare": 0.11628518070140864,
+			"dateoftare": null,
+                        "measured": 0.30547500398847566,
                         "calibrated": false,
                         "dashboardSetup": {
                             "min": 0,
-                            "max": 10
+                            "max": 8
                         }
                     },
                     "state": {
-                        "ordered": 4
+                        "ordered": 1
                     },
-                    "description": "Schrauben M4"
+                    "description": "AA-Batterie"
                 }
             ]
         },
@@ -51,44 +51,44 @@
                 {
                     "LED": {
                         "onoff": true,
-                        "color": "green"
+                        "color": "blue"
                     },
                     "weight": {
-                        "piece": 0.02,
-                        "tare": -0.003138992537313433,
-                        "dateoftare": "1704817176726",
-                        "measured": 0.29666904125569543,
-                        "calibrated": false,
+                        "piece": 0.032,
+                        "tare": null,
+                        "dateoftare": null,
+                        "measured": null,
+                        "calibrated": true,
                         "dashboardSetup": {
                             "min": 0,
                             "max": 10
                         }
                     },
                     "state": {
-                        "ordered": 1
+                        "ordered": null
                     },
-                    "description": "Muttern M3"
+                    "description": "Muttern M16"
                 },
                 {
                     "LED": {
                         "onoff": true,
-                        "color": ""
+                        "color": "blue"
                     },
                     "weight": {
-                        "piece": 0.01141,
-                        "tare": 0,
-                        "dateoftare": "",
-                        "measured": -0.15309180059929176,
-                        "calibrated": false,
+                        "piece": 0.0249,
+                        "tare": null,
+                        "dateoftare": null,
+                        "measured": null,
+                        "calibrated": true,
                         "dashboardSetup": {
                             "min": 0,
                             "max": 10
                         }
                     },
                     "state": {
-                        "ordered": 1
+                        "ordered": null
                     },
-                    "description": "Muttern M4"
+                    "description": "Schraube M10x30"
                 }
             ]
         }
